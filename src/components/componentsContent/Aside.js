@@ -1,5 +1,5 @@
 const Aside = (props) => {
-  const { } = props
+  const { lang, changeLang, darkMode, changeDarkMode } = props
   return (
     <aside></aside>
   )

@@ -1,13 +1,6 @@
-import { education } from '../main/education'
-import { experience } from '../main/experience'
-import { portfolio } from '../main/portfolio'
-import { allTags } from './function'
+// #generic
 
-const list = [education, experience, portfolio]
-export const uniqueSkills = allTags(list, "skills")
-
-/*
-export const skills = {
+const skills = {
   "EN": {
     "front": ["HTML", "CSS", "Bootstrap", "React"],
     "back": ["JavaScript", "NodeJS", "SQL", "C", "Perl"],
@@ -36,4 +29,3 @@ export const skills = {
     "langague": ["anglais", "espagnol", "français"],
   }
 }
-*/

@@ -1,5 +1,5 @@
 const Highlights = (props) => {
-  const { } = props
+  const { lang, darkMode } = props
   return (
     <section></section>
   )

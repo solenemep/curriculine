@@ -1,5 +1,5 @@
 const Footer = (props) => {
-  const { } = props
+  const { lang, darkMode } = props
   return (
     <footer></footer>
   )

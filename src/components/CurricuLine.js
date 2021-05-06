@@ -1,14 +1,17 @@
-import { Fragment } from "react"
+import { Fragment, useState, useEffect } from "react"
+
 import Header from "./Header"
 import Highlights from "./Hightlights"
-import Main from "./Main"
+import Content from "./Content"
 import Footer from "./Footer"
+
+import { langague } from "../data/content/aside/langague"
 
 const CurricuLine = (props) => {
   const { } = props
 
   // Langague
-  const [lang, setLang] = useState(JSON.parse(localStorage.getItem('langCurricuLine')) || 'EN')
+  const [lang, setLang] = useState(JSON.parse(localStorage.getItem('langCurricuLine')) || langague[0])
   const changeLang = (event) => {
     setLang(event.target.value)
   }
@@ -27,15 +30,22 @@ const CurricuLine = (props) => {
   }
   )
 
-  // Filter Fields
-  // Filter Skills
-
   return (
     <Fragment>
-      <Header />
-      <Highlights />
-      <Main />
-      <Footer />
+      <Header
+        lang={lang}
+        darkMode={darkMode} />
+      <Highlights
+        lang={lang}
+        darkMode={darkMode} />
+      <Content
+        lang={lang}
+        changeLang={changeLang}
+        darkMode={darkMode}
+        changeDarkMode={changeDarkMode} />
+      <Footer
+        lang={lang}
+        darkMode={darkMode} />
     </Fragment>
   )
 }
