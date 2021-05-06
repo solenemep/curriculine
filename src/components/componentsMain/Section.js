@@ -1,7 +1,7 @@
-const Highlight = (props) => {
+const Section = (props) => {
   const { } = props
   return (
     <section></section>
   )
 }
-export default Highlight
+export default Section
