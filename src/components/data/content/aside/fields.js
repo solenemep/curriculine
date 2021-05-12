@@ -19,6 +19,6 @@ export const allFields = (listArray) => {
   return listFieldsUnique
 }
 
-const fields = {
-
-}
+export const fields = [
+  "Filter by field", "Filtrar por campo", "Filtrer par domaine"
+]

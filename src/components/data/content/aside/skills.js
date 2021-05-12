@@ -19,6 +19,11 @@ export const allSkills = (listArray) => {
   return listSkillsUnique
 }
 
+export const skills = [
+  "Filter by skills", "Filtrar por habilidad", "Filtrer par compétence"
+]
+
+/*
 const skills = [
   {
     "front": ["HTML", "CSS", "Bootstrap", "React"],
@@ -48,3 +53,4 @@ const skills = [
     "langague": ["anglais", "espagnol", "français"],
   }
 ]
+*/

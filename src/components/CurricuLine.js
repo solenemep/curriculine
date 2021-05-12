@@ -30,23 +30,29 @@ const CurricuLine = (props) => {
   }
   )
 
-  return (
-    <Fragment>
-      <Header
-        lang={lang}
-        darkMode={darkMode} />
-      <Highlights
-        lang={lang}
-        darkMode={darkMode} />
-      <Content
-        lang={lang}
-        changeLang={changeLang}
-        darkMode={darkMode}
-        changeDarkMode={changeDarkMode} />
-      <Footer
-        lang={lang}
-        darkMode={darkMode} />
-    </Fragment>
-  )
+  for (const [index, langague] of langagues.entries()) {
+    if (lang === langagues[index]) {
+
+      return (
+        <Fragment>
+          <Header
+            index={index}
+            darkMode={darkMode} />
+          <Highlights
+            index={index}
+            darkMode={darkMode} />
+          <Content
+            index={index}
+            lang={lang}
+            changeLang={changeLang}
+            darkMode={darkMode}
+            changeDarkMode={changeDarkMode} />
+          <Footer
+            index={index}
+            darkMode={darkMode} />
+        </Fragment>
+      )
+    }
+  }
 }
 export default CurricuLine

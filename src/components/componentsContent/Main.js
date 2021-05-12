@@ -1,11 +1,10 @@
 const Main = (props) => {
-  const { lang, darkMode, filterFields, filterSkills } = props
-
-
-
+  const { index, darkMode, filteredEducation, filteredExperience, filteredPortfolio } = props
 
   return (
-    <main className="col-lg-9"></main>
+    <main className="col-lg-9">
+
+    </main>
   )
 }
 
