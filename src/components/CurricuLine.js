@@ -30,7 +30,7 @@ const CurricuLine = (props) => {
   }
   )
 
-  for (const [index, langague] of langagues.entries()) {
+  for (const [index] of langagues.entries()) {
     if (lang === langagues[index]) {
 
       return (

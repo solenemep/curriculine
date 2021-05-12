@@ -15,7 +15,7 @@ const Aside = (props) => {
       <form>
         <div>
           <DarkMode
-            lang={lang}
+            index={index}
             darkMode={darkMode}
             changeDarkMode={changeDarkMode} />
           <Langague

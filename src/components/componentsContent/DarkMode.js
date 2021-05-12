@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 
 import { darkmodes } from "../data/content/aside/darkmodes"
-import { langagues } from '../data/content/aside/langagues'
 
 const Moon = (props) => {
   const { children } = props
@@ -25,22 +24,19 @@ const Sun = (props) => {
 }
 
 const DarkMode = (props) => {
-  const { lang, darkMode, changeDarkMode } = props
+  const { index, darkMode, changeDarkMode } = props
 
-  for (const [index, langague] of langagues.entries()) {
-    if (lang === langagues[index]) {
-      return (
-        <button
-          type="button"
-          aria-label="Dark Mode"
-          onClick={changeDarkMode}
-          className="btn btn-dark"
-        >
-          {darkMode ?
-            <Sun>{" "}{darkmodes[index].lightmode}</Sun> :
-            <Moon>{" "}{darkmodes[index].darkmode}</Moon>}
-        </button>)
-    }
-  }
+  return (
+    <button
+      type="button"
+      aria-label="Dark Mode"
+      onClick={changeDarkMode}
+      className="btn btn-dark"
+    >
+      {darkMode ?
+        <Sun>{" "}{darkmodes[index].lightmode}</Sun> :
+        <Moon>{" "}{darkmodes[index].darkmode}</Moon>}
+    </button>)
 }
+
 export default DarkMode
