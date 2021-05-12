@@ -1,5 +1,0 @@
-// #generic
-
-const fields = {
-
-}

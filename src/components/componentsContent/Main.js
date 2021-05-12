@@ -1,7 +1,12 @@
 const Main = (props) => {
-  const { lang, darkMode } = props
+  const { lang, darkMode, filterFields, filterSkills } = props
+
+
+
+
   return (
-    <main></main>
+    <main className="col-lg-9"></main>
   )
 }
+
 export default Main

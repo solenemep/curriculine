@@ -1,7 +1,26 @@
 // #generic
 
-const skills = {
-  "EN": {
+// Filter Skills
+export const allSkills = (listArray) => {
+  let listTotal = []
+  for (let element of listArray) {
+    for (let el of element.items) {
+      if ("skills" in el) {
+        listTotal = listTotal.concat(el.skills)
+      }
+    }
+  }
+  const listSkillsUnique = []
+  listTotal.forEach((el) => {
+    if (!listSkillsUnique.includes(el)) {
+      listSkillsUnique.push(el)
+    }
+  })
+  return listSkillsUnique
+}
+
+const skills = [
+  {
     "front": ["HTML", "CSS", "Bootstrap", "React"],
     "back": ["JavaScript", "NodeJS", "SQL", "C", "Perl"],
     "blockchain": ["Solidity"],
@@ -10,7 +29,7 @@ const skills = {
     "tools": ["JIRA", "Trello", "SAP", "Odoo", "Microsoft Office"],
     "langague": ["english", "spanish", "french"],
   },
-  "SP": {
+  {
     "front": ["HTML", "CSS", "Bootstrap", "React"],
     "back": ["JavaScript", "NodeJS", "SQL", "C", "Perl"],
     "blockchain": ["Solidity"],
@@ -19,7 +38,7 @@ const skills = {
     "tools": ["JIRA", "Trello", "SAP", "Odoo", "Microsoft Office"],
     "langague": ["inglés", "español", "francés"],
   },
-  "FR": {
+  {
     "front": ["HTML", "CSS", "Bootstrap", "React"],
     "back": ["JavaScript", "NodeJS", "SQL", "C", "Perl"],
     "blockchain": ["Solidity"],
@@ -28,4 +47,4 @@ const skills = {
     "tools": ["JIRA", "Trello", "SAP", "Odoo", "Microsoft Office"],
     "langague": ["anglais", "espagnol", "français"],
   }
-}
+]

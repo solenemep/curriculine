@@ -5,13 +5,13 @@ import Highlights from "./Hightlights"
 import Content from "./Content"
 import Footer from "./Footer"
 
-import { langague } from "../data/content/aside/langague"
+import { langagues } from "./data/content/aside/langagues"
 
 const CurricuLine = (props) => {
   const { } = props
 
   // Langague
-  const [lang, setLang] = useState(JSON.parse(localStorage.getItem('langCurricuLine')) || langague[0])
+  const [lang, setLang] = useState(JSON.parse(localStorage.getItem('langCurricuLine')) || langagues[0])
   const changeLang = (event) => {
     setLang(event.target.value)
   }
