@@ -1,5 +1,7 @@
 // #generic
 
+// Faire liste exhaustive
+
 // Filter Skills
 export const allSkills = (listArray) => {
   let listTotal = []

@@ -1,5 +1,7 @@
 // #generic
 
+// Faire liste exhaustive
+
 // Filter Fields
 export const allFields = (listArray) => {
   let listTotal = []

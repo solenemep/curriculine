@@ -46,7 +46,7 @@ const Content = (props) => {
   const filteredPortfolio = filterList(portfolios[index].items, filterFields, filterSkills)
 
   return (
-    <div className="content">
+    <div className="container">
       <Main
         index={index}
         darkMode={darkMode}
