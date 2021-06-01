@@ -6,6 +6,8 @@ import { educations } from "../data/content/main/educations"
 import { experiences } from "../data/content/main/experiences"
 import { portfolios } from "../data/content/main/portfolios"
 
+// faire en sorte que ces listes dépendent des imports précedents
+// et supprimer les 2 fichiers data/aside/fields.js et data/aside/skills.js
 import { allFields } from "../data/content/aside/fields"
 import { allSkills } from "../data/content/aside/skills"
 import { fields } from "../data/content/aside/fields"

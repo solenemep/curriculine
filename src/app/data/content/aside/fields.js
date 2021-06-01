@@ -22,5 +22,7 @@ export const allFields = (listArray) => {
 }
 
 export const fields = [
-  "Filter by field", "Filtrar por campo", "Filtrer par domaine"
+  "Filter by field",
+  "Filtrar por campo",
+  "Filtrer par domaine",
 ]
