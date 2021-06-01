@@ -1,4 +1,4 @@
-import CurricuLine from "./components/CurricuLine";
+import CurricuLine from "./app/CurricuLine";
 
 const App = () => {
   return (
