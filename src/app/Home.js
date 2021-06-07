@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom"
+
 import { useCurriContext } from "./hook/useCurriContext"
-import { useHeaderContext } from "./hook/useHeaderContext"
+import { useHomeContext } from "./hook/useHomeContext"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -9,19 +11,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
-const Header = () => {
-  const { index, darkMode } = useCurriContext()
-  const { intros, links } = useHeaderContext()
+const Home = () => {
+  const { index, darkMode, changeSection } = useCurriContext()
+  const { intros, highlights } = useHomeContext()
 
   return (
-    <header>
+    <section id="home" className="container">
       <h1>{intros[index].name}</h1>
       <small>{intros[index].title}</small>
       <p>{intros[index].paragraph}</p>
       <ul>
         <li>
           <a
-            href={links[index].linkedin}
+            href={intros[index].linkedin}
             aria-label="my linkedin"
             target="blank"
             rel="noopener noreferrer"
@@ -31,7 +33,7 @@ const Header = () => {
         </li>
         <li>
           <a
-            href={links[index].github}
+            href={intros[index].github}
             aria-label="my github"
             target="blank"
             rel="noopener noreferrer"
@@ -41,7 +43,7 @@ const Header = () => {
         </li>
         <li>
           <a
-            href={links[index].codepen}
+            href={intros[index].codepen}
             aria-label="my codepen"
             target="blank"
             rel="noopener noreferrer"
@@ -51,7 +53,7 @@ const Header = () => {
         </li>
         <li>
           <a
-            href={links[index].mail}
+            href={intros[index].mail}
             aria-label="my email"
             target="blank"
             rel="noopener noreferrer"
@@ -60,8 +62,27 @@ const Header = () => {
           </a>
         </li>
       </ul>
-    </header>
+      <ul className="row">
+        {highlights[index].items.map((highlight) => {
+          return (
+            <li className="col-md-4">
+              <h2>{highlight.title}</h2>
+              <p>{highlight.detail}</p>
+              <a href={highlight.link}>
+                <button
+                  type="button"
+                  onClick={changeSection}
+                  value={highlight.section}
+                >
+                  {highlight.see}
+                </button>
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
   )
 }
 
-export default Header
+export default Home

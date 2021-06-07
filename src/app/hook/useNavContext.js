@@ -1,8 +1,8 @@
 import { useContext } from "react"
-import { HeaderContext } from "../context/HeaderContext"
+import { NavContext } from "../context/NavContext"
 
-export const useHeaderContext = () => {
-  const context = useContext(HeaderContext)
+export const useNavContext = () => {
+  const context = useContext(NavContext)
   if (context === undefined) {
     throw new Error(
       `It seems that you are trying to use GradientContext outside of its provider`

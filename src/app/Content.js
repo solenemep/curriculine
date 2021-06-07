@@ -1,26 +1,20 @@
-import { useCurriContext } from "./hook/useCurriContext"
-import { useContentContext } from "./hook/useContentContext"
-
 import Main from "./componentsContent/Main"
 import Aside from "./componentsContent/Aside"
 
+import { useCurriContext } from "./hook/useCurriContext"
+import { useContentContext } from "./hook/useContentContext"
+
 const Content = () => {
-  const { index, lang, changeLang, darkMode, changeDarkMode } =
-    useCurriContext()
-  const {
-    educations,
-    experiences,
-    portfolios,
-    filteredEducation,
-    filteredExperience,
-    filteredPortfolio,
-  } = useContentContext()
+  const { index } = useCurriContext()
+  const {} = useContentContext()
 
   return (
-    <div className="container">
-      <Main />
-      <Aside />
-    </div>
+    <section id="content" className="container">
+      <div className="row">
+        <Main />
+        <Aside />
+      </div>
+    </section>
   )
 }
 

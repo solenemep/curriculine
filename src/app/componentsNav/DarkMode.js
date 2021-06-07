@@ -1,8 +1,6 @@
 import { Fragment } from "react"
 import { useCurriContext } from "../hook/useCurriContext"
 
-import { darkmodes } from "../data/content/aside/darkmodes"
-
 const Moon = (props) => {
   const { children } = props
   return (
@@ -41,15 +39,11 @@ const Sun = (props) => {
 }
 
 const DarkMode = () => {
-  const { index, darkMode, changeDarkMode } = useCurriContext()
+  const { darkMode, changeDarkMode } = useCurriContext()
 
   return (
     <button type="button" aria-label="Dark Mode" onClick={changeDarkMode}>
-      {darkMode ? (
-        <Sun> {darkmodes[index].lightmode}</Sun>
-      ) : (
-        <Moon> {darkmodes[index].darkmode}</Moon>
-      )}
+      {darkMode ? <Sun> </Sun> : <Moon> </Moon>}
     </button>
   )
 }

@@ -1,66 +1,43 @@
-import { createContext, useState } from "react"
-// à supprimer :
-import { useCurriContext } from "../hook/useCurriContext"
+import { createContext, useState, useEffect } from "react"
 
-import { educations } from "../data/content/main/educations"
-import { experiences } from "../data/content/main/experiences"
-import { portfolios } from "../data/content/main/portfolios"
-
-// faire en sorte que ces listes dépendent des imports précedents
-// et supprimer les 2 fichiers data/aside/fields.js et data/aside/skills.js
-import { allFields } from "../data/content/aside/fields"
-import { allSkills } from "../data/content/aside/skills"
-import { fields } from "../data/content/aside/fields"
-import { skills } from "../data/content/aside/skills"
+import { educations } from "../data/content/educations"
+import { experiences } from "../data/content/experiences"
+import { portfolios } from "../data/content/portfolios"
+import { skills, fields, tags } from "../data/content/tags"
 
 export const ContentContext = createContext()
 
 export const ContentContextProvider = ({ children }) => {
-  // à supprimer :
-  const { index } = useCurriContext()
-
-  // Filter by fields
-  const [filterFields, setFilterFields] = useState("")
-  const updateFilterFields = (event) => {
-    setFilterFields(event.target.value)
+  // Filter
+  const [filter, setFilter] = useState(
+    () => JSON.parse(localStorage.getItem("solenemhep-filter")) || tags
+  )
+  const toggleFilter = (event) => {
+    setFilter(
+      filter.map((el) => {
+        if (el.text === event.target.value) {
+          return {
+            ...el,
+            bool: !el.bool,
+          }
+        }
+        return el
+      })
+    )
   }
-
-  // Filter by skills
-  const [filterSkills, setFilterSkills] = useState("")
-  const updateFilterSkills = (event) => {
-    setFilterSkills(event.target.value)
-  }
-
-  // POUR LE ASIDE
-  const list = [educations[index], experiences[index], portfolios[index]]
-  const uniqueFields = allFields(list)
-  // console.log(uniqueFields)
-  const uniqueSkills = allSkills(list)
-  // console.log(uniqueSkills)
-
-  // POUR LE MAIN
-  const filterList = (list, filter1, filter2) => {
-    if (filter1 === "" && filter2 === "") {
-      return list
-    } else {
-      return list.filter((el) => el.fields === filter1 && el.skills === filter2)
+  useEffect(() => {
+    localStorage.setItem("solenemhep-filter", JSON.stringify(filter))
+  }, [filter])
+  /*
+  const filterList = (list) => {
+    list.filter((el) => {
+      const elem = filter.find((fil) => fil.id === el.id)
+      if (elem) {
+        return el
+      }
     }
-  }
-  const filteredEducation = filterList(
-    educations[index].items,
-    filterFields,
-    filterSkills
-  )
-  const filteredExperience = filterList(
-    experiences[index].items,
-    filterFields,
-    filterSkills
-  )
-  const filteredPortfolio = filterList(
-    portfolios[index].items,
-    filterFields,
-    filterSkills
-  )
+    )}
+*/
 
   return (
     <ContentContext.Provider
@@ -68,17 +45,8 @@ export const ContentContextProvider = ({ children }) => {
         educations,
         experiences,
         portfolios,
-        filteredEducation,
-        filteredExperience,
-        filteredPortfolio,
-        fields,
-        allFields,
-        uniqueFields,
-        updateFilterFields,
-        skills,
-        allSkills,
-        uniqueSkills,
-        updateFilterSkills,
+        filter,
+        toggleFilter,
       }}
     >
       {children}

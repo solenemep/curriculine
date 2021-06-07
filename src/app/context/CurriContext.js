@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react"
 
-import { langagues } from "../data/content/aside/langagues"
+import { langagues } from "../data/langagues"
 
 export const CurriContext = createContext()
 
@@ -14,7 +14,8 @@ export const CurriContextProvider = ({ children }) => {
   }
   useEffect(() => {
     localStorage.setItem("langCurricuLine", JSON.stringify(lang), [lang])
-  })
+  }, [lang])
+  const index = langagues.findIndex((el) => el === lang)
 
   // DarkMode
   const [darkMode, setDarkMode] = useState(
@@ -25,13 +26,31 @@ export const CurriContextProvider = ({ children }) => {
   }
   useEffect(() => {
     localStorage.setItem("darkModeCurricuLine", JSON.stringify(darkMode))
-  })
+  }, [darkMode])
 
-  const index = langagues.findIndex((el) => el === lang)
+  // Mode
+  const [section, setSection] = useState(
+    () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "portfolio"
+  )
+  const changeSection = (event) => {
+    setSection(event.target.value)
+  }
+  useEffect(() => {
+    localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
+  }, [section])
 
   return (
     <CurriContext.Provider
-      value={{ index, lang, changeLang, darkMode, changeDarkMode }}
+      value={{
+        langagues,
+        index,
+        lang,
+        changeLang,
+        darkMode,
+        changeDarkMode,
+        section,
+        changeSection,
+      }}
     >
       {children}
     </CurriContext.Provider>

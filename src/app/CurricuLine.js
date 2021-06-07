@@ -1,33 +1,49 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
 import { CurriContextProvider } from "./context/CurriContext"
-import { HeaderContextProvider } from "./context/HeaderContext"
-import { HighlightsContextProvider } from "./context/HighlightsContext"
+import { NavContextProvider } from "./context/NavContext"
+import { HomeContextProvider } from "./context/HomeContext"
 import { ContentContextProvider } from "./context/ContentContext"
+import { ContactContextProvider } from "./context/ContactContext"
 import { FooterContextProvider } from "./context/FooterContext"
 
-import Header from "./Header"
-import Highlights from "./Highlights"
+import Nav from "./Nav"
+import Home from "./Home"
 import Content from "./Content"
+import Contact from "./Contact"
 import Footer from "./Footer"
 
 const CurricuLine = () => {
   return (
-    <CurriContextProvider>
-      <HeaderContextProvider>
-        <Header />
-      </HeaderContextProvider>
+    <Router>
+      <CurriContextProvider>
+        <NavContextProvider>
+          <Nav />
+        </NavContextProvider>
+        <Switch>
+          <Route exact path="/">
+            <HomeContextProvider>
+              <Home />
+            </HomeContextProvider>
+          </Route>
 
-      <HighlightsContextProvider>
-        <Highlights />
-      </HighlightsContextProvider>
+          <Route exact path="/curriculum">
+            <ContentContextProvider>
+              <Content />
+            </ContentContextProvider>
+          </Route>
 
-      <ContentContextProvider>
-        <Content />
-      </ContentContextProvider>
-
-      <FooterContextProvider>
-        <Footer />
-      </FooterContextProvider>
-    </CurriContextProvider>
+          <Route exact path="/contact">
+            <ContactContextProvider>
+              <Contact />
+            </ContactContextProvider>
+          </Route>
+        </Switch>
+        <FooterContextProvider>
+          <Footer />
+        </FooterContextProvider>
+      </CurriContextProvider>
+    </Router>
   )
 }
 export default CurricuLine

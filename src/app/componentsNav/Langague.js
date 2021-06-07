@@ -1,8 +1,7 @@
 import { useCurriContext } from "../hook/useCurriContext"
-import { langagues } from "../data/content/aside/langagues"
 
 const Langague = () => {
-  const { lang, changeLang } = useCurriContext()
+  const { langagues, lang, changeLang } = useCurriContext()
   return (
     <div role="group" aria-label="langague choice">
       {langagues.map((langague) => {

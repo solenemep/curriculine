@@ -1,8 +1,8 @@
 import { useContext } from "react"
-import { HighlightsContext } from "../context/HighlightsContext"
+import { HomeContext } from "../context/HomeContext"
 
-export const useHighlightsContext = () => {
-  const context = useContext(HighlightsContext)
+export const useHomeContext = () => {
+  const context = useContext(HomeContext)
   if (context === undefined) {
     throw new Error(
       `It seems that you are trying to use GradientContext outside of its provider`
