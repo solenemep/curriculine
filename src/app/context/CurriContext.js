@@ -28,7 +28,7 @@ export const CurriContextProvider = ({ children }) => {
     localStorage.setItem("darkModeCurricuLine", JSON.stringify(darkMode))
   }, [darkMode])
 
-  // Mode
+  // Section
   const [section, setSection] = useState(
     () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "portfolio"
   )

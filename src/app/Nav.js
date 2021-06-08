@@ -8,22 +8,22 @@ import { useNavContext } from "./hook/useNavContext"
 
 const Nav = () => {
   const { index, darkMode } = useCurriContext()
-  const { navs, intros, contacts } = useNavContext()
+  const { home, contacts } = useNavContext()
 
   return (
-    <nav className="bg-dark text-white d-flex flex-row">
-      <div className="nav-items">
+    <nav className="bg-navfoot">
+      <div className="navfoot-items">
         <Link to="/" aria-label="home page">
-          {intros[index].name}
+          {home[index].name}
         </Link>
         <Link to="/curriculum" aria-label="curriculum page">
-          CURRICULUM
+          Curriculum
         </Link>
         <Link to="/contact" aria-label="contact page">
           {contacts[index].title}
         </Link>
       </div>
-      <div className="nav-items">
+      <div className="navfoot-items">
         <Langague />
         <DarkMode />
       </div>

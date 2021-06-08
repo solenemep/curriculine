@@ -1,14 +1,13 @@
 import { createContext } from "react"
 
-import { navs } from "../data/nav/navs"
-import { intros } from "../data/home/intros"
-import { contacts } from "../data/contact/contacts"
+import { home } from "../data/home"
+import { contacts } from "../data/contacts"
 
 export const NavContext = createContext()
 
 export const NavContextProvider = ({ children }) => {
   return (
-    <NavContext.Provider value={{ navs, intros, contacts }}>
+    <NavContext.Provider value={{ home, contacts }}>
       {children}
     </NavContext.Provider>
   )

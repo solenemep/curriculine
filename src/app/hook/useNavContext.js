@@ -5,7 +5,7 @@ export const useNavContext = () => {
   const context = useContext(NavContext)
   if (context === undefined) {
     throw new Error(
-      `It seems that you are trying to use GradientContext outside of its provider`
+      `It seems that you are trying to use NavContext outside of its provider`
     )
   }
   return context

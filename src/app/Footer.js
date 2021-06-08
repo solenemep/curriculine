@@ -3,13 +3,12 @@ import { useFooterContext } from "./hook/useFooterContext"
 
 const Footer = () => {
   const { index, darkMode } = useCurriContext()
-  const { copyrights } = useFooterContext()
+  const { footer } = useFooterContext()
 
   return (
-    <footer className="bg-dark text-white">
-      <p>
-        {copyrights[index].madeby} - {copyrights[index].copyright}
-      </p>
+    <footer className="bg-navfoot d-flex flex-row align-items-center">
+      <p className="navfoot-items">{footer[index].madeby}</p>
+      <p className="navfoot-items">{footer[index].copyright}</p>
     </footer>
   )
 }

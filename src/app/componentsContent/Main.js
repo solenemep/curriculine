@@ -3,8 +3,10 @@ import { useCurriContext } from "../hook/useCurriContext"
 
 const Main = () => {
   const { index, darkMode, section, changeSection } = useCurriContext()
-  const { educations, experiences, portfolios } = useContentContext()
+  const { curriculum } = useContentContext()
   //si tous les filters sont à false, toute la liste, sinon juste les true
+
+  const cardContent = darkMode ? "card-dark" : "card-light"
 
   return (
     <main className="col-md-9">
@@ -15,7 +17,7 @@ const Main = () => {
           disabled={section === "education"}
           onClick={changeSection}
         >
-          {educations[index].title}
+          {curriculum[index].educations.title}
         </button>
         <button
           type="button"
@@ -23,7 +25,7 @@ const Main = () => {
           disabled={section === "experience"}
           onClick={changeSection}
         >
-          {experiences[index].title}
+          {curriculum[index].experiences.title}
         </button>
         <button
           type="button"
@@ -31,76 +33,104 @@ const Main = () => {
           disabled={section === "portfolio"}
           onClick={changeSection}
         >
-          {portfolios[index].title}
+          {curriculum[index].portfolios.title}
         </button>
       </div>
       {section === "education" && (
         <section id="education">
-          <h2>{educations[index].title}</h2>
-          <ul>
-            {educations[index].items.map((education) => {
-              return (
-                <li>
-                  <h3>{education.name}</h3>
+          <h2>{curriculum[index].educations.title}</h2>
+          {curriculum[index].educations.items.map((item) => {
+            return (
+              <article>
+                <div class={cardContent}>
+                  <h3>{item.name}</h3>
                   <small>
-                    {education.date_start} - {education.date_end}
+                    {item.date_start} - {item.date_end}
                   </small>
-                  <p>{education.location}</p>
-                  <p>{education.establishment}</p>
-                </li>
-              )
-            })}
-          </ul>
+                  <p>{item.location}</p>
+                  <p>{item.establishment}</p>
+                  <ul>
+                    {item.skills.map((skill) => {
+                      return (
+                        <li>
+                          <button type="button">{skill.text}</button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </article>
+            )
+          })}
         </section>
       )}
       {section === "experience" && (
         <section id="experience">
-          <h2>{experiences[index].title}</h2>
-          <ul>
-            {experiences[index].items.map((experience) => {
-              return (
-                <li>
-                  <h3>{experience.name}</h3>
+          <h2>{curriculum[index].experiences.title}</h2>
+          {curriculum[index].experiences.items.map((item) => {
+            return (
+              <article>
+                <div className={cardContent}>
+                  <h3>{item.name}</h3>
                   <small>
-                    {experience.date_start} - {experience.date_end}
+                    {item.date_start} - {item.date_end}
                   </small>
-                  <p>{experience.location}</p>
-                  <p>{experience.establishment}</p>
+                  <p>{item.location}</p>
+                  <p>{item.establishment}</p>
                   <ul>
-                    {experience.details.map((detail) => {
+                    {item.details.map((detail) => {
                       return <p>{detail}</p>
                     })}
                   </ul>
-                </li>
-              )
-            })}
-          </ul>
+                  <ul>
+                    {item.skills.map((skill) => {
+                      return (
+                        <li>
+                          <button type="button">{skill.text}</button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </article>
+            )
+          })}
         </section>
       )}
       {section === "portfolio" && (
         <section id="portfolio">
-          <h2>{portfolios[index].title}</h2>
-          <ul>
-            {portfolios[index].items.map((portfolio) => {
-              return (
-                <li>
+          <h2>{curriculum[index].portfolios.title}</h2>
+
+          {curriculum[index].portfolios.items.map((item) => {
+            return (
+              <article>
+                <div className={cardContent}>
                   <h3>
-                    <a href={portfolio.repository}>{portfolio.name}</a>
+                    <a href={item.repository}>{item.name}</a>
                   </h3>
                   <small>
-                    {portfolio.date_start} - {portfolio.date_end}
+                    {item.date_start} - {item.date_end}
                   </small>
-                  <p>{portfolio.location}</p>
+                  <p>{item.location}</p>
                   <ul>
-                    {portfolio.details.map((detail) => {
+                    {item.details.map((detail) => {
                       return <p>{detail}</p>
                     })}
                   </ul>
-                  <a href={portfolio.link}>{portfolio.link}</a>
-                </li>
-              )
-            })}
-          </ul>
+                  <a href={item.link}>{item.link}</a>
+                  <ul>
+                    {item.skills.map((skill) => {
+                      return (
+                        <li>
+                          <button type="button">{skill.text}</button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </article>
+            )
+          })}
         </section>
       )}
     </main>
