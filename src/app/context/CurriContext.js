@@ -9,9 +9,6 @@ export const CurriContextProvider = ({ children }) => {
   const [lang, setLang] = useState(
     JSON.parse(localStorage.getItem("langCurricuLine")) || langagues[0]
   )
-  const changeLang = (event) => {
-    setLang(event.target.value)
-  }
   useEffect(() => {
     localStorage.setItem("langCurricuLine", JSON.stringify(lang), [lang])
   }, [lang])
@@ -21,23 +18,27 @@ export const CurriContextProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkModeCurricuLine")) || false
   )
-  const changeDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
   useEffect(() => {
     localStorage.setItem("darkModeCurricuLine", JSON.stringify(darkMode))
   }, [darkMode])
 
   // Section
   const [section, setSection] = useState(
-    () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "portfolio"
+    () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "education"
   )
-  const changeSection = (event) => {
-    setSection(event.target.value)
-  }
   useEffect(() => {
     localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
   }, [section])
+
+  // Style
+  const backgroundImage = darkMode
+    ? "linear-gradient(45deg,rgb(255,126,95),rgb(254,180,123))"
+    : "linear-gradient(45deg,rgb(255,126,95),rgb(254,180,123))"
+  const color = darkMode ? "#000000" : "#ffffff"
+  const style = {
+    backgroundImage,
+    color,
+  }
 
   return (
     <CurriContext.Provider
@@ -45,11 +46,12 @@ export const CurriContextProvider = ({ children }) => {
         langagues,
         index,
         lang,
-        changeLang,
+        setLang,
         darkMode,
-        changeDarkMode,
+        setDarkMode,
         section,
-        changeSection,
+        setSection,
+        style,
       }}
     >
       {children}

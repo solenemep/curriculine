@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-import { CurriContextProvider } from "./context/CurriContext"
 import { NavContextProvider } from "./context/NavContext"
 import { HomeContextProvider } from "./context/HomeContext"
 import { ContentContextProvider } from "./context/ContentContext"
@@ -13,36 +12,49 @@ import Content from "./Content"
 import Contact from "./Contact"
 import Footer from "./Footer"
 
+import { useCurriContext } from "./hook/useCurriContext"
+
 const CurricuLine = () => {
+  const { darkMode } = useCurriContext()
   return (
     <Router>
-      <CurriContextProvider>
-        <NavContextProvider>
-          <Nav />
-        </NavContextProvider>
-        <Switch>
-          <Route exact path="/">
-            <HomeContextProvider>
+      <NavContextProvider>
+        <Nav />
+      </NavContextProvider>
+      <Switch>
+        <Route exact path="/">
+          <HomeContextProvider>
+            <div
+              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
+            >
               <Home />
-            </HomeContextProvider>
-          </Route>
+            </div>
+          </HomeContextProvider>
+        </Route>
 
-          <Route exact path="/curriculum">
-            <ContentContextProvider>
+        <Route exact path="/curriculum">
+          <ContentContextProvider>
+            <div
+              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
+            >
               <Content />
-            </ContentContextProvider>
-          </Route>
+            </div>
+          </ContentContextProvider>
+        </Route>
 
-          <Route exact path="/contact">
-            <ContactContextProvider>
+        <Route exact path="/contact">
+          <ContactContextProvider>
+            <div
+              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
+            >
               <Contact />
-            </ContactContextProvider>
-          </Route>
-        </Switch>
-        <FooterContextProvider>
-          <Footer />
-        </FooterContextProvider>
-      </CurriContextProvider>
+            </div>
+          </ContactContextProvider>
+        </Route>
+      </Switch>
+      <FooterContextProvider>
+        <Footer />
+      </FooterContextProvider>
     </Router>
   )
 }

@@ -24,73 +24,113 @@ const Contact = () => {
     changeSendMessage,
   } = useContactContext()
 
-  const bgContact = darkMode ? "bg-dark" : "bg-light"
-
   return (
-    <div className={bgContact}>
-      <section id="contact" className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <h2>{contacts[index].title}</h2>
-            <ul>
-              <li>
-                <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
-                {contacts[index].address}
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faPhone} /> {contacts[index].phone}
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faEnvelope} /> {contacts[index].mailto}
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faDiscord} /> {contacts[index].discord}
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-6">
-            <h2>{contacts[index].write}</h2>
-            <form onSubmit={submitEmail} id="send-form">
-              <label htmlFor="name">{contacts[index].name}</label>
-              <input
-                id="name"
-                type="text"
-                aria-label="name"
-                value={sendName}
-                onChange={changeSendName}
-                required
-              ></input>
-              <label htmlFor="email">{contacts[index].sendermail}</label>
-              <input
-                id="email"
-                type="email"
-                aria-label="email"
-                value={sendEmail}
-                onChange={changeSendEmail}
-                required
-              ></input>
-              <label htmlFor="subject">{contacts[index].subject}</label>
-              <input
-                id="subject"
-                type="text"
-                aria-label="subject"
-                value={sendSubject}
-                onChange={changeSendSubject}
-                required
-              ></input>
-              <label htmlFor="message">{contacts[index].message}</label>
-              <textarea
-                id="message"
-                aria-label="message"
-                value={sendMessage}
-                onChange={changeSendMessage}
-                required
-              ></textarea>
-              <button type="submit">{contacts[index].send}</button>
-            </form>
-          </div>
-        </div>
-      </section>
+    <div className="container py-5">
+      <div className="row">
+        <h2 className="display-5">{contacts[index].title}</h2>
+        <section id="mail" className="col-lg-8">
+          <form onSubmit={submitEmail} id="send-form" className="my-3">
+            <label className="form-label" htmlFor="name">
+              {contacts[index].name}
+            </label>
+            <input
+              className={
+                darkMode
+                  ? "form-control bg-dark text-white mb-3"
+                  : "form-control mb-3"
+              }
+              id="name"
+              type="text"
+              aria-label="name"
+              value={sendName}
+              onChange={changeSendName}
+              required
+            ></input>
+            <label className="form-label" htmlFor="email">
+              {contacts[index].sendermail}
+            </label>
+            <input
+              className={
+                darkMode
+                  ? "form-control bg-dark text-white mb-3"
+                  : "form-control mb-3"
+              }
+              id="email"
+              type="email"
+              aria-label="email"
+              value={sendEmail}
+              onChange={changeSendEmail}
+              required
+            ></input>
+            <label className="form-label" htmlFor="subject">
+              {contacts[index].subject}
+            </label>
+            <input
+              className={
+                darkMode
+                  ? "form-control bg-dark text-white mb-3"
+                  : "form-control mb-3"
+              }
+              id="subject"
+              type="text"
+              aria-label="subject"
+              value={sendSubject}
+              onChange={changeSendSubject}
+              required
+            ></input>
+            <label className="form-label" htmlFor="message">
+              {contacts[index].message}
+            </label>
+            <textarea
+              className={
+                darkMode
+                  ? "form-control bg-dark text-white mb-3"
+                  : "form-control mb-3"
+              }
+              rows="6"
+              id="message"
+              aria-label="message"
+              value={sendMessage}
+              onChange={changeSendMessage}
+              required
+            ></textarea>
+            <button
+              className={
+                darkMode
+                  ? "mb-3 btn btn-outline-light"
+                  : "mb-3 btn btn-outline-dark"
+              }
+              type="submit"
+            >
+              {contacts[index].send}
+            </button>
+          </form>
+        </section>
+        <section id="coord" className="col-lg-4">
+          <ul>
+            <li className="my-3">
+              <FontAwesomeIcon
+                icon={faMapMarkerAlt}
+                size="2x"
+                className="me-3"
+              />{" "}
+              {contacts[index].address}
+            </li>
+            <li className="my-3">
+              <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
+              {contacts[index].phone}
+            </li>
+            <li className="my-3">
+              <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
+              {contacts[index].mailto}
+            </li>
+            <li className="my-3">
+              <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
+              {contacts[index].discord}
+            </li>
+          </ul>
+        </section>
+      </div>
     </div>
   )
 }

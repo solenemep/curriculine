@@ -10,10 +10,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-h2,
-h3 {
-  text-transform: uppercase;
-}
 
 .bg-navfoot {
   background-color: #000000;
@@ -52,19 +48,12 @@ a {
 article {
   margin-bottom: 2rem;
 }
-.bg-dark {
+.bg-myblack {
   background-color: #000000;
-  color: #ffffff;
 }
-.bg-light {
-  background-color: #ffffff;
-  color: #000000;
-}
-.card-dark {
+.btn-myblack {
   background-color: #000000;
-  border-radius: 2px;
 }
-.card-light {
-  background-color: #ffffff;
-  border-radius: 2px;
+.border-myblack {
+  border: 1px solid #000000;
 }

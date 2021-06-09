@@ -7,26 +7,30 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useNavContext } from "./hook/useNavContext"
 
 const Nav = () => {
-  const { index, darkMode } = useCurriContext()
-  const { home, contacts } = useNavContext()
+  const { index } = useCurriContext()
+  const { home, main, contacts } = useNavContext()
 
   return (
     <nav className="bg-navfoot">
-      <div className="navfoot-items">
-        <Link to="/" aria-label="home page">
+      <section id="routes" className="navfoot-items">
+        <Link to="/" aria-label="home page" className="text-white">
           {home[index].name}
         </Link>
-        <Link to="/curriculum" aria-label="curriculum page">
-          Curriculum
+        <Link
+          to="/curriculum"
+          aria-label="curriculum page"
+          className="text-white"
+        >
+          {main[index].name}
         </Link>
-        <Link to="/contact" aria-label="contact page">
+        <Link to="/contact" aria-label="contact page" className="text-white">
           {contacts[index].title}
         </Link>
-      </div>
-      <div className="navfoot-items">
+      </section>
+      <section id="settings" className="navfoot-items">
         <Langague />
         <DarkMode />
-      </div>
+      </section>
     </nav>
   )
 }

@@ -1,9 +1,12 @@
-import CurricuLine from "./app/CurricuLine";
+import { CurriContextProvider } from "./app/context/CurriContext"
+import CurricuLine from "./app/CurricuLine"
 
 const App = () => {
   return (
-    <CurricuLine />
-  );
+    <CurriContextProvider>
+      <CurricuLine />
+    </CurriContextProvider>
+  )
 }
 
-export default App;
+export default App

@@ -39,10 +39,15 @@ const Sun = (props) => {
 }
 
 const DarkMode = () => {
-  const { darkMode, changeDarkMode } = useCurriContext()
+  const { darkMode, setDarkMode } = useCurriContext()
 
   return (
-    <button type="button" aria-label="Dark Mode" onClick={changeDarkMode}>
+    <button
+      type="button"
+      aria-label="Dark Mode"
+      onClick={() => setDarkMode(!darkMode)}
+      className="btn btn-outline-light btn-sm"
+    >
       {darkMode ? <Sun> </Sun> : <Moon> </Moon>}
     </button>
   )

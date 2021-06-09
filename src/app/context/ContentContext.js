@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react"
 
-import { curriculum } from "../data/curriculum"
+import { main } from "../data/main"
+import { aside } from "../data/aside"
 
 export const ContentContext = createContext()
 
@@ -40,7 +41,8 @@ export const ContentContextProvider = ({ children }) => {
   return (
     <ContentContext.Provider
       value={{
-        curriculum,
+        main,
+        aside,
         //filter,
         //toggleFilter,
       }}
