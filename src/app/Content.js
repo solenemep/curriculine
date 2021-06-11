@@ -34,9 +34,9 @@ const Content = () => {
                     date={item.date}
                     establishment={item.establishment}
                     location={item.location}
+                    section={item.section}
+                    fields={item.fields}
                     skills={item.skills}
-                    field={item.fields}
-                    pathSection={item.pathSection}
                     github={item.github}
                     link={item.link}
                     path={item.path}
@@ -59,19 +59,13 @@ const Content = () => {
               }
               aria-label="select section"
               onChange={(e) => setSection(e.target.value)}
+              value={section}
             >
-              <option value="education" defaultValue={section === "education"}>
-                {main[index].educations.title}
-              </option>
-              <option
-                value="experience"
-                defaultValue={section === "experience"}
-              >
+              <option value="education">{main[index].educations.title}</option>
+              <option value="experience">
                 {main[index].experiences.title}
               </option>
-              <option value="portfolio" defaultValue={section === "portfolio"}>
-                {main[index].portfolios.title}
-              </option>
+              <option value="portfolio">{main[index].portfolios.title}</option>
             </select>
 
             <label htmlFor=""></label>

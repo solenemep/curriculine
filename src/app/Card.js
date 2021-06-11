@@ -16,8 +16,8 @@ const Card = (props) => {
     date,
     establishment,
     location,
-    pathSection,
-    field,
+    section,
+    fields,
     skills,
     github,
     link,
@@ -27,7 +27,7 @@ const Card = (props) => {
 
   return (
     <div className={darkMode ? "card bg-myblack" : "card bg-light"}>
-      <div className="card-header py-3 lead" style={style}>
+      <div className="card-header py-3 h3" style={style}>
         <strong>{title}</strong>
       </div>
       <div className="p-3">
@@ -49,31 +49,51 @@ const Card = (props) => {
             </small>
           )}
         </div>
-        <ul>
-          {details.map((detail) => {
-            return <li key={detail}>{detail}</li>
-          })}
-        </ul>
-        <ul className="list-inline text-end">
-          {skills.map((skill) => {
-            return (
-              <li key={skill.text} className="list-inline-item">
-                <button
-                  type="button"
-                  className={
-                    darkMode ? "btn btn-outline-light" : "btn btn-outline-dark"
-                  }
-                >
-                  {skill.text}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+        <div style={{ position: "relative" }}>
+          <div className="p-4">
+            <ul className="mb-0">
+              {details.map((detail) => {
+                return (
+                  <li key={detail} className="mb-2">
+                    {detail}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <ul
+            className="list-inline text-end mb-0"
+            style={{ position: "absolute", bottom: "0", right: "0" }}
+          >
+            {skills.map((skill) => {
+              return (
+                <li key={skill.text} className="list-inline-item">
+                  <button
+                    type="button"
+                    className={
+                      darkMode
+                        ? "btn btn-outline-light btn-sm"
+                        : "btn btn-sm btn-outline-dark"
+                    }
+                  >
+                    {skill.text}
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
+
       <div className="card-footer">
-        <div className="d-flex flex-row justify-content-between">
-          <p>{field}</p>
+        <div className="d-flex flex-row justify-content-between align-items-center">
+          <div className="d-flex flex-row justify-content-start gap-3">
+            {fields.map((field) => (
+              <p key={field} className="m-0">
+                {field}
+              </p>
+            ))}
+          </div>
           <div className="d-flex flex-row justify-content-end gap-3">
             {github !== "" && (
               <a
@@ -92,7 +112,7 @@ const Card = (props) => {
               <a
                 href={path}
                 className={darkMode ? "text-white" : "text-dark"}
-                onClick={() => setSection(pathSection)}
+                onClick={() => setSection(section)}
               >
                 <FontAwesomeIcon icon={faAngleDoubleRight} size="2x" />
               </a>

@@ -106,29 +106,23 @@ const Contact = () => {
             </button>
           </form>
         </section>
-        <section id="coord" className="col-lg-4">
-          <ul>
-            <li className="my-3">
-              <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                size="2x"
-                className="me-3"
-              />{" "}
-              {contacts[index].address}
-            </li>
-            <li className="my-3">
-              <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
-              {contacts[index].phone}
-            </li>
-            <li className="my-3">
-              <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
-              {contacts[index].mailto}
-            </li>
-            <li className="my-3">
-              <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
-              {contacts[index].discord}
-            </li>
-          </ul>
+        <section id="coord" className="col-lg-4 d-flex flex-column">
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" className="me-3" />{" "}
+            {contacts[index].address}
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
+            {contacts[index].phone}
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
+            {contacts[index].mailto}
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
+            {contacts[index].discord}
+          </p>
         </section>
       </div>
     </div>

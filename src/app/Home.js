@@ -89,9 +89,9 @@ const Home = () => {
                 date={item.date}
                 establishment={item.establishment}
                 location={item.location}
+                section={item.section}
+                fields={item.fields}
                 skills={item.skills}
-                field={item.fields}
-                pathSection={item.pathSection}
                 github={item.github}
                 link={item.link}
                 path={item.path}

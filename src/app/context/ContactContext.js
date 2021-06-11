@@ -31,6 +31,7 @@ export const ContactContextProvider = ({ children }) => {
 
   // Submit
   const submitEmail = () => {}
+
   return (
     <ContactContext.Provider
       value={{
