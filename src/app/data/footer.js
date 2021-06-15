@@ -1,14 +1,14 @@
 export const footer = [
   {
     copyright: "© Solène PETTIER ☀️ - 2021",
-    madeby: "Made with Love, Bootstrap & React",
+    madeby: "Made with Love, React & Chakra UI",
   },
   {
     copyright: "© Solène PETTIER ☀️ - 2021",
-    madeby: "Hecho con Amor, Bootstrap & React",
+    madeby: "Hecho con Amor, React & Chakra UI",
   },
   {
     copyright: "© Solène PETTIER ☀️ - 2021",
-    madeby: "Fait avec Amour, Bootstrap & React",
+    madeby: "Fait avec Amour, React & Chakra UI",
   },
 ]

@@ -9,24 +9,6 @@ code {
     monospace;
 }
 
-.bg-navfoot {
-  background-color: #000000;
-  color: #ffffff;
-  height: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  vertical-align: middle;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.navfoot-items {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
 footer p {
   margin: 0;
 }

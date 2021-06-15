@@ -1,37 +1,121 @@
-import { Link } from "react-router-dom"
+import {
+  Flex,
+  Link,
+  useDisclosure,
+  IconButton,
+  HStack,
+  Box,
+  Stack,
+} from "@chakra-ui/react"
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 
-import DarkMode from "../app/componentsNav/DarkMode"
-import Langague from "../app/componentsNav/Langague"
+import DarkMode from "./componentsNav/DarkMode"
+import Langague from "./componentsNav/Langague"
 
 import { useCurriContext } from "./hook/useCurriContext"
 import { useNavContext } from "./hook/useNavContext"
 
 const Nav = () => {
-  const { index } = useCurriContext()
+  const { index, bgNavFoot, hoverNavFoot } = useCurriContext()
   const { home, main, contacts } = useNavContext()
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <nav className="bg-navfoot">
-      <section id="routes" className="navfoot-items">
-        <Link to="/" aria-label="home page" className="text-white">
-          {home[index].name}
-        </Link>
-        <Link
-          to="/curriculum"
-          aria-label="curriculum page"
-          className="text-white"
-        >
-          {main[index].name}
-        </Link>
-        <Link to="/contact" aria-label="contact page" className="text-white">
-          {contacts[index].title}
-        </Link>
-      </section>
-      <section id="settings" className="navfoot-items">
-        <Langague />
-        <DarkMode />
-      </section>
-    </nav>
+    <Box bg={bgNavFoot} px={4}>
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <IconButton
+          size={"md"}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={"Open Menu"}
+          display={{ md: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+          bg={bgNavFoot}
+          hover={hoverNavFoot}
+        />
+        <HStack id="routes" spacing={8} alignItems={"center"}>
+          <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/"}
+              aria-label={"home page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {home[index].name}
+            </Link>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/curriculum"}
+              aria-label={"curriculum page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].name}
+            </Link>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/contact"}
+              aria-label={"contact page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {contacts[index].title}
+            </Link>
+          </HStack>
+        </HStack>
+
+        <HStack id="settings" h={16} alignItems={"center"}>
+          <Langague />
+          <DarkMode />
+        </HStack>
+      </Flex>
+
+      {isOpen ? (
+        <Box pb={4} display={{ md: "none" }}>
+          <Stack as={"nav"} spacing={2}>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/"}
+              aria-label={"home page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {home[index].name}
+            </Link>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/curriculum"}
+              aria-label={"curriculum page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].name}
+            </Link>
+            <Link
+              style={{ fontWeight: "bold" }}
+              href={"/contact"}
+              aria-label={"contact page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {contacts[index].title}
+            </Link>
+          </Stack>
+        </Box>
+      ) : null}
+    </Box>
   )
 }
 

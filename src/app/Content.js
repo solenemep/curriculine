@@ -3,6 +3,7 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useContentContext } from "./hook/useContentContext"
 
 import Card from "./Card"
+import { Box, VStack, Stack, Heading, HStack } from "@chakra-ui/react"
 
 const Content = () => {
   const { index, darkMode, section, setSection } = useCurriContext()
@@ -20,34 +21,32 @@ const Content = () => {
   }, [[index], [section]])
 
   return (
-    <div className="container py-5">
-      <div className="row">
-        <h2 className="display-5">{list.title}</h2>
-
-        <section id="main" className="col-lg-8">
-          <div className="my-3">
-            {list.items.map((item) => {
-              return (
-                <article key={item.title}>
-                  <Card
-                    title={item.title}
-                    date={item.date}
-                    establishment={item.establishment}
-                    location={item.location}
-                    section={item.section}
-                    fields={item.fields}
-                    skills={item.skills}
-                    github={item.github}
-                    link={item.link}
-                    path={item.path}
-                    details={item.details}
-                  />
-                </article>
-              )
-            })}
-          </div>
-        </section>
-        <section id="aside" className="col-lg-4">
+    <Box mx={16} py={16}>
+      <Heading as="h2" size="lg" mb={8}>
+        {list.title}
+      </Heading>
+      <Stack>
+        <VStack id="main" spacing={8}>
+          {list.items.map((item) => {
+            return (
+              <Card
+                key={item.title}
+                title={item.title}
+                date={item.date}
+                establishment={item.establishment}
+                location={item.location}
+                section={item.section}
+                fields={item.fields}
+                skills={item.skills}
+                github={item.github}
+                link={item.link}
+                path={item.path}
+                details={item.details}
+              />
+            )
+          })}
+        </VStack>
+        <HStack id="aside">
           <form className="my-3">
             <label className="form-label" htmlFor="section">
               {aside[index].change_section}
@@ -71,9 +70,9 @@ const Content = () => {
             <label htmlFor=""></label>
             <select id="" aria-label="" onClick={toggleFilter}></select>
           </form>
-        </section>
-      </div>
-    </div>
+        </HStack>
+      </Stack>
+    </Box>
   )
 }
 

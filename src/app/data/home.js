@@ -3,7 +3,7 @@
 export const home = [
   {
     name: "Solène PETTIER",
-    title: "IT Engineer, Web & ✨Blockchain✨ Developper",
+    title: "IT Engineer, Web & Blockchain Developper",
     paragraph:
       "Hello, my name is Solène, I am 28 years old and I am french from Paris. After intensive mathematics studies and the obtention of my information technology engineer diploma, I framed the development of ERP for various companies interacting directly with client and developer teams. My appetence for technique leaded me to learn decentralized developer profession. Very rigorous and orderly, I got passionated about coding and more particularly development of smart contracts on Blockchain.",
     linkedin: "https://www.linkedin.com/in/solenemhep",
@@ -18,6 +18,7 @@ export const home = [
         establishment: "",
         location: "",
         date: "",
+        section: "experience",
         fields: [],
         skills: [],
         details: [
@@ -28,13 +29,13 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "experience",
       },
       {
         title: "Web development",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: [
@@ -44,13 +45,13 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
       {
         title: "Blockchain development",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: [
@@ -59,13 +60,12 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
     ],
   },
   {
     name: "Solène PETTIER",
-    title: "Ingeniera SI, Desarrolladora Web & ✨Blockchain✨",
+    title: "Ingeniera SI, Desarrolladora Web & Blockchain",
     paragraph:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     linkedin: "https://www.linkedin.com/in/solenemhep",
@@ -80,8 +80,10 @@ export const home = [
         establishment: "",
         location: "",
         date: "",
+        section: "experience",
         fields: [],
         skills: [],
+
         details: [
           "3 años de experiencia en ERP consultoría",
           "Interaciones con clientes y recogida de necesitades",
@@ -90,13 +92,13 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "experience",
       },
       {
         title: "Desarollo Web",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: [
@@ -106,26 +108,25 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
       {
         title: "Desarollo Blockchain",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: ["Ethereum smart contract desarollo con Solidity en Hardhat"],
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
     ],
   },
   {
     name: "Solène PETTIER",
-    title: "Ingénieure SI, Developpeuse Web & ✨Blockchain✨",
+    title: "Ingénieure SI, Developpeuse Web & Blockchain",
     paragraph:
       "Bonjour, je m'appelle Solène, j'ai 28 ans et je suis française originaire de Paris. Après des études de mathématiques poussées et l'obtention d'un diplôme d'ingénieur en systèmes d'information, j'ai encadré le développement d'ERP pour diverses entreprises en relation directe avec le client et les équipes de développeurs. Mon fort penchant pour la technique m'a encouragé à me former au métier de développeur web décentralisé. Très rigoureuse et ordonnée, je me suis découvert une passion pour le code et plus particulièrement le développement de smart contrat sur la Blockchain.",
     linkedin: "https://www.linkedin.com/in/solenemhep",
@@ -140,6 +141,7 @@ export const home = [
         establishment: "",
         location: "",
         date: "",
+        section: "experience",
         fields: [],
         skills: [],
         details: [
@@ -150,13 +152,13 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "experience",
       },
       {
         title: "Développement Web",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: [
@@ -166,13 +168,13 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
       {
         title: "Développement Blockchain",
         establishment: "",
         location: "",
         date: "",
+        section: "portfolio",
         fields: [],
         skills: [],
         details: [
@@ -181,7 +183,6 @@ export const home = [
         link: "",
         github: "",
         path: "/curriculum",
-        pathSection: "portfolio",
       },
     ],
   },

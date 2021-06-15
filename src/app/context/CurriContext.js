@@ -1,3 +1,4 @@
+import { useColorModeValue } from "@chakra-ui/react"
 import { createContext, useState, useEffect } from "react"
 
 import { langagues } from "../data/langagues"
@@ -14,7 +15,21 @@ export const CurriContextProvider = ({ children }) => {
   }, [lang])
   const index = langagues.findIndex((el) => el === lang)
 
-  // DarkMode
+  // Color Mode
+  const bgNavFoot = useColorModeValue("gray.100", "gray.900")
+  const hoverNavFoot = {
+    textDecoration: "none",
+    color: "inherit",
+    bg: useColorModeValue("gray.200", "gray.800"),
+  }
+  const hoverContent = {
+    textDecoration: "none",
+    color: useColorModeValue("red.300", "cyan.200"),
+  }
+
+  const bgContent = useColorModeValue("gray.50", "gray.800")
+  const colorTitle = useColorModeValue("red.300", "cyan.200")
+
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkModeCurricuLine")) || false
   )
@@ -52,6 +67,11 @@ export const CurriContextProvider = ({ children }) => {
         section,
         setSection,
         style,
+        bgNavFoot,
+        hoverNavFoot,
+        bgContent,
+        colorTitle,
+        hoverContent,
       }}
     >
       {children}

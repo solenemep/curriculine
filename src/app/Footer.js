@@ -1,19 +1,22 @@
+import { Box, Flex, Text } from "@chakra-ui/react"
 import { useCurriContext } from "./hook/useCurriContext"
 import { useFooterContext } from "./hook/useFooterContext"
 
 const Footer = () => {
-  const { index } = useCurriContext()
+  const { index, bgNavFoot } = useCurriContext()
   const { footer } = useFooterContext()
 
   return (
-    <footer className="bg-navfoot d-flex flex-row align-items-center">
-      <section id="madeby" className="navfoot-items">
-        <p>{footer[index].madeby}</p>
-      </section>
-      <section id="copyright" className="navfoot-items">
-        <p>{footer[index].copyright}</p>
-      </section>
-    </footer>
+    <Box bg={bgNavFoot} px={4}>
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Box id="madeby" px={2} py={1}>
+          <Text style={{ fontWeight: "bold" }}>{footer[index].madeby}</Text>
+        </Box>
+        <Box id="copyright" px={2} py={1}>
+          <Text style={{ fontWeight: "bold" }}>{footer[index].copyright}</Text>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 

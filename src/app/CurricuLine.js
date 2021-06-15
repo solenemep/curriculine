@@ -13,9 +13,10 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 
 import { useCurriContext } from "./hook/useCurriContext"
+import { Box } from "@chakra-ui/react"
 
 const CurricuLine = () => {
-  const { darkMode } = useCurriContext()
+  const { bgContent } = useCurriContext()
   return (
     <Router>
       <NavContextProvider>
@@ -24,31 +25,25 @@ const CurricuLine = () => {
       <Switch>
         <Route exact path="/">
           <HomeContextProvider>
-            <div
-              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
-            >
+            <Box bg={bgContent} minH={"100vh"}>
               <Home />
-            </div>
+            </Box>
           </HomeContextProvider>
         </Route>
 
         <Route exact path="/curriculum">
           <ContentContextProvider>
-            <div
-              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
-            >
+            <Box bg={bgContent} minH={"100vh"}>
               <Content />
-            </div>
+            </Box>
           </ContentContextProvider>
         </Route>
 
         <Route exact path="/contact">
           <ContactContextProvider>
-            <div
-              className={darkMode ? "bg-dark text-white" : "bg-white text-dark"}
-            >
+            <Box bg={bgContent} minH={"100vh"}>
               <Contact />
-            </div>
+            </Box>
           </ContactContextProvider>
         </Route>
       </Switch>

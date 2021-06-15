@@ -1,24 +1,32 @@
+import { Box, Button } from "@chakra-ui/react"
 import { useCurriContext } from "../hook/useCurriContext"
 
 const Langague = () => {
-  const { langagues, lang, setLang } = useCurriContext()
+  const { langagues, lang, setLang, bgNavFoot, hoverNavFoot } =
+    useCurriContext()
+
   return (
-    <div role="group" aria-label="langague choice" className="btn-group">
+    <Box role="group" aria-label="langague choice" className="btn-group">
       {langagues.map((langague) => {
         return (
-          <button
+          <Button
+            px={2}
+            py={1}
+            mx={1}
+            size={"md"}
             key={langague}
             type="button"
             value={langague}
             onClick={(e) => setLang(e.target.value)}
             disabled={langague === lang}
-            className="btn btn-outline-light btn-sm"
+            bg={bgNavFoot}
+            _hover={hoverNavFoot}
           >
             {langague}
-          </button>
+          </Button>
         )
       })}
-    </div>
+    </Box>
   )
 }
 export default Langague
