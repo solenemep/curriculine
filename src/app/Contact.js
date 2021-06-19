@@ -8,9 +8,20 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons"
+import {
+  Box,
+  Flex,
+  Heading,
+  VStack,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+  Button,
+} from "@chakra-ui/react"
 
 const Contact = () => {
-  const { index, darkMode } = useCurriContext()
+  const { lang, index } = useCurriContext()
   const {
     contacts,
     submitEmail,
@@ -25,107 +36,74 @@ const Contact = () => {
   } = useContactContext()
 
   return (
-    <div className="container py-5">
-      <div className="row">
-        <h2 className="display-5">{contacts[index].title}</h2>
-        <section id="mail" className="col-lg-8">
-          <form onSubmit={submitEmail} id="send-form" className="my-3">
-            <label className="form-label" htmlFor="name">
-              {contacts[index].name}
-            </label>
-            <input
-              className={
-                darkMode
-                  ? "form-control bg-dark text-white mb-3"
-                  : "form-control mb-3"
-              }
-              id="name"
-              type="text"
-              aria-label="name"
-              value={sendName}
-              onChange={changeSendName}
-              required
-            ></input>
-            <label className="form-label" htmlFor="email">
-              {contacts[index].sendermail}
-            </label>
-            <input
-              className={
-                darkMode
-                  ? "form-control bg-dark text-white mb-3"
-                  : "form-control mb-3"
-              }
-              id="email"
-              type="email"
-              aria-label="email"
-              value={sendEmail}
-              onChange={changeSendEmail}
-              required
-            ></input>
-            <label className="form-label" htmlFor="subject">
-              {contacts[index].subject}
-            </label>
-            <input
-              className={
-                darkMode
-                  ? "form-control bg-dark text-white mb-3"
-                  : "form-control mb-3"
-              }
-              id="subject"
-              type="text"
-              aria-label="subject"
-              value={sendSubject}
-              onChange={changeSendSubject}
-              required
-            ></input>
-            <label className="form-label" htmlFor="message">
-              {contacts[index].message}
-            </label>
-            <textarea
-              className={
-                darkMode
-                  ? "form-control bg-dark text-white mb-3"
-                  : "form-control mb-3"
-              }
-              rows="6"
-              id="message"
-              aria-label="message"
-              value={sendMessage}
-              onChange={changeSendMessage}
-              required
-            ></textarea>
-            <button
-              className={
-                darkMode
-                  ? "mb-3 btn btn-outline-light"
-                  : "mb-3 btn btn-outline-dark"
-              }
-              type="submit"
-            >
-              {contacts[index].send}
-            </button>
-          </form>
-        </section>
-        <section id="coord" className="col-lg-4 d-flex flex-column">
-          <p>
-            <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" className="me-3" />{" "}
-            {contacts[index].address}
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
-            {contacts[index].phone}
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
-            {contacts[index].mailto}
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
-            {contacts[index].discord}
-          </p>
-        </section>
-      </div>
-    </div>
+    <Box mx={16} py={16}>
+      <Heading as="h2" size="lg" mb={8}>
+        {contacts[lang].title}
+      </Heading>
+      <VStack id="mail">
+        <FormControl id="name" isRequired>
+          <FormLabel>{contacts[index].name}</FormLabel>
+          <Input
+            type="text"
+            aria-label="name"
+            value={sendName}
+            onChange={changeSendName}
+            required
+          />
+        </FormControl>
+        <FormControl id="email" isRequired>
+          <FormLabel>{contacts[index].sendermail}</FormLabel>
+          <Input
+            type="email"
+            aria-label="email"
+            value={sendEmail}
+            onChange={changeSendEmail}
+            required
+          />
+        </FormControl>
+        <FormControl id="subject">
+          <FormLabel>{contacts[index].subject}</FormLabel>
+          <Input
+            type="text"
+            aria-label="subject"
+            value={sendSubject}
+            onChange={changeSendSubject}
+            required
+          />
+        </FormControl>
+        <FormControl id="message" isRequired>
+          <FormLabel>{contacts[index].message}</FormLabel>
+          <Textarea
+            rows="6"
+            aria-label="message"
+            value={sendMessage}
+            onChange={changeSendMessage}
+            required
+          />
+        </FormControl>
+        <Button type="submit" onSubmit={submitEmail}>
+          {contacts[index].send}
+        </Button>
+      </VStack>
+      <Flex direction={"column"} alignItems={"start"} id="coord">
+        <Box>
+          <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" className="me-3" />{" "}
+          {contacts[index].address}
+        </Box>
+        <Box>
+          <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
+          {contacts[index].phone}
+        </Box>
+        <Box>
+          <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
+          {contacts[index].mailto}
+        </Box>
+        <Box>
+          <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
+          {contacts[index].discord}
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 

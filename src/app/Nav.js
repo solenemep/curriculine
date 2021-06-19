@@ -27,13 +27,13 @@ const Nav = () => {
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           aria-label={"Open Menu"}
-          display={{ md: "none" }}
+          display={{ lg: "none" }}
           onClick={isOpen ? onClose : onOpen}
           bg={bgNavFoot}
           hover={hoverNavFoot}
         />
         <HStack id="routes" spacing={8} alignItems={"center"}>
-          <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+          <HStack as={"nav"} spacing={4} display={{ base: "none", lg: "flex" }}>
             <Link
               style={{ fontWeight: "bold" }}
               href={"/"}
@@ -55,6 +55,36 @@ const Nav = () => {
               _hover={hoverNavFoot}
             >
               {main[index].name}
+            </Link>
+            <Link
+              href={"/curriculum"}
+              aria-label={"education page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].educations.title}
+            </Link>
+            <Link
+              href={"/curriculum"}
+              aria-label={"experience page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].experiences.title}
+            </Link>
+            <Link
+              href={"/contact"}
+              aria-label={"portfolio page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].portfolios.title}
             </Link>
             <Link
               style={{ fontWeight: "bold" }}
@@ -77,7 +107,7 @@ const Nav = () => {
       </Flex>
 
       {isOpen ? (
-        <Box pb={4} display={{ md: "none" }}>
+        <Box pb={4} display={{ lg: "none" }}>
           <Stack as={"nav"} spacing={2}>
             <Link
               style={{ fontWeight: "bold" }}
@@ -100,6 +130,36 @@ const Nav = () => {
               _hover={hoverNavFoot}
             >
               {main[index].name}
+            </Link>
+            <Link
+              href={"/curriculum"}
+              aria-label={"education page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].educations.title}
+            </Link>
+            <Link
+              href={"/curriculum"}
+              aria-label={"experience page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].experiences.title}
+            </Link>
+            <Link
+              href={"/contact"}
+              aria-label={"portfolio page"}
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={hoverNavFoot}
+            >
+              {main[index].portfolios.title}
             </Link>
             <Link
               style={{ fontWeight: "bold" }}

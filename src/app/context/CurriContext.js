@@ -13,7 +13,13 @@ export const CurriContextProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("langCurricuLine", JSON.stringify(lang), [lang])
   }, [lang])
-  const index = langagues.findIndex((el) => el === lang)
+
+  // Index
+  // const index = langagues.findIndex((el) => el === lang)
+  const [index, setIndex] = useState(langagues[0])
+  useEffect(() => {
+    setIndex(langagues.findIndex((el) => el === lang))
+  }, [lang])
 
   // Color Mode
   const bgNavFoot = useColorModeValue("gray.100", "gray.900")

@@ -18,7 +18,7 @@ const Content = () => {
     } else if (section === "portfolio") {
       setList(main[index].portfolios)
     }
-  }, [[index], [section]])
+  }, [index, main, section])
 
   return (
     <Box mx={16} py={16}>
