@@ -15,33 +15,24 @@ export const CurriContextProvider = ({ children }) => {
   }, [lang])
 
   // Index
-  // const index = langagues.findIndex((el) => el === lang)
-  const [index, setIndex] = useState(langagues[0])
-  useEffect(() => {
-    setIndex(langagues.findIndex((el) => el === lang))
-  }, [lang])
+  const index = langagues.findIndex((el) => el === lang)
 
   // Color Mode
-  const bgNavFoot = useColorModeValue("gray.100", "gray.900")
+  const bgNavFoot = useColorModeValue("white", "gray.900")
+  const bgContent = useColorModeValue("white", "gray.900")
+
   const hoverNavFoot = {
     textDecoration: "none",
-    color: "inherit",
-    bg: useColorModeValue("gray.200", "gray.800"),
+    color: useColorModeValue("gray.600", "gray.400"),
+    bg: "inherit",
   }
   const hoverContent = {
     textDecoration: "none",
-    color: useColorModeValue("red.300", "cyan.200"),
+    color: useColorModeValue("gray.600", "gray.400"),
+    bg: "inherit",
   }
-
-  const bgContent = useColorModeValue("gray.50", "gray.800")
-  const colorTitle = useColorModeValue("red.300", "cyan.200")
-
-  const [darkMode, setDarkMode] = useState(
-    JSON.parse(localStorage.getItem("darkModeCurricuLine")) || false
-  )
-  useEffect(() => {
-    localStorage.setItem("darkModeCurricuLine", JSON.stringify(darkMode))
-  }, [darkMode])
+  const colorCard = useColorModeValue("black", "black")
+  const colorScheme = useColorModeValue("gray", "yellow")
 
   // Section
   const [section, setSection] = useState(
@@ -51,16 +42,6 @@ export const CurriContextProvider = ({ children }) => {
     localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
   }, [section])
 
-  // Style
-  const backgroundImage = darkMode
-    ? "linear-gradient(45deg,rgb(255,126,95),rgb(254,180,123))"
-    : "linear-gradient(45deg,rgb(255,126,95),rgb(254,180,123))"
-  const color = darkMode ? "#000000" : "#ffffff"
-  const style = {
-    backgroundImage,
-    color,
-  }
-
   return (
     <CurriContext.Provider
       value={{
@@ -68,16 +49,14 @@ export const CurriContextProvider = ({ children }) => {
         index,
         lang,
         setLang,
-        darkMode,
-        setDarkMode,
         section,
         setSection,
-        style,
         bgNavFoot,
         hoverNavFoot,
         bgContent,
-        colorTitle,
+        colorCard,
         hoverContent,
+        colorScheme,
       }}
     >
       {children}

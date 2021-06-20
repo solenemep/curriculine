@@ -5,24 +5,29 @@ import {
   faMap,
 } from "@fortawesome/free-regular-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faAngleDoubleRight, faLink } from "@fortawesome/free-solid-svg-icons"
+import {
+  faAngleDoubleRight,
+  faCode,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons"
 
 import { useCurriContext } from "./hook/useCurriContext"
 import {
   Box,
   Heading,
   HStack,
-  Button,
   Flex,
   Link,
-  Spacer,
+  Tag,
+  Wrap,
+  WrapItem,
+  Badge,
 } from "@chakra-ui/react"
-import { ArrowForwardIcon } from "@chakra-ui/icons"
 
 const Card = (props) => {
-  const { setSection, bgNavFoot, hoverNavFoot, colorTitle, hoverContent } =
-    useCurriContext()
+  const { setSection, colorCard, hoverContent } = useCurriContext()
   const {
+    color,
     title,
     date,
     establishment,
@@ -37,25 +42,31 @@ const Card = (props) => {
   } = props
 
   return (
-    <Box bg={bgNavFoot} rounded={"md"} shadow={"xs"} width={"100%"}>
+    <Box
+      bg={`${color}.100`}
+      color={colorCard}
+      rounded={"md"}
+      width={"100%"}
+      _hover={{
+        transform: "scale(1.03)",
+        transition: "0.3s",
+      }}
+      shadow={"lg"}
+    >
       <Flex direction={"column"} alignItems={"left"} p={8}>
         <Flex justifyContent={"space-between"} alignItems={"center"}>
-          <Heading
-            as="h2"
-            size="lg"
-            color={colorTitle}
-            style={{ fontWeight: "bold" }}
-          >
+          <Heading as="h2" size="lg" style={{ fontWeight: "bold" }}>
             {title}
           </Heading>
+
           <HStack spacing={4}>
             {github !== "" && (
-              <Link _hover={hoverContent} href={github}>
-                <FontAwesomeIcon icon={faGithub} />
+              <Link _hover={hoverContent} href={github} isExternal>
+                <FontAwesomeIcon icon={faCode} />
               </Link>
             )}
             {link !== "" && (
-              <Link _hover={hoverContent} href={link}>
+              <Link _hover={hoverContent} href={link} isExternal>
                 <FontAwesomeIcon icon={faLink} />
               </Link>
             )}
@@ -92,45 +103,36 @@ const Card = (props) => {
           </HStack>
         )}
 
+        {location !== [] && (
+          <HStack justifyContent={"space-between"} mt={4}>
+            {fields.map((field) => {
+              return <Badge colorScheme={color}>{field}</Badge>
+            })}
+          </HStack>
+        )}
+
         <Flex direction={"column"} mt={8}>
           {details.map((detail) => {
             return (
               <HStack key={detail} mb={2}>
-                <ArrowForwardIcon />
                 <small>{detail}</small>
               </HStack>
             )
           })}
         </Flex>
 
-        {(skills !== [] || fields !== []) && (
-          <HStack mt={4}>
-            <Spacer />
+        {skills !== [] && (
+          <Wrap mt={4}>
             {skills.map((skill) => {
               return (
-                <Button
-                  size={"sm"}
-                  key={skill.text}
-                  type="button"
-                  bg={bgNavFoot}
-                  _hover={hoverNavFoot}
-                >
-                  {skill.text}
-                </Button>
+                <WrapItem>
+                  <Tag variant={"solid"} key={skill} colorScheme={color}>
+                    {skill}
+                  </Tag>
+                </WrapItem>
               )
             })}
-            {fields.map((field) => (
-              <Button
-                size={"sm"}
-                key={field}
-                type="button"
-                bg={bgNavFoot}
-                _hover={hoverNavFoot}
-              >
-                {field}
-              </Button>
-            ))}
-          </HStack>
+          </Wrap>
         )}
       </Flex>
     </Box>

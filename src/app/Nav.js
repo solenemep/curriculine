@@ -5,7 +5,8 @@ import {
   IconButton,
   HStack,
   Box,
-  Stack,
+  VStack,
+  Heading,
 } from "@chakra-ui/react"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 
@@ -16,22 +17,27 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useNavContext } from "./hook/useNavContext"
 
 const Nav = () => {
-  const { index, bgNavFoot, hoverNavFoot } = useCurriContext()
+  const { lang, bgNavFoot, hoverNavFoot, setSection } = useCurriContext()
   const { home, main, contacts } = useNavContext()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: navIsOpen,
+    onOpen: navOnOpen,
+    onClose: navOnClose,
+  } = useDisclosure()
 
   return (
-    <Box bg={bgNavFoot} px={4}>
+    <Box bg={bgNavFoot} px={4} style={{ position: "sticky", top: "0" }}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           aria-label={"Open Menu"}
           display={{ lg: "none" }}
-          onClick={isOpen ? onClose : onOpen}
+          onClick={navIsOpen ? navOnClose : navOnOpen}
           bg={bgNavFoot}
-          hover={hoverNavFoot}
-        />
+          _hover={hoverNavFoot}
+        >
+          {navIsOpen ? <CloseIcon /> : <HamburgerIcon />}
+        </IconButton>
         <HStack id="routes" spacing={8} alignItems={"center"}>
           <HStack as={"nav"} spacing={4} display={{ base: "none", lg: "flex" }}>
             <Link
@@ -43,19 +49,9 @@ const Nav = () => {
               rounded={"md"}
               _hover={hoverNavFoot}
             >
-              {home[index].name}
+              {home.title[lang]}
             </Link>
-            <Link
-              style={{ fontWeight: "bold" }}
-              href={"/curriculum"}
-              aria-label={"curriculum page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-            >
-              {main[index].name}
-            </Link>
+
             <Link
               href={"/curriculum"}
               aria-label={"education page"}
@@ -63,9 +59,11 @@ const Nav = () => {
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("education")}
             >
-              {main[index].educations.title}
+              {main.education.title[lang]}
             </Link>
+
             <Link
               href={"/curriculum"}
               aria-label={"experience page"}
@@ -73,21 +71,24 @@ const Nav = () => {
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("experience")}
             >
-              {main[index].experiences.title}
+              {main.experience.title[lang]}
             </Link>
+
             <Link
-              href={"/contact"}
+              href={"/curriculum"}
               aria-label={"portfolio page"}
               px={2}
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("portfolio")}
             >
-              {main[index].portfolios.title}
+              {main.portfolio.title[lang]}
             </Link>
+
             <Link
-              style={{ fontWeight: "bold" }}
               href={"/contact"}
               aria-label={"contact page"}
               px={2}
@@ -95,20 +96,19 @@ const Nav = () => {
               rounded={"md"}
               _hover={hoverNavFoot}
             >
-              {contacts[index].title}
+              {contacts.title[lang]}
             </Link>
           </HStack>
         </HStack>
-
         <HStack id="settings" h={16} alignItems={"center"}>
           <Langague />
           <DarkMode />
         </HStack>
       </Flex>
 
-      {isOpen ? (
+      {navIsOpen ? (
         <Box pb={4} display={{ lg: "none" }}>
-          <Stack as={"nav"} spacing={2}>
+          <VStack as={"nav"} spacing={2} alignItems={"left"}>
             <Link
               style={{ fontWeight: "bold" }}
               href={"/"}
@@ -118,19 +118,13 @@ const Nav = () => {
               rounded={"md"}
               _hover={hoverNavFoot}
             >
-              {home[index].name}
+              <HStack>
+                <Heading as="h1" size={"sm"}>
+                  {home.name}
+                </Heading>
+              </HStack>
             </Link>
-            <Link
-              style={{ fontWeight: "bold" }}
-              href={"/curriculum"}
-              aria-label={"curriculum page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-            >
-              {main[index].name}
-            </Link>
+
             <Link
               href={"/curriculum"}
               aria-label={"education page"}
@@ -138,9 +132,11 @@ const Nav = () => {
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("education")}
             >
-              {main[index].educations.title}
+              {main.education.title[lang]}
             </Link>
+
             <Link
               href={"/curriculum"}
               aria-label={"experience page"}
@@ -148,21 +144,24 @@ const Nav = () => {
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("experience")}
             >
-              {main[index].experiences.title}
+              {main.experience.title[lang]}
             </Link>
+
             <Link
-              href={"/contact"}
+              href={"/curriculum"}
               aria-label={"portfolio page"}
               px={2}
               py={1}
               rounded={"md"}
               _hover={hoverNavFoot}
+              onClick={() => setSection("portfolio")}
             >
-              {main[index].portfolios.title}
+              {main.portfolio.title[lang]}
             </Link>
+
             <Link
-              style={{ fontWeight: "bold" }}
               href={"/contact"}
               aria-label={"contact page"}
               px={2}
@@ -170,9 +169,9 @@ const Nav = () => {
               rounded={"md"}
               _hover={hoverNavFoot}
             >
-              {contacts[index].title}
+              {contacts.title[lang]}
             </Link>
-          </Stack>
+          </VStack>
         </Box>
       ) : null}
     </Box>

@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useCurriContext } from "../hook/useCurriContext"
 
 const DarkMode = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode, bgNavFoot } = useColorMode()
   const { hoverNavFoot } = useCurriContext()
 
   return (
@@ -16,7 +16,7 @@ const DarkMode = () => {
       type="button"
       aria-label="Dark Mode"
       onClick={toggleColorMode}
-      bg={useColorModeValue("gray.100", "gray.900")}
+      bg={bgNavFoot}
       _hover={hoverNavFoot}
     >
       {colorMode === "light" ? <MoonIcon /> : <SunIcon />}

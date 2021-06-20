@@ -3,17 +3,17 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useFooterContext } from "./hook/useFooterContext"
 
 const Footer = () => {
-  const { index, bgNavFoot } = useCurriContext()
+  const { lang, bgNavFoot } = useCurriContext()
   const { footer } = useFooterContext()
 
   return (
     <Box bg={bgNavFoot} px={4}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box id="madeby" px={2} py={1}>
-          <Text style={{ fontWeight: "bold" }}>{footer[index].madeby}</Text>
+          <Text>{footer.madeby[lang]}</Text>
         </Box>
         <Box id="copyright" px={2} py={1}>
-          <Text style={{ fontWeight: "bold" }}>{footer[index].copyright}</Text>
+          <Text>{footer.copyright}</Text>
         </Box>
       </Flex>
     </Box>

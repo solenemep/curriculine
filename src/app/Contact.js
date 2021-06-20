@@ -18,10 +18,16 @@ import {
   Input,
   Textarea,
   Button,
+  Badge,
+  Wrap,
+  WrapItem,
+  Tag,
+  HStack,
+  Text,
 } from "@chakra-ui/react"
 
 const Contact = () => {
-  const { lang, index } = useCurriContext()
+  const { lang, hoverNavFoot, colorCard } = useCurriContext()
   const {
     contacts,
     submitEmail,
@@ -37,12 +43,58 @@ const Contact = () => {
 
   return (
     <Box mx={16} py={16}>
-      <Heading as="h2" size="lg" mb={8}>
-        {contacts[lang].title}
+      <Heading
+        Heading
+        as="h2"
+        style={{ textTransform: "uppercase" }}
+        size="2xl"
+        mb={8}
+      >
+        {contacts.title[lang]}
       </Heading>
-      <VStack id="mail">
+      <Wrap id="coord" mb={8}>
+        <WrapItem>
+          <Tag colorScheme={"pink"} fontSize={"md"}>
+            <HStack spacing={2}>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <Text>{contacts.address[lang]}</Text>
+            </HStack>
+          </Tag>
+        </WrapItem>
+        <WrapItem>
+          <Tag colorScheme={"red"} fontSize={"md"}>
+            <HStack spacing={2}>
+              <FontAwesomeIcon icon={faPhone} />
+              <Text>{contacts.phone}</Text>
+            </HStack>
+          </Tag>
+        </WrapItem>
+        <WrapItem>
+          <Tag colorScheme={"cyan"} fontSize={"md"}>
+            <HStack spacing={2}>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <Text>{contacts.mailto}</Text>
+            </HStack>
+          </Tag>
+        </WrapItem>
+        <WrapItem>
+          <Tag colorScheme={"purple"} fontSize={"md"}>
+            <HStack spacing={2}>
+              <FontAwesomeIcon icon={faDiscord} />
+              <Text>{contacts.discord}</Text>
+            </HStack>
+          </Tag>
+        </WrapItem>
+      </Wrap>
+      <VStack
+        id="mail"
+        mb={8}
+        as={"form"}
+        onSubmit={submitEmail}
+        alignItems={"start"}
+      >
         <FormControl id="name" isRequired>
-          <FormLabel>{contacts[index].name}</FormLabel>
+          <FormLabel>{contacts.name[lang]}</FormLabel>
           <Input
             type="text"
             aria-label="name"
@@ -52,7 +104,7 @@ const Contact = () => {
           />
         </FormControl>
         <FormControl id="email" isRequired>
-          <FormLabel>{contacts[index].sendermail}</FormLabel>
+          <FormLabel>{contacts.mail[lang]}</FormLabel>
           <Input
             type="email"
             aria-label="email"
@@ -62,7 +114,7 @@ const Contact = () => {
           />
         </FormControl>
         <FormControl id="subject">
-          <FormLabel>{contacts[index].subject}</FormLabel>
+          <FormLabel>{contacts.subject[lang]}</FormLabel>
           <Input
             type="text"
             aria-label="subject"
@@ -72,7 +124,7 @@ const Contact = () => {
           />
         </FormControl>
         <FormControl id="message" isRequired>
-          <FormLabel>{contacts[index].message}</FormLabel>
+          <FormLabel>{contacts.message[lang]}</FormLabel>
           <Textarea
             rows="6"
             aria-label="message"
@@ -81,28 +133,15 @@ const Contact = () => {
             required
           />
         </FormControl>
-        <Button type="submit" onSubmit={submitEmail}>
-          {contacts[index].send}
+        <Button
+          color={colorCard}
+          type="submit"
+          bg={"red.100"}
+          _hover={hoverNavFoot}
+        >
+          {contacts.send[lang]}
         </Button>
       </VStack>
-      <Flex direction={"column"} alignItems={"start"} id="coord">
-        <Box>
-          <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" className="me-3" />{" "}
-          {contacts[index].address}
-        </Box>
-        <Box>
-          <FontAwesomeIcon icon={faPhone} size="2x" className="me-3" />{" "}
-          {contacts[index].phone}
-        </Box>
-        <Box>
-          <FontAwesomeIcon icon={faEnvelope} size="2x" className="me-3" />{" "}
-          {contacts[index].mailto}
-        </Box>
-        <Box>
-          <FontAwesomeIcon icon={faDiscord} size="2x" className="me-3" />{" "}
-          {contacts[index].discord}
-        </Box>
-      </Flex>
     </Box>
   )
 }
