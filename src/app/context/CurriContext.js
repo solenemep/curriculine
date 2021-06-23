@@ -18,8 +18,9 @@ export const CurriContextProvider = ({ children }) => {
   const index = langagues.findIndex((el) => el === lang)
 
   // Color Mode
-  const bgNavFoot = useColorModeValue("white", "gray.900")
+  const bgNav = useColorModeValue("whiteAlpha.900", "grayAlpha.900")
   const bgContent = useColorModeValue("white", "gray.900")
+  const bgFoot = "gray.900"
 
   const hoverNavFoot = {
     textDecoration: "none",
@@ -31,7 +32,9 @@ export const CurriContextProvider = ({ children }) => {
     color: useColorModeValue("gray.600", "gray.400"),
     bg: "inherit",
   }
+  const colorFoot = "white"
   const colorCard = useColorModeValue("black", "black")
+  const colorTag = useColorModeValue("white", "black")
   const colorScheme = useColorModeValue("gray", "yellow")
 
   // Section
@@ -42,6 +45,22 @@ export const CurriContextProvider = ({ children }) => {
     localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
   }, [section])
 
+  // Filter
+  const [filter, setFilter] = useState(
+    () => JSON.parse(localStorage.getItem("filterCurriculine")) || []
+  )
+  const toggleFilter = (event) => {
+    event.preventDefault()
+    if (filter.some((elem) => elem === Number(event.target.value))) {
+      setFilter(filter.filter((elem) => elem !== Number(event.target.value)))
+    } else {
+      setFilter([...filter, Number(event.target.value)])
+    }
+  }
+  useEffect(() => {
+    localStorage.setItem("filterCurriculine", JSON.stringify(filter))
+  }, [filter])
+
   return (
     <CurriContext.Provider
       value={{
@@ -51,12 +70,18 @@ export const CurriContextProvider = ({ children }) => {
         setLang,
         section,
         setSection,
-        bgNavFoot,
+        filter,
+        setFilter,
+        toggleFilter,
+        bgNav,
+        bgFoot,
+        colorFoot,
         hoverNavFoot,
         bgContent,
         colorCard,
         hoverContent,
         colorScheme,
+        colorTag,
       }}
     >
       {children}

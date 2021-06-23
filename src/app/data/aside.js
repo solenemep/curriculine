@@ -1,11 +1,7 @@
-export const aside = [
-  {
-    change_section: "Choose the section",
+export const aside = {
+  changeSection: {
+    EN: "Choose the section",
+    ES: "Elegir la sección",
+    FR: "Choisir la section",
   },
-  {
-    change_section: "Elegir la sección",
-  },
-  {
-    change_section: "Choisir la section",
-  },
-]
+}

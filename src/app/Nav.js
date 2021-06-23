@@ -7,6 +7,7 @@ import {
   Box,
   VStack,
   Heading,
+  Fade,
 } from "@chakra-ui/react"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 
@@ -17,7 +18,7 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useNavContext } from "./hook/useNavContext"
 
 const Nav = () => {
-  const { lang, bgNavFoot, hoverNavFoot, setSection } = useCurriContext()
+  const { lang, bgNav, hoverNavFoot, setSection } = useCurriContext()
   const { home, main, contacts } = useNavContext()
   const {
     isOpen: navIsOpen,
@@ -26,14 +27,14 @@ const Nav = () => {
   } = useDisclosure()
 
   return (
-    <Box bg={bgNavFoot} px={4} style={{ position: "sticky", top: "0" }}>
+    <Box bg={bgNav} position="fixed" px={4} w="100%" zIndex="sticky">
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           aria-label={"Open Menu"}
           display={{ lg: "none" }}
           onClick={navIsOpen ? navOnClose : navOnOpen}
-          bg={bgNavFoot}
+          bg={bgNav}
           _hover={hoverNavFoot}
         >
           {navIsOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -107,72 +108,74 @@ const Nav = () => {
       </Flex>
 
       {navIsOpen ? (
-        <Box pb={4} display={{ lg: "none" }}>
-          <VStack as={"nav"} spacing={2} alignItems={"left"}>
-            <Link
-              style={{ fontWeight: "bold" }}
-              href={"/"}
-              aria-label={"home page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-            >
-              <HStack>
-                <Heading as="h1" size={"sm"}>
-                  {home.name}
-                </Heading>
-              </HStack>
-            </Link>
+        <Fade in={navIsOpen} unmountOnExit={true}>
+          <Box pb={4} display={{ lg: "none" }}>
+            <VStack as={"nav"} spacing={2} alignItems={"left"}>
+              <Link
+                style={{ fontWeight: "bold" }}
+                href={"/"}
+                aria-label={"home page"}
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={hoverNavFoot}
+              >
+                <HStack>
+                  <Heading as="h1" size={"sm"}>
+                    {home.name}
+                  </Heading>
+                </HStack>
+              </Link>
 
-            <Link
-              href={"/curriculum"}
-              aria-label={"education page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-              onClick={() => setSection("education")}
-            >
-              {main.education.title[lang]}
-            </Link>
+              <Link
+                href={"/curriculum"}
+                aria-label={"education page"}
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={hoverNavFoot}
+                onClick={() => setSection("education")}
+              >
+                {main.education.title[lang]}
+              </Link>
 
-            <Link
-              href={"/curriculum"}
-              aria-label={"experience page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-              onClick={() => setSection("experience")}
-            >
-              {main.experience.title[lang]}
-            </Link>
+              <Link
+                href={"/curriculum"}
+                aria-label={"experience page"}
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={hoverNavFoot}
+                onClick={() => setSection("experience")}
+              >
+                {main.experience.title[lang]}
+              </Link>
 
-            <Link
-              href={"/curriculum"}
-              aria-label={"portfolio page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-              onClick={() => setSection("portfolio")}
-            >
-              {main.portfolio.title[lang]}
-            </Link>
+              <Link
+                href={"/curriculum"}
+                aria-label={"portfolio page"}
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={hoverNavFoot}
+                onClick={() => setSection("portfolio")}
+              >
+                {main.portfolio.title[lang]}
+              </Link>
 
-            <Link
-              href={"/contact"}
-              aria-label={"contact page"}
-              px={2}
-              py={1}
-              rounded={"md"}
-              _hover={hoverNavFoot}
-            >
-              {contacts.title[lang]}
-            </Link>
-          </VStack>
-        </Box>
+              <Link
+                href={"/contact"}
+                aria-label={"contact page"}
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={hoverNavFoot}
+              >
+                {contacts.title[lang]}
+              </Link>
+            </VStack>
+          </Box>
+        </Fade>
       ) : null}
     </Box>
   )

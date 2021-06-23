@@ -20,6 +20,7 @@ import {
   SimpleGrid,
   Text,
   Avatar,
+  Container,
 } from "@chakra-ui/react"
 
 const Home = () => {
@@ -27,11 +28,8 @@ const Home = () => {
   const { home } = useHomeContext()
 
   return (
-    <Box mx={16} py={16}>
+    <Container maxW={"container.xl"}>
       <VStack id="intro" alignItems={"left"} spacing={8} mb={16}>
-        <Heading style={{ textTransform: "uppercase" }} size="4xl">
-          {home.qualification[lang]}
-        </Heading>
         <HStack spacing={8}>
           <Avatar size="lg" src={SP} />
 
@@ -74,7 +72,9 @@ const Home = () => {
             <FontAwesomeIcon icon={faEnvelope} />
           </Link>
         </HStack>
-
+        <Heading style={{ textTransform: "uppercase" }} size="2xl">
+          {home.qualification[lang]}
+        </Heading>
         <Text as={"small"}>{home.paragraph[lang]}</Text>
       </VStack>
       <SimpleGrid
@@ -103,7 +103,7 @@ const Home = () => {
           )
         })}
       </SimpleGrid>
-    </Box>
+    </Container>
   )
 }
 

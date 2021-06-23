@@ -24,7 +24,9 @@ import {
   Tag,
   HStack,
   Text,
+  Container,
 } from "@chakra-ui/react"
+import ScaleFadeOnScroll from "./transitions/ScaleFadeOnScroll"
 
 const Contact = () => {
   const { lang, hoverNavFoot, colorCard } = useCurriContext()
@@ -42,7 +44,7 @@ const Contact = () => {
   } = useContactContext()
 
   return (
-    <Box mx={16} py={16}>
+    <Container maxW={"container.xl"}>
       <Heading
         Heading
         as="h2"
@@ -52,40 +54,42 @@ const Contact = () => {
       >
         {contacts.title[lang]}
       </Heading>
-      <Wrap id="coord" mb={8}>
-        <WrapItem>
-          <Tag colorScheme={"pink"} fontSize={"md"}>
-            <HStack spacing={2}>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
-              <Text>{contacts.address[lang]}</Text>
-            </HStack>
-          </Tag>
-        </WrapItem>
-        <WrapItem>
-          <Tag colorScheme={"red"} fontSize={"md"}>
-            <HStack spacing={2}>
-              <FontAwesomeIcon icon={faPhone} />
-              <Text>{contacts.phone}</Text>
-            </HStack>
-          </Tag>
-        </WrapItem>
-        <WrapItem>
-          <Tag colorScheme={"cyan"} fontSize={"md"}>
-            <HStack spacing={2}>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <Text>{contacts.mailto}</Text>
-            </HStack>
-          </Tag>
-        </WrapItem>
-        <WrapItem>
-          <Tag colorScheme={"purple"} fontSize={"md"}>
-            <HStack spacing={2}>
-              <FontAwesomeIcon icon={faDiscord} />
-              <Text>{contacts.discord}</Text>
-            </HStack>
-          </Tag>
-        </WrapItem>
-      </Wrap>
+      <ScaleFadeOnScroll>
+        <Wrap id="coord" mb={8}>
+          <WrapItem>
+            <Tag colorScheme={"pink"} fontSize={"md"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+                <Text>{contacts.address[lang]}</Text>
+              </HStack>
+            </Tag>
+          </WrapItem>
+          <WrapItem>
+            <Tag colorScheme={"red"} fontSize={"md"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faPhone} />
+                <Text>{contacts.phone}</Text>
+              </HStack>
+            </Tag>
+          </WrapItem>
+          <WrapItem>
+            <Tag colorScheme={"cyan"} fontSize={"md"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <Text>{contacts.mailto}</Text>
+              </HStack>
+            </Tag>
+          </WrapItem>
+          <WrapItem>
+            <Tag colorScheme={"purple"} fontSize={"md"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faDiscord} />
+                <Text>{contacts.discord}</Text>
+              </HStack>
+            </Tag>
+          </WrapItem>
+        </Wrap>
+      </ScaleFadeOnScroll>
       <VStack
         id="mail"
         mb={8}
@@ -142,7 +146,7 @@ const Contact = () => {
           {contacts.send[lang]}
         </Button>
       </VStack>
-    </Box>
+    </Container>
   )
 }
 

@@ -3,11 +3,11 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useFooterContext } from "./hook/useFooterContext"
 
 const Footer = () => {
-  const { lang, bgNavFoot } = useCurriContext()
+  const { lang, bgFoot, colorFoot } = useCurriContext()
   const { footer } = useFooterContext()
 
   return (
-    <Box bg={bgNavFoot} px={4}>
+    <Box bg={bgFoot} color={colorFoot} px={4}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box id="madeby" px={2} py={1}>
           <Text>{footer.madeby[lang]}</Text>

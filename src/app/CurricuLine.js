@@ -25,7 +25,7 @@ const CurricuLine = () => {
       <Switch>
         <Route exact path="/">
           <HomeContextProvider>
-            <Box bg={bgContent} minH={"100vh"}>
+            <Box bg={bgContent} minH={"100vh"} pt={32} pb={24}>
               <Home />
             </Box>
           </HomeContextProvider>
@@ -33,7 +33,7 @@ const CurricuLine = () => {
 
         <Route exact path="/curriculum">
           <ContentContextProvider>
-            <Box bg={bgContent} minH={"100vh"}>
+            <Box bg={bgContent} minH={"100vh"} pt={32} pb={24}>
               <Content />
             </Box>
           </ContentContextProvider>
@@ -41,7 +41,7 @@ const CurricuLine = () => {
 
         <Route exact path="/contact">
           <ContactContextProvider>
-            <Box bg={bgContent} minH={"100vh"}>
+            <Box bg={bgContent} minH={"100vh"} pt={32} pb={24}>
               <Contact />
             </Box>
           </ContactContextProvider>
