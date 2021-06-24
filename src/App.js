@@ -1,5 +1,5 @@
-import { CurriContextProvider } from "./app/context/CurriContext"
-import CurricuLine from "./app/CurricuLine"
+import { CurriContextProvider } from "./context/CurriContext"
+import CurricuLine from "./CurricuLine"
 
 const App = () => {
   return (

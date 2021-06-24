@@ -1,12 +1,12 @@
 import { createContext } from "react"
 
-import { footer } from "../data/footer"
+import { copyright, madeby } from "../data/footer"
 
 export const FooterContext = createContext()
 
 export const FooterContextProvider = ({ children }) => {
   return (
-    <FooterContext.Provider value={{ footer }}>
+    <FooterContext.Provider value={{ copyright, madeby }}>
       {children}
     </FooterContext.Provider>
   )

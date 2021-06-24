@@ -66,10 +66,34 @@ export const main = {
             ],
           },
         ],
-        github: "",
+        code: "",
         link: "https://alyra.fr/",
-        path: "",
-        details: { EN: [], ES: [], FR: [] },
+        details: [
+          {
+            key: 11,
+            text: {
+              EN: "3 years of experience in ERP consulting",
+              ES: "3 años de experiencia en ERP consultoría",
+              FR: "3 ans d'expérience dans le conseil ERP",
+            },
+          },
+          {
+            key: 12,
+            text: {
+              EN: "Interacting with clients and collecting requirements",
+              ES: "Interaciones con clientes y recogida de necesitades",
+              FR: "Interactions avec les clients et recueil des besoins",
+            },
+          },
+          {
+            key: 12,
+            text: {
+              EN: "Managing development teams",
+              ES: "Dirección de los equipos de desarollo",
+              FR: "Encadrement des équipes de développement",
+            },
+          },
+        ],
       },
       {
         key: 3,
@@ -111,7 +135,7 @@ export const main = {
         github: "",
         link: "",
         path: "",
-        details: { EN: [], ES: [], FR: [] },
+        details: [],
       },
       {
         key: 2,
@@ -142,7 +166,7 @@ export const main = {
         github: "",
         link: "",
         path: "",
-        details: { EN: [], ES: [], FR: [] },
+        details: [],
       },
       {
         key: 1,
@@ -180,7 +204,7 @@ export const main = {
         github: "",
         link: "",
         path: "",
-        details: { EN: [], ES: [], FR: [] },
+        details: [],
       },
     ],
   },
@@ -224,16 +248,12 @@ export const main = {
         github: "",
         link: "",
         path: "",
-        details: {
-          EN: [
-            "Managed the industrialization of two production lines",
-            "Animated progress meetings to liaise management and operational teams",
-            "dentified process issues to establish action plans supporting engineering production and exploitation unit",
-            "Implemented an internal tool to monitor production and to measure KPI",
-          ],
-          ES: [],
-          FR: [],
-        },
+        details: [
+          "Managed the industrialization of two production lines",
+          "Animated progress meetings to liaise management and operational teams",
+          "dentified process issues to establish action plans supporting engineering production and exploitation unit",
+          "Implemented an internal tool to monitor production and to measure KPI",
+        ],
       },
       {
         key: 102,
@@ -248,17 +268,13 @@ export const main = {
         github: "",
         link: "https://trobz.com/about",
         path: "",
-        details: {
-          EN: [
-            "Guided customer in their ERP SaaS solution implementation",
-            "Produced specifications improving solution functionalities",
-            "Implemented walkthrough programming HTML and CSS",
-            "Troubleshot, investigated and created detailed reports about issues",
-            "Provided online instruction for users",
-          ],
-          ES: [],
-          FR: [],
-        },
+        details: [
+          "Guided customer in their ERP SaaS solution implementation",
+          "Produced specifications improving solution functionalities",
+          "Implemented walkthrough programming HTML and CSS",
+          "Troubleshot, investigated and created detailed reports about issues",
+          "Provided online instruction for users",
+        ],
       },
       {
         key: 101,
@@ -273,14 +289,10 @@ export const main = {
         github: "",
         link: "",
         path: "",
-        details: {
-          EN: [
-            "Designed a logistic plan to integrate a new supply chain activity",
-            "Optimized picking & packing processes",
-          ],
-          ES: [],
-          FR: [],
-        },
+        details: [
+          "Designed a logistic plan to integrate a new supply chain activity",
+          "Optimized picking & packing processes",
+        ],
       },
     ],
   },
@@ -300,7 +312,7 @@ export const main = {
         github: "https://github.com/solenemhep/googlefonts-widget",
         link: "https://solenemhep-googlefonts.netlify.app/",
         path: "",
-        details: { EN: ["Fetching API", "React hooks"], ES: [], FR: [] },
+        details: [],
       },
     ],
   },

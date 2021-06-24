@@ -1,7 +1,7 @@
 import { createContext, useState } from "react"
 // import emailjs from "emailjs-com"
 
-import { contacts } from "../data/contacts"
+import { contacts, coord, mailme } from "../data/contact"
 
 export const ContactContext = createContext()
 
@@ -53,6 +53,8 @@ export const ContactContextProvider = ({ children }) => {
     <ContactContext.Provider
       value={{
         contacts,
+        coord,
+        mailme,
         submitEmail,
         sendName,
         changeSendName,

@@ -1,8 +1,13 @@
 import { createContext, useState, useEffect } from "react"
 
 import { main } from "../data/main"
-import { aside } from "../data/aside"
-import { skills } from "../data/tags"
+import {
+  sections,
+  changeSection,
+  skills,
+  filterSkill,
+  curriculum,
+} from "../data/content"
 
 export const ContentContext = createContext()
 
@@ -11,8 +16,11 @@ export const ContentContextProvider = ({ children }) => {
     <ContentContext.Provider
       value={{
         main,
-        aside,
+        sections,
+        changeSection,
         skills,
+        filterSkill,
+        curriculum,
       }}
     >
       {children}

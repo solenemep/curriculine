@@ -14,9 +14,6 @@ export const CurriContextProvider = ({ children }) => {
     localStorage.setItem("langCurricuLine", JSON.stringify(lang), [lang])
   }, [lang])
 
-  // Index
-  const index = langagues.findIndex((el) => el === lang)
-
   // Color Mode
   const bgNav = useColorModeValue("whiteAlpha.900", "grayAlpha.900")
   const bgContent = useColorModeValue("white", "gray.900")
@@ -27,15 +24,10 @@ export const CurriContextProvider = ({ children }) => {
     color: useColorModeValue("gray.600", "gray.400"),
     bg: "inherit",
   }
-  const hoverContent = {
-    textDecoration: "none",
-    color: useColorModeValue("gray.600", "gray.400"),
-    bg: "inherit",
-  }
+
   const colorFoot = "white"
   const colorCard = useColorModeValue("black", "black")
   const colorTag = useColorModeValue("white", "black")
-  const colorScheme = useColorModeValue("gray", "yellow")
 
   // Section
   const [section, setSection] = useState(
@@ -65,7 +57,6 @@ export const CurriContextProvider = ({ children }) => {
     <CurriContext.Provider
       value={{
         langagues,
-        index,
         lang,
         setLang,
         section,
@@ -79,8 +70,6 @@ export const CurriContextProvider = ({ children }) => {
         hoverNavFoot,
         bgContent,
         colorCard,
-        hoverContent,
-        colorScheme,
         colorTag,
       }}
     >

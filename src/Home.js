@@ -1,8 +1,8 @@
 import { useCurriContext } from "./hook/useCurriContext"
 import { useHomeContext } from "./hook/useHomeContext"
 
-import Card from "./Card"
-import SP from "../img/SP.jpg"
+import Card from "./card/Card"
+import SP from "./img/SP.jpg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -12,7 +12,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
-  Box,
   VStack,
   HStack,
   Heading,
@@ -22,23 +21,24 @@ import {
   Avatar,
   Container,
 } from "@chakra-ui/react"
+import CardHome from "./card/CardHome"
 
 const Home = () => {
-  const { lang, hoverContent } = useCurriContext()
-  const { home } = useHomeContext()
+  const { lang, hoverNavFoot } = useCurriContext()
+  const { intro, highlights } = useHomeContext()
 
   return (
     <Container maxW={"container.xl"}>
       <VStack id="intro" alignItems={"left"} spacing={8} mb={16}>
         <HStack spacing={8}>
-          <Avatar size="lg" src={SP} />
+          <Avatar size="md" src={SP} />
 
           <Heading as="h1" size={"lg"}>
-            {home.name}
+            {intro.name}
           </Heading>
           <Link
-            _hover={hoverContent}
-            href={home.linkedin}
+            _hover={hoverNavFoot}
+            href={intro.linkedin}
             aria-label="my linkedin"
             isExternal
           >
@@ -46,8 +46,8 @@ const Home = () => {
           </Link>
 
           <Link
-            _hover={hoverContent}
-            href={home.github}
+            _hover={hoverNavFoot}
+            href={intro.github}
             aria-label="my github"
             isExternal
           >
@@ -55,8 +55,8 @@ const Home = () => {
           </Link>
 
           <Link
-            _hover={hoverContent}
-            href={home.codepen}
+            _hover={hoverNavFoot}
+            href={intro.codepen}
             aria-label="my codepen"
             isExternal
           >
@@ -64,8 +64,8 @@ const Home = () => {
           </Link>
 
           <Link
-            _hover={hoverContent}
-            href={home.mail}
+            _hover={hoverNavFoot}
+            href={intro.mail}
             aria-label="my email"
             isExternal
           >
@@ -73,32 +73,27 @@ const Home = () => {
           </Link>
         </HStack>
         <Heading style={{ textTransform: "uppercase" }} size="2xl">
-          {home.qualification[lang]}
+          {intro.title[lang]}
         </Heading>
-        <Text as={"small"}>{home.paragraph[lang]}</Text>
+        <Text>{intro.paragraph[lang]}</Text>
       </VStack>
       <SimpleGrid
         id="highlight"
         columns={{ base: 1, lg: 3 }}
         spacing={8}
-        mb={16}
+        mb={8}
       >
-        {home.highlights.map((highlight) => {
+        {highlights.map((highlight) => {
           return (
-            <Card
-              key={highlight.title[lang]}
+            <CardHome
+              key={highlight.key}
               color={highlight.color}
               title={highlight.title[lang]}
-              date={highlight.date[lang]}
-              establishment={highlight.establishment[lang]}
-              location={highlight.location[lang]}
               section={highlight.section}
-              fields={highlight.fields}
-              skills={highlight.skills}
-              github={highlight.github}
-              link={highlight.link}
               path={highlight.path}
-              details={highlight.details[lang]}
+              more={highlight.more}
+              filter={highlight.filter}
+              details={highlight.details}
             />
           )
         })}

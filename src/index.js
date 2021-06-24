@@ -3,8 +3,6 @@ import ReactDOM from "react-dom"
 import { ChakraProvider } from "@chakra-ui/react"
 import "bootstrap/dist/css/bootstrap.css"
 import theme from "./theme"
-import "@fontsource/raleway"
-import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 

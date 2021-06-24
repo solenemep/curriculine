@@ -2,7 +2,7 @@ import { useState, useEffect, Fragment } from "react"
 import { useCurriContext } from "./hook/useCurriContext"
 import { useContentContext } from "./hook/useContentContext"
 
-import Card from "./Card"
+import Card from "./card/Card"
 import {
   Heading,
   FormLabel,
@@ -23,9 +23,13 @@ import { AddIcon, MinusIcon } from "@chakra-ui/icons"
 
 const Content = () => {
   const { lang, section, setSection, filter, toggleFilter } = useCurriContext()
-  const { main, aside, skills } = useContentContext()
+  const { sections, changeSection, skills, filterSkill, curriculum } =
+    useContentContext()
 
-  const filterMain = (filter) => {
+  const filterCurri = () => {
+    const main = curriculum.filter((el) => el.section === section)
+    return main
+    /*
     if (filter.length === 0) {
       return main[section].items
     } else {
@@ -33,21 +37,21 @@ const Content = () => {
         item.skills.filter((el) => el.items.key !== 12)
       )
     }
+    */
   }
 
-  const mainy = filterMain(filter)
-  console.log(mainy)
+  const main = filterCurri()
 
   return (
     <Container maxW={"container.xl"}>
       <Heading as="h2" style={{ textTransform: "uppercase" }} size="2xl" mb={8}>
-        {main[section].title[lang]}
+        {sections[section][lang]}
       </Heading>
       <Grid
         sx={{
           display: "grid",
           gridTemplateColumns: { base: "1fr", lg: "2fr 1fr" },
-          gap: "2rem",
+          gap: "3rem",
         }}
         alignItems={"start"}
         justifyContent={"space-between"}
@@ -58,7 +62,7 @@ const Content = () => {
           spacing={8}
           id="main"
         >
-          {mainy.map((item) => {
+          {main.map((item) => {
             return (
               <Card
                 key={item.key}
@@ -68,12 +72,10 @@ const Content = () => {
                 establishment={item.establishment[lang]}
                 location={item.location[lang]}
                 section={item.section}
-                fields={item.fields}
                 skills={item.skills}
-                github={item.github}
+                code={item.code}
                 link={item.link}
-                path={item.path}
-                details={item.details[lang]}
+                details={item.details}
               />
             )
           })}
@@ -84,24 +86,25 @@ const Content = () => {
           alignItems={"start"}
           spacing={8}
           id="aside"
+          sx={{ position: "sticky", top: "28" }}
         >
           <FormControl id="section">
-            <FormLabel>{aside.changeSection[lang]}</FormLabel>
+            <FormLabel>{changeSection[lang]}</FormLabel>
             <Select
               defaultValue={section}
               onChange={(e) => setSection(e.target.value)}
             >
-              <option value="education">{main.education.title[lang]}</option>
-              <option value="experience">{main.experience.title[lang]}</option>
-              <option value="portfolio">{main.portfolio.title[lang]}</option>
+              <option value="education">{sections.education[lang]}</option>
+              <option value="experience">{sections.experience[lang]}</option>
+              <option value="portfolio">{sections.portfolio[lang]}</option>
             </Select>
           </FormControl>
           <FormControl id="skills">
             <FormLabel flex="1" textAlign="left">
-              {skills.filter[lang]}
+              {filterSkill[lang]}
             </FormLabel>
             <Accordion allowMultiple>
-              {skills.items.map((category) => {
+              {skills.map((category) => {
                 return (
                   <AccordionItem key={category.key}>
                     {({ isExpanded }) => (

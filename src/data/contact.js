@@ -1,5 +1,9 @@
 export const contacts = {
-  title: { EN: "Contact me", ES: "Contactarme", FR: "Me contacter" },
+  EN: "Contact me",
+  ES: "Contactarme",
+  FR: "Me contacter",
+}
+export const coord = {
   address: {
     EN: "Barcelona, Spain",
     ES: "Barcelona, España",
@@ -8,6 +12,9 @@ export const contacts = {
   phone: "+33 6 74 66 29 38",
   mailto: "solene.pettier@gmail.com",
   discord: "solène#5763",
+}
+
+export const mailme = {
   name: { EN: "Your name", ES: "Su nombre", FR: "Votre nom" },
   mail: { EN: "Your email", ES: "Su email", FR: "Votre email" },
   subject: { EN: "Subject", ES: "Sujeto", FR: "Sujet" },

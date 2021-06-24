@@ -11,23 +11,21 @@ import {
   faLink,
 } from "@fortawesome/free-solid-svg-icons"
 
-import { useCurriContext } from "./hook/useCurriContext"
+import { useCurriContext } from "../hook/useCurriContext"
 import {
   Box,
   Heading,
   HStack,
   Flex,
   Link,
-  Tag,
   Wrap,
   WrapItem,
   Badge,
   Text,
   VStack,
   Button,
-  filter,
 } from "@chakra-ui/react"
-import SlideFadeOnScroll from "./transitions/SlideFadeOnScroll"
+import SlideFadeOnScroll from "../transitions/SlideFadeOnScroll"
 import { Fragment } from "react"
 
 const Card = (props) => {
@@ -116,7 +114,7 @@ const Card = (props) => {
               )}
             </HStack>
           )}
-
+          {/*
           {fields !== [] && (
             <Wrap mt={4}>
               {fields.map((field) => {
@@ -128,19 +126,19 @@ const Card = (props) => {
               })}
             </Wrap>
           )}
-
+         
           {details !== [] && (
             <VStack mt={4} spacing={2} alignItems={"start"}>
-              {details.map((detail) => {
+              {details[lang].map((detail) => {
                 return (
-                  <Text as={"small"} key={detail}>
+                  <Text as={"small"} key={detail[lang]}>
                     {detail}
                   </Text>
                 )
               })}
             </VStack>
           )}
-
+*/}
           {skills !== [] && (
             <Wrap mt={4}>
               {skills.map((category) => {
