@@ -140,7 +140,11 @@ const Contact = () => {
           color={colorCard}
           type="submit"
           bg={"red.100"}
-          _hover={hoverNavFoot}
+          _hover={{
+            bg: `red.300`,
+            textDecoration: "none",
+            color: `${colorCard}`,
+          }}
         >
           {mailme.send[lang]}
         </Button>

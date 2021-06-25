@@ -1,3 +1,9 @@
+export const curriculum = {
+  EN: "Curriculum",
+  ES: "Currículum",
+  FR: "Curriculum",
+}
+
 export const sections = {
   education: { EN: "Education", ES: "Formación", FR: "Formation" },
   experience: { EN: "Experience", ES: "Experiencia", FR: "Expérience" },
@@ -110,7 +116,7 @@ export const filterSkill = {
   FR: "Filtrer par compétence",
 }
 
-export const curriculum = [
+export const main = [
   {
     key: 1,
     color: "green",
@@ -125,22 +131,16 @@ export const curriculum = [
     section: "education",
     skills: [
       {
-        key: 4,
-        title: { EN: "Mathematics", ES: "Matématica", FR: "Mathématiques" },
-        items: [
-          {
-            key: 41,
-            text: { EN: "Aritmetic", ES: "Aritmética", FR: "Arithmétique" },
-          },
-          {
-            key: 42,
-            text: { EN: "Algebra", ES: "Álgebra", FR: "Algèbre" },
-          },
-          {
-            key: 43,
-            text: { EN: "Geometry", ES: "Geometría", FR: "Géométrie" },
-          },
-        ],
+        key: 41,
+        text: { EN: "Aritmetic", ES: "Aritmética", FR: "Arithmétique" },
+      },
+      {
+        key: 42,
+        text: { EN: "Algebra", ES: "Álgebra", FR: "Algèbre" },
+      },
+      {
+        key: 43,
+        text: { EN: "Geometry", ES: "Geometría", FR: "Géométrie" },
       },
     ],
     code: "",
@@ -159,7 +159,13 @@ export const curriculum = [
     establishment: { EN: "D3 LLC", ES: "", FR: "" },
     location: { EN: "New-York, USA", ES: "", FR: "" },
     section: "experience",
-    skills: [],
+    skills: [
+      {
+        key: 52,
+        text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
+      },
+      { key: 71, text: { EN: "English", ES: "Inglés", FR: "Anglais" } },
+    ],
     code: "",
     link: "",
     details: [],
@@ -173,20 +179,14 @@ export const curriculum = [
     location: { EN: "Montreal, Canada", ES: "", FR: "" },
     section: "education",
     skills: [
+      { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
       {
-        key: 5,
-        title: { EN: "Method", ES: "Método", FR: "Méthode" },
-        items: [
-          { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
-          {
-            key: 52,
-            text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
-          },
-          {
-            key: 53,
-            text: { EN: "Robotics", ES: "Robotica", FR: "Robotique" },
-          },
-        ],
+        key: 52,
+        text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
+      },
+      {
+        key: 53,
+        text: { EN: "Robotics", ES: "Robotica", FR: "Robotique" },
       },
     ],
     code: "",
@@ -201,7 +201,13 @@ export const curriculum = [
     establishment: { EN: "Pernod Ricard", ES: "", FR: "" },
     location: { EN: "Bordeaux, France", ES: "", FR: "" },
     section: "experience",
-    skills: [],
+    skills: [
+      {
+        key: 52,
+        text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
+      },
+      { key: 63, text: { EN: "SAP", ES: "SAP", FR: "SAP" } },
+    ],
     github: "",
     code: "",
     details: [
@@ -226,24 +232,10 @@ export const curriculum = [
     location: { EN: "Albi, France", ES: "", FR: "" },
     section: "education",
     skills: [
-      {
-        key: 1,
-        title: { EN: "Front", ES: "Front", FR: "Front" },
-        items: [
-          { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
-          { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
-        ],
-      },
-      {
-        key: 2,
-        title: { EN: "Back", ES: "Back", FR: "Back" },
-        items: [{ key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } }],
-      },
-      {
-        key: 5,
-        title: { EN: "Method", ES: "Método", FR: "Méthode" },
-        items: [{ key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } }],
-      },
+      { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
+      { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
+      { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
+      { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
     ],
     code: "",
     link: "",
@@ -257,7 +249,13 @@ export const curriculum = [
     establishment: { EN: "Trobz", ES: "", FR: "" },
     location: { EN: "Ho-Chi-Minh-City, Vietnam", ES: "", FR: "" },
     section: "experience",
-    skills: [],
+    skills: [
+      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
+      { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
+      { key: 64, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
+      { key: 71, text: { EN: "English", ES: "Inglés", FR: "Anglais" } },
+    ],
     code: "",
     link: "https://trobz.com/about",
     details: [
@@ -276,7 +274,14 @@ export const curriculum = [
     establishment: { EN: "Bouygues Telecom", ES: "", FR: "" },
     location: { EN: "Paris, France", ES: "", FR: "" },
     section: "experience",
-    skills: [],
+    skills: [
+      { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
+      {
+        key: 52,
+        text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
+      },
+      { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
+    ],
     code: "",
     link: "",
     details: [
@@ -294,7 +299,12 @@ export const curriculum = [
     establishment: { EN: "Fitnet Manager", ES: "", FR: "" },
     location: { EN: "Barcelona, Spain", ES: "", FR: "" },
     section: "experience",
-    skills: [],
+    skills: [
+      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
+      { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
+      { key: 72, text: { EN: "Spanish", ES: "Español", FR: "Espagnol" } },
+    ],
     code: "",
     link: "https://www.fitnetmanager.com/en/home-en/",
     details: {
@@ -317,59 +327,42 @@ export const curriculum = [
     location: { EN: "Paris, France", ES: "", FR: "" },
     section: "education",
     skills: [
+      { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
+      { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
       {
-        key: 1,
-        title: { EN: "Front", ES: "Front", FR: "Front" },
-        items: [
-          { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
-          { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
-          {
-            key: 13,
-            text: { EN: "Bootstrap", ES: "Bootstrap", FR: "Bootstrap" },
-          },
-          { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
-          {
-            key: 15,
-            text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
-          },
-        ],
+        key: 13,
+        text: { EN: "Bootstrap", ES: "Bootstrap", FR: "Bootstrap" },
       },
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
       {
-        key: 2,
-        title: { EN: "Back", ES: "Back", FR: "Back" },
-        items: [
-          {
-            key: 21,
-            text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
-          },
-          { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
-        ],
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
       },
 
       {
-        key: 3,
-        title: { EN: "Blockchain", ES: "Blockchain", FR: "Blockchain" },
-        items: [
-          {
-            key: 31,
-            text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" },
-          },
-          {
-            key: 32,
-            text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" },
-          },
-          { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
-          {
-            key: 34,
-            text: {
-              EN: "OpenZepellin",
-              ES: "OpenZepellin",
-              FR: "OpenZepellin",
-            },
-          },
-          { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
-        ],
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
+      { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
+
+      {
+        key: 31,
+        text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" },
+      },
+      {
+        key: 32,
+        text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" },
+      },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: {
+          EN: "OpenZepellin",
+          ES: "OpenZepellin",
+          FR: "OpenZepellin",
+        },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
     ],
     code: "",
     link: "https://alyra.fr/",

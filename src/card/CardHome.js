@@ -51,12 +51,16 @@ const CardHome = (props) => {
               as={Link}
               size={"xs"}
               href={path}
-              color={`${color}.600`}
               bg={`${color}.200`}
               _hover={{
                 bg: `${color}.300`,
                 textDecoration: "none",
-                color: `${color}.600`,
+                color: `inherit`,
+              }}
+              _active={{
+                bg: `${color}.300`,
+                textDecoration: "none",
+                color: `inherit`,
               }}
               onClick={() => {
                 setSection(section)

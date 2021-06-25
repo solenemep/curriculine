@@ -4,12 +4,7 @@ import {
   faCalendar,
   faMap,
 } from "@fortawesome/free-regular-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import {
-  faAngleDoubleRight,
-  faCode,
-  faLink,
-} from "@fortawesome/free-solid-svg-icons"
+import { faCode, faLink } from "@fortawesome/free-solid-svg-icons"
 
 import { useCurriContext } from "../hook/useCurriContext"
 import {
@@ -19,14 +14,9 @@ import {
   Flex,
   Link,
   Wrap,
-  WrapItem,
-  Badge,
-  Text,
-  VStack,
   Button,
 } from "@chakra-ui/react"
 import SlideFadeOnScroll from "../transitions/SlideFadeOnScroll"
-import { Fragment } from "react"
 
 const Card = (props) => {
   const {
@@ -44,12 +34,9 @@ const Card = (props) => {
     date,
     establishment,
     location,
-    section,
-    fields,
     skills,
-    github,
+    code,
     link,
-    path,
     details,
   } = props
 
@@ -72,23 +59,14 @@ const Card = (props) => {
             </Heading>
 
             <HStack spacing={4}>
-              {github !== "" && (
-                <Link _hover={hoverContent} href={github} isExternal>
+              {code !== "" && (
+                <Link _hover={hoverContent} href={code} isExternal>
                   <FontAwesomeIcon icon={faCode} />
                 </Link>
               )}
               {link !== "" && (
                 <Link _hover={hoverContent} href={link} isExternal>
                   <FontAwesomeIcon icon={faLink} />
-                </Link>
-              )}
-              {path !== "" && (
-                <Link
-                  _hover={hoverContent}
-                  href={path}
-                  onClick={() => setSection(section)}
-                >
-                  <FontAwesomeIcon icon={faAngleDoubleRight} />
                 </Link>
               )}
             </HStack>
@@ -141,27 +119,29 @@ const Card = (props) => {
 */}
           {skills !== [] && (
             <Wrap mt={4}>
-              {skills.map((category) => {
+              {skills.map((skill) => {
                 return (
-                  <Fragment key={category.key}>
-                    {category.items.map((skill) => {
-                      return (
-                        <Button
-                          size={"xs"}
-                          key={skill.key}
-                          variant={"solid"}
-                          colorScheme={color}
-                          color={colorTag}
-                          value={skill.key}
-                          onClick={toggleFilter}
-                          isActive={filter.includes(Number(skill.key))}
-                          _hover={{ cursor: "pointer" }}
-                        >
-                          {skill.text[lang]}
-                        </Button>
-                      )
-                    })}
-                  </Fragment>
+                  <Button
+                    size={"xs"}
+                    key={skill.key}
+                    bg={`${color}.200`}
+                    _hover={{
+                      bg: `${color}.300`,
+                      textDecoration: "none",
+                      color: `inherit`,
+                    }}
+                    _active={{
+                      bg: `${color}.300`,
+                      textDecoration: "none",
+                      color: `inherit`,
+                    }}
+                    value={skill.key}
+                    onClick={toggleFilter}
+                    isActive={filter.includes(Number(skill.key))}
+                    _hover={{ cursor: "pointer" }}
+                  >
+                    {skill.text[lang]}
+                  </Button>
                 )
               })}
             </Wrap>

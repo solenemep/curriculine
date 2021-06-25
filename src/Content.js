@@ -18,29 +18,50 @@ import {
   Flex,
   Stack,
   Grid,
+  HStack,
+  IconButton,
+  Spacer,
 } from "@chakra-ui/react"
-import { AddIcon, MinusIcon } from "@chakra-ui/icons"
+import { AddIcon, MinusIcon, SmallCloseIcon } from "@chakra-ui/icons"
 
 const Content = () => {
-  const { lang, section, setSection, filter, toggleFilter } = useCurriContext()
-  const { sections, changeSection, skills, filterSkill, curriculum } =
+  const {
+    lang,
+    section,
+    setSection,
+    filter,
+    setFilter,
+    toggleFilter,
+    colorCard,
+  } = useCurriContext()
+  const { sections, changeSection, skills, filterSkill, main } =
     useContentContext()
+  const [list, setList] = useState(main)
 
-  const filterCurri = () => {
-    const main = curriculum.filter((el) => el.section === section)
-    return main
-    /*
-    if (filter.length === 0) {
-      return main[section].items
-    } else {
-      return main[section].items.filter((item) =>
-        item.skills.filter((el) => el.items.key !== 12)
-      )
+  useEffect(() => {
+    const filterMain = (section, filter) => {
+      if (filter.length !== 0) {
+        let mainy = main.filter((elem) => {
+          let bool = false
+          elem.skills.map((skill) => {
+            if (filter.includes(Number(skill.key))) {
+              bool = true
+            }
+            return bool
+          })
+          if (bool === true) {
+            return true
+          } else return false
+        })
+        return mainy.filter((el) => el.section === section)
+      } else {
+        let mainy = main
+        return mainy.filter((el) => el.section === section)
+      }
     }
-    */
-  }
 
-  const main = filterCurri()
+    setList(filterMain(section, filter).reverse())
+  }, [filter, section])
 
   return (
     <Container maxW={"container.xl"}>
@@ -62,7 +83,7 @@ const Content = () => {
           spacing={8}
           id="main"
         >
-          {main.map((item) => {
+          {list.map((item) => {
             return (
               <Card
                 key={item.key}
@@ -101,7 +122,22 @@ const Content = () => {
           </FormControl>
           <FormControl id="skills">
             <FormLabel flex="1" textAlign="left">
-              {filterSkill[lang]}
+              <HStack justifyContent={"space-between"}>
+                <Text>{filterSkill[lang]}</Text>
+                <IconButton
+                  icon={<SmallCloseIcon />}
+                  color={colorCard}
+                  type="button"
+                  bg={"purple.100"}
+                  size={"xs"}
+                  _hover={{
+                    bg: `purple.300`,
+                    textDecoration: "none",
+                    color: `${colorCard}`,
+                  }}
+                  onClick={() => setFilter([])}
+                />
+              </HStack>
             </FormLabel>
             <Accordion allowMultiple>
               {skills.map((category) => {
@@ -109,19 +145,24 @@ const Content = () => {
                   <AccordionItem key={category.key}>
                     {({ isExpanded }) => (
                       <Fragment>
-                        <AccordionButton>
-                          <Text flex="1" textAlign="left">
-                            {category.title[lang]}{" "}
+                        <AccordionButton justifyContent={"space-between"}>
+                          <Text textAlign="left">{category.title[lang]} </Text>
+                          <HStack justifyContent={"space-between"}>
                             <Text as={"small"}>
-                              ( /{category.items.length})
+                              {
+                                filter.filter((el) =>
+                                  el.toString().startsWith(`${category.key}`)
+                                ).length
+                              }
+                              /{category.items.length}
                             </Text>
-                          </Text>
-
-                          {isExpanded ? (
-                            <MinusIcon fontSize="12px" />
-                          ) : (
-                            <AddIcon fontSize="12px" />
-                          )}
+                            <Spacer />
+                            {isExpanded ? (
+                              <MinusIcon fontSize="12px" />
+                            ) : (
+                              <AddIcon fontSize="12px" />
+                            )}
+                          </HStack>
                         </AccordionButton>
                         <AccordionPanel pb={4}>
                           <Flex direction={"column"} alignItems={"start"}>

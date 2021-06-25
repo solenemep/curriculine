@@ -5,7 +5,7 @@ import { useNavContext } from "../hook/useNavContext"
 
 const NavItems = () => {
   const { lang, setSection, hoverNavFoot } = useCurriContext()
-  const { home, sections, contacts } = useNavContext()
+  const { home, curriculum, contacts } = useNavContext()
   return (
     <Fragment>
       <Link
@@ -22,38 +22,14 @@ const NavItems = () => {
 
       <Link
         href={"/curriculum"}
-        aria-label={"education page"}
+        aria-label={"curriculum page"}
         px={2}
         py={1}
         rounded={"md"}
         _hover={hoverNavFoot}
         onClick={() => setSection("education")}
       >
-        {sections.education[lang]}
-      </Link>
-
-      <Link
-        href={"/curriculum"}
-        aria-label={"experience page"}
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={hoverNavFoot}
-        onClick={() => setSection("experience")}
-      >
-        {sections.experience[lang]}
-      </Link>
-
-      <Link
-        href={"/curriculum"}
-        aria-label={"portfolio page"}
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={hoverNavFoot}
-        onClick={() => setSection("portfolio")}
-      >
-        {sections.portfolio[lang]}
+        {curriculum[lang]}
       </Link>
 
       <Link
