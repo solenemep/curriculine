@@ -5,6 +5,7 @@ import {
   changeSection,
   skills,
   filterSkill,
+  cardLinks,
   main,
 } from "../data/content"
 
@@ -18,6 +19,7 @@ export const ContentContextProvider = ({ children }) => {
         changeSection,
         skills,
         filterSkill,
+        cardLinks,
         main,
       }}
     >

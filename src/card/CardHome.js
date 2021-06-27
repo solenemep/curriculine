@@ -12,6 +12,7 @@ import {
   Spacer,
   Stack,
   Tag,
+  Text,
 } from "@chakra-ui/react"
 import { useCurriContext } from "../hook/useCurriContext"
 import SlideFadeOnScroll from "../transitions/SlideFadeOnScroll"
@@ -31,16 +32,16 @@ const CardHome = (props) => {
         }}
         shadow={"lg"}
       >
-        <Stack direction={"column"} alignItems={"left"} p={8}>
-          <Heading as={"h2"} mb={8}>
-            {title}
-          </Heading>
+        <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
+          <Heading as={"h2"}>{title}</Heading>
           <List spacing={2}>
             {details.map((detail) => {
               return (
                 <ListItem key={detail.key}>
-                  <ListIcon as={CheckIcon} color="green.300" />
-                  {detail.text[lang]}
+                  <HStack>
+                    <ListIcon as={CheckIcon} color="green.300" />
+                    <Text>{detail.text[lang]}</Text>
+                  </HStack>
                 </ListItem>
               )
             })}

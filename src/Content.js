@@ -2,7 +2,6 @@ import { useState, useEffect, Fragment } from "react"
 import { useCurriContext } from "./hook/useCurriContext"
 import { useContentContext } from "./hook/useContentContext"
 
-import Card from "./card/Card"
 import {
   Heading,
   FormLabel,
@@ -23,6 +22,7 @@ import {
   Spacer,
 } from "@chakra-ui/react"
 import { AddIcon, MinusIcon, SmallCloseIcon } from "@chakra-ui/icons"
+import CardContent from "./card/CardContent"
 
 const Content = () => {
   const {
@@ -85,7 +85,7 @@ const Content = () => {
         >
           {list.map((item) => {
             return (
-              <Card
+              <CardContent
                 key={item.key}
                 color={item.color}
                 title={item.title[lang]}
@@ -96,6 +96,7 @@ const Content = () => {
                 skills={item.skills}
                 code={item.code}
                 link={item.link}
+                img={item.img}
                 details={item.details}
               />
             )
@@ -107,7 +108,6 @@ const Content = () => {
           alignItems={"start"}
           spacing={8}
           id="aside"
-          sx={{ position: "sticky", top: "28" }}
         >
           <FormControl id="section">
             <FormLabel>{changeSection[lang]}</FormLabel>
