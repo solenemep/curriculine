@@ -1,3 +1,5 @@
+const pourmail =
+  "Bonjour, je m'appelle Solène, j'ai 28 ans et je suis française originaire de Paris. Après des études de mathématiques poussées et l'obtention d'un diplôme d'ingénieur en systèmes d'information, j'ai encadré le développement d'ERP pour diverses entreprises en relation directe avec le client et les équipes de développeurs. Mon fort penchant pour la technique m'a encouragé à me former au métier de développeur web décentralisé. Très rigoureuse et ordonnée, je me suis découvert une passion pour le code et plus particulièrement le développement de smart contrat sur la Blockchain."
 export const main = [
   {
     name: "Curriculum",

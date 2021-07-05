@@ -10,9 +10,9 @@ export const intro = {
     FR: "Ingénieure SI, Développeuse Web & Blockchain",
   },
   paragraph: {
-    EN: "Hello, my name is Solène, I am 28 years old and I am french from Paris. After intensive mathematics studies and the obtention of my information technology engineer diploma, I framed the development of ERP for various companies interacting directly with client and developer teams. My appetence for technique leaded me to learn decentralized developer profession. Very rigorous and orderly, I got passionated about coding and more particularly development of smart contracts on Blockchain.",
-    ES: "",
-    FR: "Bonjour, je m'appelle Solène, j'ai 28 ans et je suis française originaire de Paris. Après des études de mathématiques poussées et l'obtention d'un diplôme d'ingénieur en systèmes d'information, j'ai encadré le développement d'ERP pour diverses entreprises en relation directe avec le client et les équipes de développeurs. Mon fort penchant pour la technique m'a encouragé à me former au métier de développeur web décentralisé. Très rigoureuse et ordonnée, je me suis découvert une passion pour le code et plus particulièrement le développement de smart contrat sur la Blockchain.",
+    EN: "Hello and welcome ! I'm Solène, from Paris, passionated with Web & Blockchain programation !",
+    ES: "Holà y bienvenido ! Soy Solène, una francesa de París, apasionada de programacion Web & Blockchain !",
+    FR: "Bonjour et bienvenue ! Je suis Solène, originaire de Paris, et passionnée de programation Web & Blockchain !",
   },
   linkedin: "https://www.linkedin.com/in/solenemhep",
   github: "https://github.com/solenemhep",

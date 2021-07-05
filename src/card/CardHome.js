@@ -65,7 +65,6 @@ const CardHome = (props) => {
               }}
               onClick={() => {
                 setSection(section)
-                setFilter(filter)
               }}
             >
               {more[lang]}

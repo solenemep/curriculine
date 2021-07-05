@@ -50,8 +50,8 @@ const CardContent = (props) => {
     img,
     details,
   } = props
-  const { colorCard, toggleFilter, filter, lang } = useCurriContext()
-  const { cardLinks } = useContentContext()
+  const { colorCard, lang } = useCurriContext()
+  const { cardLinks, toggleFilter, filter } = useContentContext()
 
   return (
     <SlideFadeOnScroll>

@@ -12,6 +12,17 @@ import {
 export const ContentContext = createContext()
 
 export const ContentContextProvider = ({ children }) => {
+  // Filter
+  const [filter, setFilter] = useState([])
+  const toggleFilter = (event) => {
+    event.preventDefault()
+    if (filter.some((elem) => elem === Number(event.target.value))) {
+      setFilter(filter.filter((elem) => elem !== Number(event.target.value)))
+    } else {
+      setFilter([...filter, Number(event.target.value)])
+    }
+  }
+
   return (
     <ContentContext.Provider
       value={{
@@ -21,6 +32,9 @@ export const ContentContextProvider = ({ children }) => {
         filterSkill,
         cardLinks,
         main,
+        filter,
+        setFilter,
+        toggleFilter,
       }}
     >
       {children}

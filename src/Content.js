@@ -25,17 +25,17 @@ import { AddIcon, MinusIcon, SmallCloseIcon } from "@chakra-ui/icons"
 import CardContent from "./card/CardContent"
 
 const Content = () => {
+  const { lang, section, setSection, colorCard } = useCurriContext()
   const {
-    lang,
-    section,
-    setSection,
+    sections,
+    changeSection,
+    skills,
+    filterSkill,
+    main,
     filter,
     setFilter,
     toggleFilter,
-    colorCard,
-  } = useCurriContext()
-  const { sections, changeSection, skills, filterSkill, main } =
-    useContentContext()
+  } = useContentContext()
   const [list, setList] = useState(main)
 
   useEffect(() => {
@@ -110,7 +110,7 @@ const Content = () => {
           id="aside"
         >
           <FormControl id="section">
-            <FormLabel>{changeSection[lang]}</FormLabel>
+            <FormLabel fontWeight={"bold"}>{changeSection[lang]}</FormLabel>
             <Select
               defaultValue={section}
               onChange={(e) => setSection(e.target.value)}
@@ -123,7 +123,7 @@ const Content = () => {
           <FormControl id="skills">
             <FormLabel flex="1" textAlign="left">
               <HStack justifyContent={"space-between"}>
-                <Text>{filterSkill[lang]}</Text>
+                <Text fontWeight={"bold"}>{filterSkill[lang]}</Text>
                 <IconButton
                   icon={<SmallCloseIcon />}
                   color={colorCard}

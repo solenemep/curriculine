@@ -15,7 +15,7 @@ export const CurriContextProvider = ({ children }) => {
   }, [lang])
 
   // Color Mode
-  const bgNav = useColorModeValue("whiteAlpha.900", "grayAlpha.900")
+  const bgNav = useColorModeValue("white", "gray.900")
   const bgContent = useColorModeValue("white", "gray.900")
   const bgFoot = "gray.900"
 
@@ -37,22 +37,6 @@ export const CurriContextProvider = ({ children }) => {
     localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
   }, [section])
 
-  // Filter
-  const [filter, setFilter] = useState(
-    () => JSON.parse(localStorage.getItem("filterCurriculine")) || []
-  )
-  const toggleFilter = (event) => {
-    event.preventDefault()
-    if (filter.some((elem) => elem === Number(event.target.value))) {
-      setFilter(filter.filter((elem) => elem !== Number(event.target.value)))
-    } else {
-      setFilter([...filter, Number(event.target.value)])
-    }
-  }
-  useEffect(() => {
-    localStorage.setItem("filterCurriculine", JSON.stringify(filter))
-  }, [filter])
-
   return (
     <CurriContext.Provider
       value={{
@@ -61,9 +45,6 @@ export const CurriContextProvider = ({ children }) => {
         setLang,
         section,
         setSection,
-        filter,
-        setFilter,
-        toggleFilter,
         bgNav,
         bgFoot,
         colorFoot,

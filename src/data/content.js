@@ -45,6 +45,7 @@ export const skills = [
       { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
       { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
       { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
   },
 
@@ -170,32 +171,7 @@ export const main = [
     ],
     code: "",
     link: "",
-    details: [
-      {
-        key: 11,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 12,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 13,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-    ],
+    details: [],
   },
   {
     key: 2,
@@ -290,32 +266,7 @@ export const main = [
     ],
     code: "",
     link: "",
-    details: [
-      {
-        key: 31,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 32,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 33,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-    ],
+    details: [],
   },
   {
     key: 4,
@@ -405,32 +356,7 @@ export const main = [
     ],
     code: "",
     link: "",
-    details: [
-      {
-        key: 51,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 52,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 53,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-    ],
+    details: [],
   },
   {
     key: 6,
@@ -700,32 +626,7 @@ export const main = [
     ],
     code: "",
     link: "https://alyra.fr/",
-    details: [
-      {
-        key: 91,
-        text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 92,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 93,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-    ],
+    details: [],
   },
   {
     key: 10,
@@ -928,6 +829,7 @@ export const main = [
         key: 21,
         text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
     code: "https://github.com/solenemhep/weather-app",
     link: "https://solenemhep-weather-app.netlify.app/",
@@ -979,6 +881,7 @@ export const main = [
         key: 21,
         text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
     code: "https://github.com/solenemhep/gradients-fetch",
     link: "https://solenemhep-gradients-fetch.netlify.app/",
@@ -1030,6 +933,7 @@ export const main = [
         key: 21,
         text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
     code: "https://github.com/solenemhep/googlefonts-widget",
     link: "https://solenemhep-googlefonts.netlify.app/",
@@ -1104,6 +1008,109 @@ export const main = [
       },
       {
         key: 173,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 18,
+    color: "purple",
+    title: { EN: "StarWars API", ES: "StarWars API", FR: "StarWars API" },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
+      { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
+      {
+        key: 13,
+        text: { EN: "Bootstrap", ES: "Bootstrap", FR: "Bootstrap" },
+      },
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
+    ],
+    code: "https://github.com/solenemhep/starwars-api",
+    link: "https://solenemhep-starwars-api.netlify.app/",
+    img: "starwars.png",
+    details: [
+      {
+        key: 181,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 182,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 183,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 19,
+    color: "red",
+    title: { EN: "AlyraKit", ES: "AlyraKit", FR: "AlyraKit" },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
+      { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+    ],
+    code: "https://github.com/solenemhep/alyrakit",
+    link: "https://solenemhep-alyrakit.netlify.app/",
+    img: "alyrakit.png",
+    details: [
+      {
+        key: 191,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 192,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 193,
         text: {
           EN: "detail alyra en 2",
           ES: "detail alyra es 2",
