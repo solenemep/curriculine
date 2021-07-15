@@ -64,15 +64,20 @@ const Content = () => {
   }, [filter, section])
 
   return (
-    <Container maxW={"container.xl"}>
-      <Heading as="h2" style={{ textTransform: "uppercase" }} size="2xl" mb={8}>
+    <Container maxW={"container.xl"} pt={4}>
+      <Heading
+        as="h2"
+        style={{ textTransform: "uppercase" }}
+        size="2xl"
+        mb={16}
+      >
         {sections[section][lang]}
       </Heading>
       <Grid
         sx={{
           display: "grid",
           gridTemplateColumns: { base: "1fr", lg: "2fr 1fr" },
-          gap: "3rem",
+          gap: "6rem",
         }}
         alignItems={"start"}
         justifyContent={"space-between"}

@@ -5,14 +5,14 @@ export const home = { EN: "Home", ES: "Home", FR: "Accueil" }
 export const intro = {
   name: "Solène PETTIER",
   title: {
-    EN: "IT Engineer, Web & Blockchain Developper",
-    ES: "Ingeniera SI, Desarrolladora Web & Blockchain",
-    FR: "Ingénieure SI, Développeuse Web & Blockchain",
+    EN: "IT Engineer and Web & Blockchain full-stack developper",
+    ES: "Ingeniera SI y desarollada full-stack Web & Blockchain",
+    FR: "Ingénieure SI et développeuse full-stack Web & Blockchain",
   },
   paragraph: {
-    EN: "Hello and welcome ! I'm Solène, from Paris, passionated with Web & Blockchain programation !",
-    ES: "Holà y bienvenido ! Soy Solène, una francesa de París, apasionada de programacion Web & Blockchain !",
-    FR: "Bonjour et bienvenue ! Je suis Solène, originaire de Paris, et passionnée de programation Web & Blockchain !",
+    EN: "Hello and welcome ! I'm Solène, french coming from Paris, IT Engineer and Web & Blockchain full-stack developper !",
+    ES: "Holà y bienvenido ! Soy Solène, francesa originaria de París, Ingeniera SI y desarollada full-stack Web & Blockchain !",
+    FR: "Bonjour et bienvenue ! Je suis Solène, française originaire de Paris, Ingénieure SI et développeuse full-stack Web & Blockchain !",
   },
   linkedin: "https://www.linkedin.com/in/solenemhep",
   github: "https://github.com/solenemhep",

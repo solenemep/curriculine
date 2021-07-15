@@ -103,32 +103,34 @@ const CardContent = (props) => {
             )}
           </HStack>
 
-          <HStack spacing={8}>
-            {section === "portfolio" && (
-              <AspectRatio ratio={16 / 9} width={"30%"}>
-                <Image
-                  shadow={"xs"}
-                  borderWidth="1px"
-                  borderRadius="lg"
-                  src={require(`../img/${img}`).default}
-                  alt={`img${img}`}
-                />
-              </AspectRatio>
-            )}
+          {section !== "education" && (
+            <HStack spacing={8}>
+              {section === "portfolio" && (
+                <AspectRatio ratio={16 / 9} width={"30%"}>
+                  <Image
+                    shadow={"xs"}
+                    borderWidth="1px"
+                    borderRadius="lg"
+                    src={require(`../img/${img}`).default}
+                    alt={`img${img}`}
+                  />
+                </AspectRatio>
+              )}
 
-            <List spacing={2}>
-              {details.map((detail) => {
-                return (
-                  <ListItem key={detail.key}>
-                    <HStack>
-                      <ListIcon as={CheckIcon} color="green.300" />
-                      <Text>{detail.text[lang]}</Text>
-                    </HStack>
-                  </ListItem>
-                )
-              })}
-            </List>
-          </HStack>
+              <List spacing={2}>
+                {details.map((detail) => {
+                  return (
+                    <ListItem key={detail.key}>
+                      <HStack>
+                        <ListIcon as={CheckIcon} color="green.300" />
+                        <Text>{detail.text[lang]}</Text>
+                      </HStack>
+                    </ListItem>
+                  )
+                })}
+              </List>
+            </HStack>
+          )}
 
           <HStack>
             <Spacer />

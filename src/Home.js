@@ -27,21 +27,18 @@ const Home = () => {
   const { intro, highlights } = useHomeContext()
 
   return (
-    <Container maxW={"container.xl"}>
+    <Container maxW={"container.xl"} pt={8}>
       <HStack
         id="intro"
         alignItems={"center"}
-        mb={16}
+        mb={24}
         justifyContent={"left"}
         spacing={16}
       >
         <Avatar size="2xl" src={SP} />
         <VStack alignItems={"left"} spacing={4}>
-          <Heading style={{ textTransform: "uppercase" }} size="xl">
-            {intro.title[lang]}
-          </Heading>
           <HStack spacing={8}>
-            <Heading as="h1" size={"lg"}>
+            <Heading as="h1" size={"xl"}>
               {intro.name}
             </Heading>
 
@@ -81,11 +78,12 @@ const Home = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </Link>
           </HStack>
+          <Heading style={{ textTransform: "uppercase" }} size="md">
+            {intro.title[lang]}
+          </Heading>
         </VStack>
       </HStack>
-      <Text textAlign={"center"} mb={16}>
-        {intro.paragraph[lang]}
-      </Text>
+
       <SimpleGrid
         id="highlight"
         columns={{ base: 1, lg: 3 }}

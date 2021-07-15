@@ -43,13 +43,13 @@ const Contact = () => {
   } = useContactContext()
 
   return (
-    <Container maxW={"container.xl"}>
+    <Container maxW={"container.xl"} pt={4}>
       <Heading
         Heading
         as="h2"
         style={{ textTransform: "uppercase" }}
         size="2xl"
-        mb={8}
+        mb={16}
       >
         {contacts[lang]}
       </Heading>

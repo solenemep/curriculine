@@ -173,6 +173,7 @@ export const main = [
     link: "",
     details: [],
   },
+  /*
   {
     key: 2,
     color: "pink",
@@ -229,6 +230,7 @@ export const main = [
       },
     ],
   },
+  */
   {
     key: 3,
     color: "red",
@@ -650,25 +652,9 @@ export const main = [
       {
         key: 101,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 102,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 103,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Simple game developped in JavaScript",
+          ES: "Juego simple desarollado en JavaScript",
+          FR: "Jeu simple développé en JavaScript",
         },
       },
     ],
@@ -696,25 +682,9 @@ export const main = [
       {
         key: 111,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 112,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 113,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Blog designed with Bootstrap",
+          ES: "Blog diseñado con Bootstrap",
+          FR: "Blog conçu avec Bootstrap",
         },
       },
     ],
@@ -741,25 +711,9 @@ export const main = [
       {
         key: 121,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 122,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 123,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Node & JavaScript hangman game",
+          ES: "Node & Javascript juego del ahorcado",
+          FR: "Node & Javascript jeu du pendu",
         },
       },
     ],
@@ -786,25 +740,9 @@ export const main = [
       {
         key: 131,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 132,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 133,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Node & JavaScript Monty-Hall game",
+          ES: "Node & Javascript juego del Monty-Hall",
+          FR: "Node & Javascript jeu du Monty-Hall",
         },
       },
     ],
@@ -838,25 +776,17 @@ export const main = [
       {
         key: 141,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "React Weather App",
+          ES: "App React de météo",
+          FR: "App React de météo",
         },
       },
       {
         key: 142,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 143,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Fetch data from API",
+          ES: "Fetch de los datos desde API",
+          FR: "Fetch des données depuis API",
         },
       },
     ],
@@ -890,25 +820,25 @@ export const main = [
       {
         key: 151,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "React blog displaying gradient list",
+          ES: "Blog en React de gradiente de color",
+          FR: "Blog en React de gradients de couleur",
         },
       },
       {
         key: 152,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "API GET & PUSH",
+          ES: "Fetch de los datos desde API",
+          FR: "Fetch des données depuis API",
         },
       },
       {
         key: 153,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Push data to API",
+          ES: "Push de los datos hasta API",
+          FR: "Push des données à l'API",
         },
       },
     ],

@@ -25,7 +25,7 @@ const CurricuLine = () => {
       <Switch>
         <Route exact path="/">
           <HomeContextProvider>
-            <Box bg={bgContent} minH={"100vh"} pt={28} pb={24}>
+            <Box bg={bgContent} minH={"100vh"} py={24}>
               <Home />
             </Box>
           </HomeContextProvider>
