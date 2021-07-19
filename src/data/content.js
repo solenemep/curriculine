@@ -308,9 +308,9 @@ export const main = [
     key: 5,
     color: "cyan",
     title: {
-      EN: "MSc Information Technology & Process Engineering",
-      ES: "MSc Ingenería de los Sistemas de Información & Procesos",
-      FR: "MSc Génie des Sysèmes d'Information & Processus",
+      EN: "MSc Information Technology & Process Engineer",
+      ES: "MSc Ingenería Sistemas de Información & Procesos",
+      FR: "MSc Ingénieur Sysèmes d'Information & Processus",
     },
     date: {
       EN: "September 2013 - November 2016",
@@ -368,7 +368,7 @@ export const main = [
       {
         key: 61,
         text: {
-          EN: "Guided customer in their ERP SaaS solution implementation",
+          EN: "Guided customers in their ERP SaaS solution implementation",
           ES: "",
           FR: "",
         },
@@ -1024,6 +1024,7 @@ export const main = [
       },
     ],
   },
+  /*
   {
     key: 20,
     color: "blue",
@@ -1086,6 +1087,7 @@ export const main = [
       },
     ],
   },
+  */
   {
     key: 21,
     color: "purple",
@@ -1208,6 +1210,7 @@ export const main = [
       },
     ],
   },
+  /*
   {
     key: 23,
     color: "pink",
@@ -1325,4 +1328,5 @@ export const main = [
       },
     ],
   },
+  */
 ]

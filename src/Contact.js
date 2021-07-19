@@ -8,7 +8,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import {
-  faMapMarkerAlt,
+  // faMapMarkerAlt,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons"
@@ -106,13 +106,14 @@ const Contact = () => {
         </VStack>
         <ScaleFadeOnScroll>
           <VStack id="coord" mb={8} alignItems={"strech"}>
+            {/* 
             <Tag colorScheme={"pink"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
             </Tag>
-
+*/}
             <Tag colorScheme={"red"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faPhone} />
