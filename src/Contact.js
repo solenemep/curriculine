@@ -43,7 +43,7 @@ const Contact = () => {
       <Grid
         sx={{
           display: "grid",
-          gridTemplateColumns: { base: "2fr 1fr" },
+          gridTemplateColumns: { base: "1fr", md: "2fr 1fr" },
           gap: "6rem",
         }}
         alignItems={"start"}
@@ -105,7 +105,12 @@ const Contact = () => {
           )}
         </VStack>
         <ScaleFadeOnScroll>
-          <VStack id="coord" mb={8} alignItems={"strech"}>
+          <VStack
+            id="coord"
+            mb={8}
+            alignItems={"strech"}
+            sx={{ columnSpan: 1 }}
+          >
             {/* 
             <Tag colorScheme={"pink"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
