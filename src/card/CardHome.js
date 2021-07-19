@@ -1,6 +1,5 @@
 import { CheckIcon } from "@chakra-ui/icons"
 import {
-  Badge,
   Box,
   Button,
   Heading,
@@ -11,15 +10,14 @@ import {
   ListItem,
   Spacer,
   Stack,
-  Tag,
   Text,
 } from "@chakra-ui/react"
 import { useCurriContext } from "../hook/useCurriContext"
 import SlideFadeOnScroll from "../transitions/SlideFadeOnScroll"
 
 const CardHome = (props) => {
-  const { color, title, section, path, more, filter, details } = props
-  const { lang, setSection, setFilter, colorCard } = useCurriContext()
+  const { color, title, section, path, more, details } = props
+  const { lang, setSection, colorCard } = useCurriContext()
   return (
     <SlideFadeOnScroll>
       <Box
@@ -33,7 +31,14 @@ const CardHome = (props) => {
         shadow={"lg"}
       >
         <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-          <Heading as={"h2"}>{title}</Heading>
+          <Heading
+            as={"h3"}
+            size={"md"}
+            textTransform={"uppercase"}
+            fontWeight={"bold"}
+          >
+            {title}
+          </Heading>
           <List spacing={2}>
             {details.map((detail) => {
               return (

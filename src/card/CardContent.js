@@ -1,15 +1,8 @@
-import {
-  CalendarIcon,
-  CheckIcon,
-  ExternalLinkIcon,
-  LinkIcon,
-} from "@chakra-ui/icons"
+import { ArrowForwardIcon } from "@chakra-ui/icons"
 import {
   AspectRatio,
   Box,
   Button,
-  Flex,
-  Grid,
   Heading,
   HStack,
   Image,
@@ -17,11 +10,9 @@ import {
   List,
   ListIcon,
   ListItem,
-  SimpleGrid,
   Spacer,
   Stack,
   Text,
-  VStack,
   Wrap,
 } from "@chakra-ui/react"
 import { faBuilding, faCalendar } from "@fortawesome/free-regular-svg-icons"
@@ -66,7 +57,14 @@ const CardContent = (props) => {
         shadow={"lg"}
       >
         <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-          <Heading as={"h2"}>{title}</Heading>
+          <Heading
+            as={"h3"}
+            size={"md"}
+            textTransform={"uppercase"}
+            fontWeight={"bold"}
+          >
+            {title}
+          </Heading>
           <HStack justifyContent={"space-between"}>
             <Text>
               <FontAwesomeIcon icon={faCalendar} /> {date}
@@ -122,7 +120,7 @@ const CardContent = (props) => {
                   return (
                     <ListItem key={detail.key}>
                       <HStack>
-                        <ListIcon as={CheckIcon} color="green.300" />
+                        <ListIcon as={ArrowForwardIcon} color="pink.300" />
                         <Text>{detail.text[lang]}</Text>
                       </HStack>
                     </ListItem>
@@ -154,7 +152,6 @@ const CardContent = (props) => {
                     value={skill.key}
                     onClick={toggleFilter}
                     isActive={filter.includes(Number(skill.key))}
-                    _hover={{ cursor: "pointer" }}
                   >
                     {skill.text[lang]}
                   </Button>

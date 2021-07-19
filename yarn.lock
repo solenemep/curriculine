@@ -3552,11 +3552,6 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@^5.0.0-beta3:
-  version "5.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.0-beta3.tgz#c959f61fbd03667a1b158f763856994859d7a465"
-  integrity sha512-0urccjfIOzhrb9qJysN8XW/DRw6rg3zH7qLeKIp4Zyl8+Ens4JWB0NC0cB5AhnSFPd2tftRggjwCMxablo6Tpg==
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -5012,10 +5007,10 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
-emailjs-com@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.0.2.tgz#d609f8e0e1ebf67eabf659684d5478b69809407f"
-  integrity sha512-nbVFnvCQfemx5kh1W+MNmRCayHhruRbg5mJX27bV8NrpzPfa0T/tOxTJQWk8asHJ9Lx0L2SVndEiMIxJp+fGAw==
+emailjs-com@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.2.0.tgz#a53cb22f1bc433c701c84c53d8b56eefd5ce7111"
+  integrity sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==
 
 emittery@^0.7.1:
   version "0.7.2"

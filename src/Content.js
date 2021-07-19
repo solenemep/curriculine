@@ -61,16 +61,11 @@ const Content = () => {
     }
 
     setList(filterMain(section, filter).reverse())
-  }, [filter, section])
+  }, [main, filter, section])
 
   return (
     <Container maxW={"container.xl"} pt={4}>
-      <Heading
-        as="h2"
-        style={{ textTransform: "uppercase" }}
-        size="2xl"
-        mb={16}
-      >
+      <Heading as="h2" textTransform={"uppercase"} size="2xl" mb={16}>
         {sections[section][lang]}
       </Heading>
       <Grid

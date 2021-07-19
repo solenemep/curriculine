@@ -2,153 +2,154 @@ import { useCurriContext } from "./hook/useCurriContext"
 import { useContactContext } from "./hook/useContactContext"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faDiscord } from "@fortawesome/free-brands-svg-icons"
+import {
+  faDiscord,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 import {
   faMapMarkerAlt,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons"
 import {
+  Button,
+  Alert,
   Heading,
   VStack,
   FormControl,
   FormLabel,
   Input,
   Textarea,
-  Button,
-  Wrap,
-  WrapItem,
   Tag,
   HStack,
   Text,
   Container,
+  Grid,
+  AlertIcon,
 } from "@chakra-ui/react"
 import ScaleFadeOnScroll from "./transitions/ScaleFadeOnScroll"
 
 const Contact = () => {
-  const { lang, hoverNavFoot, colorCard } = useCurriContext()
-  const {
-    contacts,
-    coord,
-    mailme,
-    submitEmail,
-    sendName,
-    changeSendName,
-    sendEmail,
-    changeSendEmail,
-    sendSubject,
-    changeSendSubject,
-    sendMessage,
-    changeSendMessage,
-  } = useContactContext()
+  const { lang, colorCard } = useCurriContext()
+  const { contacts, coord, mailme, submitEmail, isLoading, alert } =
+    useContactContext()
 
   return (
     <Container maxW={"container.xl"} pt={4}>
-      <Heading
-        Heading
-        as="h2"
-        style={{ textTransform: "uppercase" }}
-        size="2xl"
-        mb={16}
-      >
+      <Heading as="h2" textTransform={"uppercase"} size="2xl" mb={16}>
         {contacts[lang]}
       </Heading>
-      <ScaleFadeOnScroll>
-        <Wrap id="coord" mb={8}>
-          <WrapItem>
-            <Tag colorScheme={"pink"} fontSize={"md"}>
+      <Grid
+        sx={{
+          display: "grid",
+          gridTemplateColumns: { base: "2fr 1fr" },
+          gap: "6rem",
+        }}
+        alignItems={"start"}
+        justifyContent={"space-between"}
+      >
+        <VStack
+          sx={{ columnSpan: 1 }}
+          id="mail"
+          mb={8}
+          as={"form"}
+          onSubmit={submitEmail}
+          alignItems={"start"}
+          className="contact-form"
+        >
+          <FormControl id="user_name" isRequired>
+            <FormLabel>{mailme.name[lang]}</FormLabel>
+            <Input type="text" name="user_name" aria-label="name" required />
+          </FormControl>
+          <FormControl id="user_email" isRequired>
+            <FormLabel>{mailme.mail[lang]}</FormLabel>
+            <Input type="email" name="user_email" aria-label="email" required />
+          </FormControl>
+          <FormControl id="subject">
+            <FormLabel>{mailme.subject[lang]}</FormLabel>
+            <Input type="text" name="subject" aria-label="subject" required />
+          </FormControl>
+          <FormControl id="message" isRequired>
+            <FormLabel>{mailme.message[lang]}</FormLabel>
+            <Textarea name="message" rows="6" aria-label="message" required />
+          </FormControl>
+          {alert === "" && (
+            <Button
+              type="submit"
+              color={colorCard}
+              bg={"red.100"}
+              _hover={{
+                bg: `red.300`,
+                textDecoration: "none",
+                color: `${colorCard}`,
+              }}
+              isLoading={isLoading}
+              isFullWidth
+            >
+              {mailme.send[lang]}
+            </Button>
+          )}
+          {alert === "OK" && (
+            <Alert status="success" rounded={"lg"}>
+              <AlertIcon />
+              {mailme.OK[lang]}
+            </Alert>
+          )}
+          {alert === "KO" && (
+            <Alert status="error" rounded={"lg"}>
+              <AlertIcon />
+              {mailme.KO[lang]}
+              {coord.mailto}
+            </Alert>
+          )}
+        </VStack>
+        <ScaleFadeOnScroll>
+          <VStack id="coord" mb={8} alignItems={"strech"}>
+            <Tag colorScheme={"pink"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
             </Tag>
-          </WrapItem>
-          <WrapItem>
-            <Tag colorScheme={"red"} fontSize={"md"}>
+
+            <Tag colorScheme={"red"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faPhone} />
                 <Text>{coord.phone}</Text>
               </HStack>
             </Tag>
-          </WrapItem>
-          <WrapItem>
-            <Tag colorScheme={"cyan"} fontSize={"md"}>
+
+            <Tag colorScheme={"cyan"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faEnvelope} />
                 <Text>{coord.mailto}</Text>
               </HStack>
             </Tag>
-          </WrapItem>
-          <WrapItem>
-            <Tag colorScheme={"purple"} fontSize={"md"}>
+
+            <Tag colorScheme={"yellow"} size={"lg"} fontWeight={"bold"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faLinkedin} />
+                <Text>{coord.linkedin}</Text>
+              </HStack>
+            </Tag>
+
+            <Tag colorScheme={"green"} size={"lg"} fontWeight={"bold"}>
+              <HStack spacing={2}>
+                <FontAwesomeIcon icon={faGithub} />
+                <Text>{coord.github}</Text>
+              </HStack>
+            </Tag>
+
+            <Tag colorScheme={"purple"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faDiscord} />
                 <Text>{coord.discord}</Text>
               </HStack>
             </Tag>
-          </WrapItem>
-        </Wrap>
-      </ScaleFadeOnScroll>
-      <VStack
-        id="mail"
-        mb={8}
-        as={"form"}
-        onSubmit={submitEmail}
-        alignItems={"start"}
-      >
-        <FormControl id="name" isRequired>
-          <FormLabel>{mailme.name[lang]}</FormLabel>
-          <Input
-            type="text"
-            aria-label="name"
-            value={sendName}
-            onChange={changeSendName}
-            required
-          />
-        </FormControl>
-        <FormControl id="email" isRequired>
-          <FormLabel>{mailme.mail[lang]}</FormLabel>
-          <Input
-            type="email"
-            aria-label="email"
-            value={sendEmail}
-            onChange={changeSendEmail}
-            required
-          />
-        </FormControl>
-        <FormControl id="subject">
-          <FormLabel>{mailme.subject[lang]}</FormLabel>
-          <Input
-            type="text"
-            aria-label="subject"
-            value={sendSubject}
-            onChange={changeSendSubject}
-            required
-          />
-        </FormControl>
-        <FormControl id="message" isRequired>
-          <FormLabel>{mailme.message[lang]}</FormLabel>
-          <Textarea
-            rows="6"
-            aria-label="message"
-            value={sendMessage}
-            onChange={changeSendMessage}
-            required
-          />
-        </FormControl>
-        <Button
-          color={colorCard}
-          type="submit"
-          bg={"red.100"}
-          _hover={{
-            bg: `red.300`,
-            textDecoration: "none",
-            color: `${colorCard}`,
-          }}
-        >
-          {mailme.send[lang]}
-        </Button>
-      </VStack>
+          </VStack>
+        </ScaleFadeOnScroll>
+      </Grid>
     </Container>
   )
 }

@@ -17,7 +17,7 @@ import { useCurriContext } from "./hook/useCurriContext"
 import NavItems from "./componentsNav/NavItems"
 
 const Nav = () => {
-  const { bgNav, hoverNavFoot } = useCurriContext()
+  const { bgNav, hoverButton } = useCurriContext()
 
   const {
     isOpen: navIsOpen,
@@ -34,7 +34,7 @@ const Nav = () => {
           display={{ lg: "none" }}
           onClick={navIsOpen ? navOnClose : navOnOpen}
           bg={bgNav}
-          _hover={hoverNavFoot}
+          _hover={hoverButton}
         >
           {navIsOpen ? <CloseIcon /> : <HamburgerIcon />}
         </IconButton>
@@ -56,7 +56,7 @@ const Nav = () => {
       {navIsOpen ? (
         <Fade in={navIsOpen} unmountOnExit={true}>
           <Box pb={4} display={{ lg: "none" }}>
-            <VStack as={"nav"} spacing={2} alignItems={"left"}>
+            <VStack as={"nav"} spacing={2} alignItems={"start"}>
               <NavItems />
             </VStack>
           </Box>

@@ -97,7 +97,7 @@ export const highlights = [
         key: 23,
         text: {
           EN: "Front-end development of smart contrat interface",
-          ES: "Desarollo front-end de interface de smart contract",
+          ES: "Desarollo front-end de interfaz de smart contract",
           FR: "Développement front-end d'interface de smart contract",
         },
       },
@@ -127,9 +127,9 @@ export const highlights = [
       {
         key: 32,
         text: {
-          EN: "Smart contract testing on Hardhat with Ethers & Web3",
-          ES: "Prueba de smart contract en Hardhat con Ethers & Web3",
-          FR: "Test de smart contract sur Hardhat avec Ethers & Web3",
+          EN: "Smart contract testing and deploying on Hardhat with Ethers & Web3",
+          ES: "Prueba y despliegue de smart contract en Hardhat con Ethers & Web3",
+          FR: "Test et déploiement de smart contract sur Hardhat avec Ethers & Web3",
         },
       },
 

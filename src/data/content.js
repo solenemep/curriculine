@@ -86,7 +86,7 @@ export const skills = [
       },
       {
         key: 53,
-        text: { EN: "Robotics", ES: "Robotica", FR: "Robotique" },
+        text: { EN: "Robotics", ES: "Robótica", FR: "Robotique" },
       },
     ],
   },
@@ -135,9 +135,9 @@ export const main = [
     key: 1,
     color: "green",
     title: {
-      EN: "Undergraduate intensive course in Mathematics & Physics",
-      ES: "Curso de Matemáticas & Física",
-      FR: "Cours de Mathématiques & Physique MPSI/MP",
+      EN: "Intensive course of Mathematics & Physics",
+      ES: "Curso intensivo de Matemáticas & Física",
+      FR: "Cours intensif de Mathématiques & Physique MPSI/MP",
     },
     date: {
       EN: "September 2011 - August 2013",
@@ -173,7 +173,6 @@ export const main = [
     link: "",
     details: [],
   },
-  /*
   {
     key: 2,
     color: "pink",
@@ -207,30 +206,13 @@ export const main = [
       {
         key: 21,
         text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 22,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 23,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
+          EN: "Worker in factoy for one month to english",
+          ES: "Obrera en fábrica durante un mes para aprender al inglés",
+          FR: "Ouvrière en usine pendant un mois pour apprendre l'anglais",
         },
       },
     ],
   },
-  */
   {
     key: 3,
     color: "red",
@@ -263,7 +245,7 @@ export const main = [
       },
       {
         key: 53,
-        text: { EN: "Robotics", ES: "Robotica", FR: "Robotique" },
+        text: { EN: "Robotics", ES: "Robótica", FR: "Robotique" },
       },
     ],
     code: "",
@@ -275,7 +257,7 @@ export const main = [
     color: "green",
     title: {
       EN: "Logistic analyst",
-      ES: "Analista logistica",
+      ES: "Analista logístico",
       FR: "Analiste logisitque",
     },
     date: {
@@ -308,24 +290,16 @@ export const main = [
         key: 41,
         text: {
           EN: "Designed a logistic plan to integrate a new supply chain activity",
-          ES: "",
-          FR: "",
+          ES: "Creación de un plano logístico para integrar una nueva actividad supply chain",
+          FR: "Création d'un plan logistique afin d'intégrer une nouvelle activité supply chain",
         },
       },
       {
         key: 42,
         text: {
-          EN: "Optimized picking & packing processes",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 43,
-        text: {
-          EN: "",
-          ES: "",
-          FR: "",
+          EN: "Optimized goods picking & packing processes",
+          ES: "Optimización de los procesos de recogida et preparación de la mercancía",
+          FR: "Optimisation des processus de collecte et préparation de la marchandise",
         },
       },
     ],
@@ -334,9 +308,9 @@ export const main = [
     key: 5,
     color: "cyan",
     title: {
-      EN: "MSC Information Technology & Process Engineering",
-      ES: "MSC Ingenería de los Sistemas de Información & Procesos",
-      FR: "MSC Génie des Sysèmes d'Information & Processus",
+      EN: "MSc Information Technology & Process Engineering",
+      ES: "MSc Ingenería de los Sistemas de Información & Procesos",
+      FR: "MSc Génie des Sysèmes d'Information & Processus",
     },
     date: {
       EN: "September 2013 - November 2016",
@@ -353,6 +327,7 @@ export const main = [
     skills: [
       { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
       { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
+      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
       { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
     ],
@@ -1041,6 +1016,307 @@ export const main = [
       },
       {
         key: 193,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 20,
+    color: "blue",
+    title: {
+      EN: "ICO Calculator",
+      ES: "ICO Calculadora",
+      FR: "ICO Calculatrice",
+    },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/ico-calc-back",
+    link: "",
+    img: "nada.png",
+    details: [
+      {
+        key: 201,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 202,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 203,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 21,
+    color: "purple",
+    title: {
+      EN: "Faucet",
+      ES: "Faucet",
+      FR: "Faucet",
+    },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/faucet-back",
+    link: "https://solenemhep-faucet.netlify.app/",
+    img: "faucet.png",
+    details: [
+      {
+        key: 211,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 212,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 213,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 22,
+    color: "orange",
+    title: {
+      EN: "Smart Words",
+      ES: "Smart Words",
+      FR: "Smart Words",
+    },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/smart-words-back",
+    link: "https://solenemhep-faucet.netlify.app/",
+    img: "smartwords.png",
+    details: [
+      {
+        key: 221,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 222,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 223,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 23,
+    color: "pink",
+    title: {
+      EN: "Collateral Token",
+      ES: "Collateral Token",
+      FR: "Collateral Token",
+    },
+    date: { EN: "July 2021", ES: "Julio 2021", FR: "Juillet 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/collateral-token-back",
+    link: "",
+    img: "nada.png",
+    details: [
+      {
+        key: 231,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 232,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 233,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+    ],
+  },
+  {
+    key: 24,
+    color: "cyan",
+    title: {
+      EN: "Login",
+      ES: "Login",
+      FR: "Login",
+    },
+    date: { EN: "July 2021", ES: "Julio 2021", FR: "Juillet 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
+      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
+    ],
+    code: "https://github.com/solenemhep/login-back",
+    link: "",
+    img: "nada.png",
+    details: [
+      {
+        key: 241,
+        text: {
+          EN: "detail alyra en 1",
+          ES: "detail alyra es 1",
+          FR: "detail alyra fr 1",
+        },
+      },
+      {
+        key: 242,
+        text: {
+          EN: "detail alyra en 2",
+          ES: "detail alyra es 2",
+          FR: "detail alyra fr 2",
+        },
+      },
+      {
+        key: 243,
         text: {
           EN: "detail alyra en 2",
           ES: "detail alyra es 2",

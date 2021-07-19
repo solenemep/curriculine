@@ -19,7 +19,7 @@ export const CurriContextProvider = ({ children }) => {
   const bgContent = useColorModeValue("white", "gray.900")
   const bgFoot = "gray.900"
 
-  const hoverNavFoot = {
+  const hoverButton = {
     textDecoration: "none",
     color: useColorModeValue("gray.600", "gray.400"),
     bg: "inherit",
@@ -46,10 +46,10 @@ export const CurriContextProvider = ({ children }) => {
         section,
         setSection,
         bgNav,
-        bgFoot,
-        colorFoot,
-        hoverNavFoot,
         bgContent,
+        bgFoot,
+        hoverButton,
+        colorFoot,
         colorCard,
         colorTag,
       }}

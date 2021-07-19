@@ -12,6 +12,8 @@ export const coord = {
   phone: "+33 6 74 66 29 38",
   mailto: "solene.pettier@gmail.com",
   discord: "solène#5763",
+  github: "/solenemhep",
+  linkedin: "/solenemhep",
 }
 
 export const mailme = {
@@ -20,4 +22,14 @@ export const mailme = {
   subject: { EN: "Subject", ES: "Sujeto", FR: "Sujet" },
   message: { EN: "Your message", ES: "Su mensaje", FR: "Votre message" },
   send: { EN: "Send", ES: "Enviar", FR: "Envoyer" },
+  OK: {
+    EN: "Your message has been successfuly sent",
+    ES: "Su mensaje ha sido enviado exitosamente",
+    FR: "Votre message a bien été envoyé",
+  },
+  KO: {
+    EN: "Error sending message, please contact me at ",
+    ES: "Error en el envío del mensaje, por favor contácteme a ",
+    FR: "Erreur à l'envoi du message, veuillez me contacter sur ",
+  },
 }

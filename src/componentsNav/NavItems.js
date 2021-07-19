@@ -1,47 +1,55 @@
-import { Link } from "@chakra-ui/react"
+import { Link, Button } from "@chakra-ui/react"
 import { Fragment } from "react"
 import { useCurriContext } from "../hook/useCurriContext"
 import { useNavContext } from "../hook/useNavContext"
 
 const NavItems = () => {
-  const { lang, setSection, hoverNavFoot } = useCurriContext()
+  const { lang, setSection, bgNav, hoverButton } = useCurriContext()
   const { home, curriculum, contacts } = useNavContext()
   return (
     <Fragment>
-      <Link
-        style={{ fontWeight: "bold" }}
+      <Button
+        as={Link}
+        fontWeight={"normal"}
         href={"/"}
         aria-label={"home page"}
         px={2}
         py={1}
         rounded={"md"}
-        _hover={hoverNavFoot}
+        bg={bgNav}
+        _hover={hoverButton}
       >
         {home[lang]}
-      </Link>
+      </Button>
 
-      <Link
+      <Button
+        as={Link}
         href={"/curriculum"}
+        fontWeight={"normal"}
         aria-label={"curriculum page"}
         px={2}
         py={1}
         rounded={"md"}
-        _hover={hoverNavFoot}
+        bg={bgNav}
+        _hover={hoverButton}
         onClick={() => setSection("education")}
       >
         {curriculum[lang]}
-      </Link>
+      </Button>
 
-      <Link
+      <Button
+        as={Link}
         href={"/contact"}
+        fontWeight={"normal"}
         aria-label={"contact page"}
         px={2}
         py={1}
         rounded={"md"}
-        _hover={hoverNavFoot}
+        bg={bgNav}
+        _hover={hoverButton}
       >
         {contacts[lang]}
-      </Link>
+      </Button>
     </Fragment>
   )
 }

@@ -16,14 +16,13 @@ import {
   Heading,
   Link,
   SimpleGrid,
-  Text,
   Avatar,
   Container,
 } from "@chakra-ui/react"
 import CardHome from "./card/CardHome"
 
 const Home = () => {
-  const { lang, hoverNavFoot } = useCurriContext()
+  const { lang, hoverButton } = useCurriContext()
   const { intro, highlights } = useHomeContext()
 
   return (
@@ -37,13 +36,16 @@ const Home = () => {
       >
         <Avatar size="2xl" src={SP} />
         <VStack alignItems={"left"} spacing={4}>
-          <HStack spacing={8}>
-            <Heading as="h1" size={"xl"}>
-              {intro.name}
-            </Heading>
+          <Heading as="h1" size={"2xl"}>
+            {intro.name}
+          </Heading>
 
+          <Heading textTransform={"uppercase"} size="md">
+            {intro.title[lang]}
+          </Heading>
+          <HStack spacing={8}>
             <Link
-              _hover={hoverNavFoot}
+              _hover={hoverButton}
               href={intro.linkedin}
               aria-label="my linkedin"
               isExternal
@@ -52,7 +54,7 @@ const Home = () => {
             </Link>
 
             <Link
-              _hover={hoverNavFoot}
+              _hover={hoverButton}
               href={intro.github}
               aria-label="my github"
               isExternal
@@ -61,7 +63,7 @@ const Home = () => {
             </Link>
 
             <Link
-              _hover={hoverNavFoot}
+              _hover={hoverButton}
               href={intro.codepen}
               aria-label="my codepen"
               isExternal
@@ -70,7 +72,7 @@ const Home = () => {
             </Link>
 
             <Link
-              _hover={hoverNavFoot}
+              _hover={hoverButton}
               href={intro.mail}
               aria-label="my email"
               isExternal
@@ -78,9 +80,6 @@ const Home = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </Link>
           </HStack>
-          <Heading style={{ textTransform: "uppercase" }} size="md">
-            {intro.title[lang]}
-          </Heading>
         </VStack>
       </HStack>
 
