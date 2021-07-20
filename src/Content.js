@@ -63,6 +63,14 @@ const Content = () => {
     setList(filterMain(section, filter).reverse())
   }, [main, filter, section])
 
+  const sectionScroll = (e) => {
+    setSection(e.target.value)
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <Container maxW={"container.xl"} pt={4}>
       <Heading as="h2" textTransform={"uppercase"} size="2xl" mb={16}>
@@ -111,10 +119,7 @@ const Content = () => {
         >
           <FormControl id="section">
             <FormLabel fontWeight={"bold"}>{changeSection[lang]}</FormLabel>
-            <Select
-              defaultValue={section}
-              onChange={((e) => setSection(e.target.value), scrollTop(0))}
-            >
+            <Select defaultValue={section} onChange={(e) => sectionScroll(e)}>
               <option value="education">{sections.education[lang]}</option>
               <option value="experience">{sections.experience[lang]}</option>
               <option value="portfolio">{sections.portfolio[lang]}</option>
