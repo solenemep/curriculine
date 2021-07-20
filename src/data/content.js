@@ -385,16 +385,16 @@ export const main = [
         key: 63,
         text: {
           EN: "Supported and trained customers during the implementation and exploitation stage",
-          ES: "",
-          FR: "",
+          ES: "Soporte y formación cliente durante las etapas de implementación y de explotación",
+          FR: "Support et formation client pendant les étapes d'implémentation et d'exploitation",
         },
       },
       {
         key: 64,
         text: {
           EN: "Optimized internal management tool for resources workload monitoring",
-          ES: "",
-          FR: "",
+          ES: "Optimización del herramienta de gestión interno para controlar la carga de trabajo de los empleados",
+          FR: "Optimisation de l'outil de management interne pour contrôler la charge de travail des employés",
         },
       },
     ],
@@ -438,32 +438,32 @@ export const main = [
         key: 71,
         text: {
           EN: "Managed the industrialization of two production lines",
-          ES: "",
-          FR: "",
+          ES: "Dirección de la industrialización de dos linéas de producción",
+          FR: "Direction de l'industralisation de deux lignes de production",
         },
       },
       {
         key: 72,
         text: {
           EN: "Animated progress meetings to liaise management and operational teams",
-          ES: "",
-          FR: "",
+          ES: "Animación de reuniónes para vincular los equipos de management y los equipos operacionales",
+          FR: "Animation de réunions pour lier les équipes de management et les équipes opérationnelles",
         },
       },
       {
         key: 73,
         text: {
           EN: "Identified process issues to establish action plans supporting engineering production and exploitation unit",
-          ES: "",
-          FR: "",
+          ES: "Identificación de los procesos bloqueantes y implementación de un plan de acciónes para soportar la concepción y la producción",
+          FR: "Identification des processus bloquants et mise en place de plan d'action pour supporter la conception et la production",
         },
       },
       {
         key: 74,
         text: {
-          EN: "Implemented an internal tool to monitor production and to measure KPI",
-          ES: "",
-          FR: "",
+          EN: "Implemented an internal tool to monitor production and to measure Key Performance Indicator",
+          ES: "Implementación de un herramienta interno de gestión de producción y de medida de los Indicadores Clave de Rendimiento",
+          FR: "Implémentation d'un outil interne de gestion de production et de mesure des Indicateurs Clé de Performance",
         },
       },
     ],
