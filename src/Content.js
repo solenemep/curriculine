@@ -113,7 +113,7 @@ const Content = () => {
             <FormLabel fontWeight={"bold"}>{changeSection[lang]}</FormLabel>
             <Select
               defaultValue={section}
-              onChange={(e) => setSection(e.target.value)}
+              onChange={((e) => setSection(e.target.value), scrollTop(0))}
             >
               <option value="education">{sections.education[lang]}</option>
               <option value="experience">{sections.experience[lang]}</option>

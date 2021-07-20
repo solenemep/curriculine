@@ -368,23 +368,23 @@ export const main = [
       {
         key: 61,
         text: {
-          EN: "Guided customers in their ERP SaaS solution implementation",
-          ES: "",
-          FR: "",
+          EN: "Analysed functional specification to match customer requirements",
+          ES: "Análisis de las especificaciónes funcionales para responder a las necesidades del cliente",
+          FR: "Analyse des spécifications fonctionnelles pour répondre au besoin client",
         },
       },
       {
         key: 62,
         text: {
-          EN: "Produced specifications improving solution functionalities",
-          ES: "",
-          FR: "",
+          EN: "Coordinated projects and assigned tasks to developers and QA testing unit",
+          ES: "Coordinación de proyectos y asignación de las tareas a los equipos de desarrolladores y testadores",
+          FR: "Coordination de projet et affectation des tâches aux équipes de développeurs et testeurs",
         },
       },
       {
         key: 63,
         text: {
-          EN: "Implemented walkthrough programming HTML and CSS",
+          EN: "Supported and trained customers during the implementation and exploitation stage",
           ES: "",
           FR: "",
         },
@@ -392,15 +392,7 @@ export const main = [
       {
         key: 64,
         text: {
-          EN: "Troubleshot, investigated and created detailed reports about issues",
-          ES: "",
-          FR: "",
-        },
-      },
-      {
-        key: 65,
-        text: {
-          EN: "Provided online instruction for users",
+          EN: "Optimized internal management tool for resources workload monitoring",
           ES: "",
           FR: "",
         },
@@ -512,33 +504,41 @@ export const main = [
       {
         key: 81,
         text: {
-          EN: "Guided customer in their ERP SaaS solution implementation",
-          ES: "",
-          FR: "",
+          EN: "Guided customers in their ERP SaaS solution implementation",
+          ES: "Asistencia de los clientes durante la fase de implementación de la solución ERP",
+          FR: "Assistance des clients pendant la phase d'implémentation de leur solution ERP",
         },
       },
       {
         key: 82,
         text: {
-          EN: "Produced specifications improving solution functionalities",
-          ES: "",
-          FR: "",
+          EN: "Produced technical specifications to create / improve solution functionalities",
+          ES: "Producción de las especificaciónes technicas para créar / mejorar las funciónes de la solución",
+          FR: "Producion des spécifications techniques pour créer / améliorer les fonctionalités de la solution",
         },
       },
       {
         key: 83,
         text: {
-          EN: "Implemented walkthrough & Provided online instruction for users",
-          ES: "",
-          FR: "",
+          EN: "Implemented walkthrough programming HTML and CSS",
+          ES: "Implementación tutoriales dinámicos con HTML y CSS",
+          FR: "Implémentation de tutoriels dynamiques avec HTML et CSS",
         },
       },
       {
         key: 84,
         text: {
           EN: "Troubleshot, investigated and created detailed reports about issues",
-          ES: "",
-          FR: "",
+          ES: "Identificación de los bugs, investigación y redacción de informes de resolución detallados",
+          FR: "Indentification des bugs, investigation et rédaction de rapports de résolution détaillés",
+        },
+      },
+      {
+        key: 65,
+        text: {
+          EN: "Provided online instructions for users",
+          ES: "Redacción de las instrucciónes de uso en línea",
+          FR: "Rédaction des instructions d'utilisation en ligne",
         },
       },
     ],
