@@ -20,6 +20,8 @@ import {
   HStack,
   IconButton,
   Spacer,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react"
 import { AddIcon, MinusIcon, SmallCloseIcon } from "@chakra-ui/icons"
 import CardContent from "./card/CardContent"
@@ -91,24 +93,32 @@ const Content = () => {
           spacing={8}
           id="main"
         >
-          {list.map((item) => {
-            return (
-              <CardContent
-                key={item.key}
-                color={item.color}
-                title={item.title[lang]}
-                date={item.date[lang]}
-                establishment={item.establishment[lang]}
-                location={item.location[lang]}
-                section={item.section}
-                skills={item.skills}
-                code={item.code}
-                link={item.link}
-                img={item.img}
-                details={item.details}
-              />
-            )
-          })}
+          {list.length === 0 && (
+            <Alert status="info" rounded={"lg"}>
+              <AlertIcon />
+              {changeSection.nothing[lang]}
+              {sections[section][lang]}
+            </Alert>
+          )}
+          {list.length !== 0 &&
+            list.map((item) => {
+              return (
+                <CardContent
+                  key={item.key}
+                  color={item.color}
+                  title={item.title[lang]}
+                  date={item.date[lang]}
+                  establishment={item.establishment[lang]}
+                  location={item.location[lang]}
+                  section={item.section}
+                  skills={item.skills}
+                  code={item.code}
+                  link={item.link}
+                  img={item.img}
+                  details={item.details}
+                />
+              )
+            })}
         </Stack>
         <Stack
           sx={{ columnSpan: 1 }}
@@ -118,7 +128,9 @@ const Content = () => {
           id="aside"
         >
           <FormControl id="section">
-            <FormLabel fontWeight={"bold"}>{changeSection[lang]}</FormLabel>
+            <FormLabel fontWeight={"bold"}>
+              {changeSection.choose[lang]}
+            </FormLabel>
             <Select defaultValue={section} onChange={(e) => sectionScroll(e)}>
               <option value="education">{sections.education[lang]}</option>
               <option value="experience">{sections.experience[lang]}</option>

@@ -11,9 +11,16 @@ export const sections = {
 }
 
 export const changeSection = {
-  EN: "Choose the section",
-  ES: "Elegir la sección",
-  FR: "Choisir la section",
+  choose: {
+    EN: "Choose the section",
+    ES: "Elegir la sección",
+    FR: "Choisir la section",
+  },
+  nothing: {
+    EN: "Nothing to show with this filter on section ",
+    ES: "Nada para monstrar con este filtro en la sección ",
+    FR: "Rien à afficher avec ce filtre dans la section ",
+  },
 }
 
 export const skills = [
