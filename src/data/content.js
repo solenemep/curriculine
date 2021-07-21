@@ -125,8 +125,8 @@ export const cardLinks = {
   },
   link: {
     EN: "Page link",
-    ES: "Enlace de la pagina",
-    FR: "Lien vers le page",
+    ES: "Enlace de la página",
+    FR: "Lien vers la page",
   },
 }
 
