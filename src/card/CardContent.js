@@ -102,17 +102,17 @@ const CardContent = (props) => {
           </HStack>
 
           {section !== "education" && (
-            <HStack spacing={8}>
+            <HStack spacing={8} alignItems={"center"}>
               {section === "portfolio" && (
-                <AspectRatio ratio={16 / 9} width={"30%"}>
-                  <Image
-                    shadow={"xs"}
-                    borderWidth="1px"
-                    borderRadius="lg"
-                    src={require(`../img/${img}`).default}
-                    alt={`img${img}`}
-                  />
-                </AspectRatio>
+                <Image
+                  ratio={16 / 9}
+                  maxWidth={"250px"}
+                  shadow={"xs"}
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  src={require(`../img/${img}`).default}
+                  alt={`img${img}`}
+                />
               )}
 
               <List spacing={2}>
