@@ -657,9 +657,9 @@ export const main = [
       {
         key: 111,
         text: {
-          EN: "Blog designed with Bootstrap",
-          ES: "Blog diseñado con Bootstrap",
-          FR: "Blog conçu avec Bootstrap",
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page conçue avec Bootstrap",
         },
       },
     ],
@@ -751,9 +751,9 @@ export const main = [
       {
         key: 141,
         text: {
-          EN: "React Weather App",
-          ES: "App React de météo",
-          FR: "App React de météo",
+          EN: "React weather application",
+          ES: "Aplicación React de meteo ",
+          FR: "Application React de météo",
         },
       },
       {
@@ -795,25 +795,25 @@ export const main = [
       {
         key: 151,
         text: {
-          EN: "React blog displaying gradient list",
-          ES: "Blog en React de gradiente de color",
-          FR: "Blog en React de gradients de couleur",
+          EN: "React application displaying gradient list",
+          ES: "Aplicación React de gradientes de color",
+          FR: "Application React de gradients de couleur",
         },
       },
       {
         key: 152,
         text: {
-          EN: "API GET & PUSH",
-          ES: "Fetch de los datos desde API",
-          FR: "Fetch des données depuis API",
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page conçue avec Bootstrap",
         },
       },
       {
         key: 153,
         text: {
-          EN: "Push data to API",
-          ES: "Push de los datos hasta API",
-          FR: "Push des données à l'API",
+          EN: "GET & POST data from API",
+          ES: "GET & POST de los datos desde API",
+          FR: "GET & POST des données depuis API",
         },
       },
     ],
@@ -847,25 +847,25 @@ export const main = [
       {
         key: 161,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "React application displaying GoogleFonts",
+          ES: "Aplicación React de GoogleFonts",
+          FR: "Application React de GoogleFonts",
         },
       },
       {
         key: 162,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page conçue avec Bootstrap",
         },
       },
       {
         key: 163,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Fetch data from API GoogleFonts",
+          ES: "Fetch de los datos desde API GoogleFonts",
+          FR: "Fetch des données depuis API GoogleFonts",
         },
       },
     ],
@@ -898,25 +898,17 @@ export const main = [
       {
         key: 171,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "React application to organize",
+          ES: "Aplicación React para organizarse",
+          FR: "Aplication React pour s'organiser",
         },
       },
       {
         key: 172,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 173,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page conçue avec Bootstrap",
         },
       },
     ],
@@ -950,25 +942,25 @@ export const main = [
       {
         key: 181,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "React application referencing StarWars universe",
+          ES: "Aplicación React referenciando StarWars universo",
+          FR: "Application React référençant l'univers StarWars",
         },
       },
       {
         key: 182,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page conçue avec Bootstrap",
         },
       },
       {
         key: 183,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Fetch data from API",
+          ES: "Fetch de los datos desde API",
+          FR: "Fetch des données depuis API",
         },
       },
     ],
@@ -1001,25 +993,9 @@ export const main = [
       {
         key: 191,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 192,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 193,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Page designed with Chakra UI",
+          ES: "Página diseñada con Chakra UI",
+          FR: "Page conçue avec Chakra UI",
         },
       },
     ],
@@ -1126,25 +1102,25 @@ export const main = [
       {
         key: 211,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "Decentralized application compatible with MetaMask on Kovan network",
+          ES: "Aplicación decentralizada compatible con MetaMask en la red Kovan",
+          FR: "Application décentralisée compatible avec MetaMask sur le réseau Kovan",
         },
       },
       {
         key: 212,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Smart Contract base on ERC20 Token OpenZepellin",
+          ES: "Contrato Intelligente basado sobre el Token ERC20 de OpenZepellin",
+          FR: "Contrat Intelligent basé sur le Token ERC20 d'OpenZepellin",
         },
       },
       {
         key: 213,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Faucet application to get 100 free tokens each 3 days",
+          ES: "Aplicación Faucet para obtener 100 tokens gratuito cada 3 días",
+          FR: "Application Faucet pour obtenir 100 tokens gratuits tous les 3 jours",
         },
       },
     ],
@@ -1181,31 +1157,31 @@ export const main = [
       { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
     ],
     code: "https://github.com/solenemhep/smart-words-back",
-    link: "https://solenemhep-faucet.netlify.app/",
+    link: "https://solenemhep-smartwords.netlify.app/",
     img: "smartwords.png",
     details: [
       {
         key: 221,
         text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
+          EN: "Decentralized application compatible with MetaMask on Kovan network",
+          ES: "Aplicación decentralizada compatible con MetaMask en la red Kovan",
+          FR: "Application décentralisée compatible avec MetaMask sur le réseau Kovan",
         },
       },
       {
         key: 222,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Smart Contract based on ERC721 Token OpenZepellin",
+          ES: "Contrato Intelligente basado sobre el Token ERC721 de OpenZepellin",
+          FR: "Contrat Intelligent basé sur le Token ERC721 d'OpenZepellin",
         },
       },
       {
         key: 223,
         text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
+          EN: "Token has a unique text content identified with hash",
+          ES: "El Token tiene un contenido texto único indentificado con un hash",
+          FR: "Le Token a un contenu texte unique identifié avec un hash",
         },
       },
     ],
