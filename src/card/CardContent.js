@@ -1,6 +1,5 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 import {
-  AspectRatio,
   Box,
   Button,
   Heading,
