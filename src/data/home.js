@@ -4,26 +4,32 @@ export const home = { EN: "Home", ES: "Home", FR: "Accueil" }
 
 export const intro = {
   name: "Solène PETTIER",
-  title: {
-    EN: "IT Engineer and Web & Blockchain full-stack developper",
-    ES: "Ingeniera SI y desarollada full-stack Web & Blockchain",
-    FR: "Ingénieure SI et développeuse full-stack Web & Blockchain",
+  title1: {
+    EN: "Information Technology Engineer",
+    ES: "Ingeniera Sistemas de Información",
+    FR: "Ingénieure Systèmes d'Information",
+  },
+  title2: {
+    EN: "Web & Blockchain full-stack developer",
+    ES: "Desarollada full-stack Web & Blockchain",
+    FR: "Développeuse full-stack Web & Blockchain",
   },
   paragraph: {
     EN: "Hello and welcome ! I'm Solène, french coming from Paris, IT Engineer and Web & Blockchain full-stack developper !",
     ES: "Holà y bienvenido ! Soy Solène, francesa originaria de París, Ingeniera SI y desarollada full-stack Web & Blockchain !",
     FR: "Bonjour et bienvenue ! Je suis Solène, française originaire de Paris, Ingénieure SI et développeuse full-stack Web & Blockchain !",
   },
-  linkedin: "https://www.linkedin.com/in/solenemhep",
-  github: "https://github.com/solenemhep",
-  codepen: "https://codepen.io/solenemhep",
-  mail: "mailto:solene.pettier@gmail.com",
+  speaks: {
+    EN: "Speaks English, Spanish & French",
+    ES: "Habla Inglés, Español & Francés",
+    FR: "Parle Anglais, Espagnol & Français",
+  },
 }
 
 export const highlights = [
   {
     key: 1,
-    color: "red",
+    color: "cyan",
     title: {
       EN: "Consultant engineer",
       ES: "Ingeniera consultora",
@@ -66,7 +72,7 @@ export const highlights = [
   },
   {
     key: 2,
-    color: "cyan",
+    color: "teal",
     title: {
       EN: "Web development",
       ES: "Desarollo Web",
@@ -105,7 +111,7 @@ export const highlights = [
   },
   {
     key: 3,
-    color: "pink",
+    color: "blue",
     title: {
       EN: "Blockchain development",
       ES: "Desarollo Blockchain",

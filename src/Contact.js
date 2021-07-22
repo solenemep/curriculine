@@ -21,17 +21,18 @@ import {
   FormLabel,
   Input,
   Textarea,
-  Tag,
   HStack,
   Text,
   Container,
   Grid,
   AlertIcon,
+  Link,
+  Box,
 } from "@chakra-ui/react"
 import ScaleFadeOnScroll from "./transitions/ScaleFadeOnScroll"
 
 const Contact = () => {
-  const { lang, colorCard } = useCurriContext()
+  const { lang, colorCard, hoverButton } = useCurriContext()
   const { contacts, coord, mailme, submitEmail, isLoading, alert } =
     useContactContext()
 
@@ -78,9 +79,9 @@ const Contact = () => {
             <Button
               type="submit"
               color={colorCard}
-              bg={"red.100"}
+              bg={"cyan.100"}
               _hover={{
-                bg: `red.300`,
+                bg: `cyan.300`,
                 textDecoration: "none",
                 color: `${colorCard}`,
               }}
@@ -105,55 +106,76 @@ const Contact = () => {
           )}
         </VStack>
         <ScaleFadeOnScroll>
-          <VStack
-            id="coord"
-            mb={8}
-            alignItems={"strech"}
-            sx={{ columnSpan: 1 }}
+          <Box
+            bg={`blue.100`}
+            color={colorCard}
+            rounded={"md"}
+            _hover={{
+              transform: "scale(1.02)",
+              transition: "0.5s",
+            }}
+            shadow={"lg"}
           >
-            {/* 
-            <Tag colorScheme={"pink"} size={"lg"} fontWeight={"bold"}>
+            <VStack
+              id="coord"
+              mb={8}
+              alignItems={"start"}
+              sx={{ columnSpan: 1 }}
+              p={8}
+            >
+              {/* 
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
-            </Tag>
 */}
-            <Tag colorScheme={"red"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faPhone} />
                 <Text>{coord.phone}</Text>
               </HStack>
-            </Tag>
 
-            <Tag colorScheme={"cyan"} size={"lg"} fontWeight={"bold"}>
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <Text>{coord.mailto}</Text>
-              </HStack>
-            </Tag>
+              <Link
+                _hover={hoverButton}
+                href={coord.mailtolink}
+                aria-label="mail me"
+                isExternal
+              >
+                <HStack spacing={2}>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <Text>{coord.mailto}</Text>
+                </HStack>
+              </Link>
 
-            <Tag colorScheme={"yellow"} size={"lg"} fontWeight={"bold"}>
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faLinkedin} />
-                <Text>{coord.linkedin}</Text>
-              </HStack>
-            </Tag>
+              <Link
+                _hover={hoverButton}
+                href={coord.linkedinlink}
+                aria-label="linkedin"
+                isExternal
+              >
+                <HStack spacing={2}>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                  <Text>{coord.linkedin}</Text>
+                </HStack>
+              </Link>
 
-            <Tag colorScheme={"green"} size={"lg"} fontWeight={"bold"}>
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faGithub} />
-                <Text>{coord.github}</Text>
-              </HStack>
-            </Tag>
+              <Link
+                _hover={hoverButton}
+                href={coord.githublink}
+                aria-label="github"
+                isExternal
+              >
+                <HStack spacing={2}>
+                  <FontAwesomeIcon icon={faGithub} />
+                  <Text>{coord.github}</Text>
+                </HStack>
+              </Link>
 
-            <Tag colorScheme={"purple"} size={"lg"} fontWeight={"bold"}>
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faDiscord} />
                 <Text>{coord.discord}</Text>
               </HStack>
-            </Tag>
-          </VStack>
+            </VStack>
+          </Box>
         </ScaleFadeOnScroll>
       </Grid>
     </Container>

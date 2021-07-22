@@ -145,10 +145,10 @@ const Content = () => {
                   icon={<SmallCloseIcon />}
                   color={colorCard}
                   type="button"
-                  bg={"purple.100"}
+                  bg={"teal.100"}
                   size={"xs"}
                   _hover={{
-                    bg: `purple.300`,
+                    bg: `teal.300`,
                     textDecoration: "none",
                     color: `${colorCard}`,
                   }}

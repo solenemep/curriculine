@@ -13,13 +13,13 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { useCurriContext } from "../hook/useCurriContext"
-import SlideFadeOnScroll from "../transitions/SlideFadeOnScroll"
+import ScaleFadeOnScroll from "../transitions/ScaleFadeOnScroll"
 
 const CardHome = (props) => {
   const { color, title, section, path, more, details } = props
   const { lang, setSection, colorCard } = useCurriContext()
   return (
-    <SlideFadeOnScroll>
+    <ScaleFadeOnScroll>
       <Box
         bg={`${color}.100`}
         color={colorCard}
@@ -55,7 +55,7 @@ const CardHome = (props) => {
             <Spacer />
             <Button
               as={Link}
-              size={"xs"}
+              size={"sm"}
               href={path}
               bg={`${color}.200`}
               _hover={{
@@ -77,7 +77,7 @@ const CardHome = (props) => {
           </HStack>
         </Stack>
       </Box>
-    </SlideFadeOnScroll>
+    </ScaleFadeOnScroll>
   )
 }
 export default CardHome

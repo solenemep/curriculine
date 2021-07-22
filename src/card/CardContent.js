@@ -2,7 +2,6 @@ import { ArrowForwardIcon } from "@chakra-ui/icons"
 import {
   Box,
   Button,
-  Grid,
   Heading,
   HStack,
   Image,
@@ -102,20 +101,9 @@ const CardContent = (props) => {
           </HStack>
 
           {section !== "education" && (
-            <Grid
-              sx={{
-                display: "grid",
-                gridTemplateColumns: { base: "1fr", md: "1fr 2fr" },
-                gap: "1rem",
-              }}
-              alignItems={"center"}
-            >
+            <HStack alignItems={"center"} spacing={4}>
               {section === "portfolio" && (
                 <Image
-                  sx={{
-                    columnSpan: 1,
-                    margin: "auto",
-                  }}
                   ratio={16 / 9}
                   maxWidth={"250px"}
                   shadow={"xs"}
@@ -131,14 +119,14 @@ const CardContent = (props) => {
                   return (
                     <ListItem key={detail.key}>
                       <HStack>
-                        <ListIcon as={ArrowForwardIcon} color="pink.300" />
+                        <ListIcon as={ArrowForwardIcon} color="green.300" />
                         <Text>{detail.text[lang]}</Text>
                       </HStack>
                     </ListItem>
                   )
                 })}
               </List>
-            </Grid>
+            </HStack>
           )}
 
           <HStack>

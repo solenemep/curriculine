@@ -3,26 +3,19 @@ import { useHomeContext } from "./hook/useHomeContext"
 
 import SP from "./img/SP.jpg"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faGithub,
-  faLinkedin,
-  faCodepen,
-} from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   VStack,
   HStack,
   Heading,
-  Link,
   SimpleGrid,
   Avatar,
   Container,
+  Text,
 } from "@chakra-ui/react"
 import CardHome from "./card/CardHome"
 
 const Home = () => {
-  const { lang, hoverButton } = useCurriContext()
+  const { lang } = useCurriContext()
   const { intro, highlights } = useHomeContext()
 
   return (
@@ -35,51 +28,14 @@ const Home = () => {
         spacing={16}
       >
         <Avatar size="2xl" src={SP} name={"SP"} />
-        <VStack alignItems={"left"} spacing={4}>
+        <VStack alignItems={"left"} spacing={2}>
           <Heading as="h1" size={"2xl"}>
             {intro.name}
           </Heading>
 
-          <Heading textTransform={"uppercase"} size="md">
-            {intro.title[lang]}
-          </Heading>
-          <HStack spacing={8}>
-            <Link
-              _hover={hoverButton}
-              href={intro.linkedin}
-              aria-label="my linkedin"
-              isExternal
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </Link>
-
-            <Link
-              _hover={hoverButton}
-              href={intro.github}
-              aria-label="my github"
-              isExternal
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-
-            <Link
-              _hover={hoverButton}
-              href={intro.codepen}
-              aria-label="my codepen"
-              isExternal
-            >
-              <FontAwesomeIcon icon={faCodepen} />
-            </Link>
-
-            <Link
-              _hover={hoverButton}
-              href={intro.mail}
-              aria-label="my email"
-              isExternal
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </Link>
-          </HStack>
+          <Text fontSize="xl">{intro.title1[lang]}</Text>
+          <Text fontSize="xl">{intro.title2[lang]}</Text>
+          <Text as="small">{intro.speaks[lang]}</Text>
         </VStack>
       </HStack>
 

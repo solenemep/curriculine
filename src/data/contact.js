@@ -11,9 +11,12 @@ export const coord = {
   },
   phone: "+33 6 74 66 29 38",
   mailto: "solene.pettier@gmail.com",
+  mailtolink: "mailto:solene.pettier@gmail.com",
   discord: "solène#5763",
   github: "/solenemhep",
+  githublink: "https://github.com/solenemhep",
   linkedin: "/solenemhep",
+  linkedinlink: "https://www.linkedin.com/in/solenemhep",
 }
 
 export const mailme = {

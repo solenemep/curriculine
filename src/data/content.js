@@ -107,15 +107,6 @@ export const skills = [
       { key: 64, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
     ],
   },
-  {
-    key: 7,
-    title: { EN: "Langagues", ES: "Idiomas", FR: "Langues" },
-    items: [
-      { key: 71, text: { EN: "English", ES: "Inglés", FR: "Anglais" } },
-      { key: 72, text: { EN: "Spanish", ES: "Español", FR: "Espagnol" } },
-      { key: 73, text: { EN: "French", ES: "Francés", FR: "Français" } },
-    ],
-  },
 ]
 
 export const filterSkill = {
@@ -140,7 +131,7 @@ export const cardLinks = {
 export const main = [
   {
     key: 1,
-    color: "green",
+    color: "teal",
     title: {
       EN: "Intensive course of Mathematics & Physics",
       ES: "Curso intensivo de Matemáticas & Física",
@@ -182,7 +173,7 @@ export const main = [
   },
   {
     key: 2,
-    color: "pink",
+    color: "blue",
     title: {
       EN: "Worker in factory",
       ES: "Obrera en fábrica",
@@ -205,7 +196,6 @@ export const main = [
         key: 52,
         text: { EN: "Logistic", ES: "Logistica", FR: "Logistique" },
       },
-      { key: 71, text: { EN: "English", ES: "Inglés", FR: "Anglais" } },
     ],
     code: "",
     link: "",
@@ -222,7 +212,7 @@ export const main = [
   },
   {
     key: 3,
-    color: "red",
+    color: "cyan",
     title: {
       EN: "Industrial Engineering",
       ES: "Genio Industrial",
@@ -261,7 +251,7 @@ export const main = [
   },
   {
     key: 4,
-    color: "green",
+    color: "teal",
     title: {
       EN: "Logistic analyst",
       ES: "Analista logístico",
@@ -344,7 +334,7 @@ export const main = [
   },
   {
     key: 6,
-    color: "cyan",
+    color: "blue",
     title: {
       EN: "Functional & Technical Consultant",
       ES: "Consultora Functional & Tecnica",
@@ -367,7 +357,6 @@ export const main = [
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
       { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
       { key: 64, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
-      { key: 71, text: { EN: "English", ES: "Inglés", FR: "Anglais" } },
     ],
     code: "",
     link: "https://trobz.com/about",
@@ -408,7 +397,7 @@ export const main = [
   },
   {
     key: 7,
-    color: "yellow",
+    color: "teal",
     title: {
       EN: "Process & Method Consultant",
       ES: "Consultora Processos & Metodos",
@@ -477,7 +466,7 @@ export const main = [
   },
   {
     key: 8,
-    color: "red",
+    color: "cyan",
     title: {
       EN: "Technical Product Specialist",
       ES: "Especialista Tecnico de Producto",
@@ -503,7 +492,6 @@ export const main = [
       { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
       { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
-      { key: 72, text: { EN: "Spanish", ES: "Español", FR: "Espagnol" } },
     ],
     code: "",
     link: "https://www.fitnetmanager.com/en/home-en/",
@@ -552,7 +540,7 @@ export const main = [
   },
   {
     key: 9,
-    color: "red",
+    color: "blue",
     title: {
       EN: "Decentralized Full Stack Developer",
       ES: "Desarrollador Full Stack Descentralizado",
@@ -614,7 +602,7 @@ export const main = [
   },
   {
     key: 10,
-    color: "yellow",
+    color: "teal",
     title: { EN: "Arkanoid", ES: "Arkanoid", FR: "Arkanoid" },
     date: { EN: "March 2021", ES: "Marzo 2021", FR: "Mars 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -673,7 +661,7 @@ export const main = [
   },
   {
     key: 12,
-    color: "red",
+    color: "blue",
     title: { EN: "Hangman", ES: "Hangman", FR: "Hangman" },
     date: { EN: "April 2021", ES: "Abril 2021", FR: "Avril 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -702,7 +690,7 @@ export const main = [
   },
   {
     key: 13,
-    color: "pink",
+    color: "cyan",
     title: { EN: "Monty Hall", ES: "Monty Hall", FR: "Monty Hall" },
     date: { EN: "April 2021", ES: "Abril 2021", FR: "Avril 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -731,7 +719,7 @@ export const main = [
   },
   {
     key: 14,
-    color: "orange",
+    color: "teal",
     title: { EN: "Weather App", ES: "App Météo", FR: "App Météo" },
     date: { EN: "April 2021", ES: "Abril 2021", FR: "Avril 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -827,7 +815,7 @@ export const main = [
   },
   {
     key: 16,
-    color: "purple",
+    color: "cyan",
     title: { EN: "Google Fonts", ES: "Google Fonts", FR: "Google Fonts" },
     date: { EN: "April 2021", ES: "Abril 2021", FR: "Avril 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -922,7 +910,7 @@ export const main = [
   },
   {
     key: 18,
-    color: "purple",
+    color: "blue",
     title: { EN: "StarWars API", ES: "StarWars API", FR: "StarWars API" },
     date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -974,7 +962,7 @@ export const main = [
   },
   {
     key: 19,
-    color: "red",
+    color: "cyan",
     title: { EN: "AlyraKit", ES: "AlyraKit", FR: "AlyraKit" },
     date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
     establishment: { EN: "", ES: "", FR: "" },
@@ -1072,7 +1060,7 @@ export const main = [
   */
   {
     key: 21,
-    color: "purple",
+    color: "teal",
     title: {
       EN: "Faucet",
       ES: "Faucet",
@@ -1133,7 +1121,7 @@ export const main = [
   },
   {
     key: 22,
-    color: "orange",
+    color: "cyan",
     title: {
       EN: "Smart Words",
       ES: "Smart Words",
@@ -1195,7 +1183,7 @@ export const main = [
   /*
   {
     key: 23,
-    color: "pink",
+    color: "teal",
     title: {
       EN: "Collateral Token",
       ES: "Collateral Token",
