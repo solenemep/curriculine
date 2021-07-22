@@ -1056,7 +1056,6 @@ export const main = [
         text: {
           EN: "detail alyra en 2",
           ES: "detail alyra es 2",
-
           FR: "detail alyra fr 2",
         },
       },
