@@ -50,124 +50,149 @@ const Contact = () => {
         alignItems={"start"}
         justifyContent={"space-between"}
       >
-        <VStack
-          sx={{ columnSpan: 1 }}
-          id="mail"
-          mb={8}
-          as={"form"}
-          onSubmit={submitEmail}
-          alignItems={"start"}
-          className="contact-form"
-        >
-          <FormControl id="user_name" isRequired>
-            <FormLabel>{mailme.name[lang]}</FormLabel>
-            <Input type="text" name="user_name" aria-label="name" required />
-          </FormControl>
-          <FormControl id="user_email" isRequired>
-            <FormLabel>{mailme.mail[lang]}</FormLabel>
-            <Input type="email" name="user_email" aria-label="email" required />
-          </FormControl>
-          <FormControl id="subject">
-            <FormLabel>{mailme.subject[lang]}</FormLabel>
-            <Input type="text" name="subject" aria-label="subject" required />
-          </FormControl>
-          <FormControl id="message" isRequired>
-            <FormLabel>{mailme.message[lang]}</FormLabel>
-            <Textarea name="message" rows="6" aria-label="message" required />
-          </FormControl>
-          {alert === "" && (
-            <Button
-              type="submit"
-              color={colorCard}
-              bg={"cyan.100"}
-              _hover={{
-                bg: `cyan.300`,
-                textDecoration: "none",
-                color: `${colorCard}`,
-              }}
-              isLoading={isLoading}
-              isFullWidth
-            >
-              {mailme.send[lang]}
-            </Button>
-          )}
-          {alert === "OK" && (
-            <Alert status="success" rounded={"lg"}>
-              <AlertIcon />
-              {mailme.OK[lang]}
-            </Alert>
-          )}
-          {alert === "KO" && (
-            <Alert status="error" rounded={"lg"}>
-              <AlertIcon />
-              {mailme.KO[lang]}
-              {coord.mailto}
-            </Alert>
-          )}
-        </VStack>
         <ScaleFadeOnScroll>
           <Box bg={`blue.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
             <VStack
-              id="coord"
-              mb={8}
-              alignItems={"start"}
-              sx={{ columnSpan: 1 }}
               p={8}
+              id="mail"
+              mb={8}
+              as={"form"}
+              onSubmit={submitEmail}
+              alignItems={"start"}
+              className="contact-form"
             >
-              {/* 
+              <FormControl id="user_name" isRequired>
+                <FormLabel>{mailme.name[lang]}</FormLabel>
+                <Input
+                  bg={"blue.200"}
+                  type="text"
+                  name="user_name"
+                  aria-label="name"
+                  required
+                />
+              </FormControl>
+              <FormControl id="user_email" isRequired>
+                <FormLabel>{mailme.mail[lang]}</FormLabel>
+                <Input
+                  bg={"blue.200"}
+                  type="email"
+                  name="user_email"
+                  aria-label="email"
+                  required
+                />
+              </FormControl>
+              <FormControl id="subject">
+                <FormLabel>{mailme.subject[lang]}</FormLabel>
+                <Input
+                  bg={"blue.200"}
+                  type="text"
+                  name="subject"
+                  aria-label="subject"
+                  required
+                />
+              </FormControl>
+              <FormControl id="message" isRequired>
+                <FormLabel>{mailme.message[lang]}</FormLabel>
+                <Textarea
+                  bg={"blue.200"}
+                  name="message"
+                  rows="6"
+                  aria-label="message"
+                  required
+                />
+              </FormControl>
+              {alert === "" && (
+                <Button
+                  type="submit"
+                  color={colorCard}
+                  bg={"blue.200"}
+                  _hover={{
+                    bg: `blue.300`,
+                    textDecoration: "none",
+                    color: `inherit`,
+                  }}
+                  isLoading={isLoading}
+                  isFullWidth
+                >
+                  {mailme.send[lang]}
+                </Button>
+              )}
+              {alert === "OK" && (
+                <Alert status="success" rounded={"lg"}>
+                  <AlertIcon />
+                  {mailme.OK[lang]}
+                </Alert>
+              )}
+              {alert === "KO" && (
+                <Alert status="error" rounded={"lg"}>
+                  <AlertIcon />
+                  {mailme.KO[lang]}
+                  {coord.mailto}
+                </Alert>
+              )}
+            </VStack>
+          </Box>
+        </ScaleFadeOnScroll>
+
+        <VStack
+          id="coord"
+          mb={8}
+          alignItems={"start"}
+          sx={{ columnSpan: 1 }}
+          spacing={4}
+        >
+          {/* 
               <HStack spacing={2}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
 */}
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faPhone} />
-                <Text>{coord.phone}</Text>
-              </HStack>
+          <HStack spacing={4}>
+            <FontAwesomeIcon icon={faPhone} size={"2x"} />
+            <Text>{coord.phone}</Text>
+          </HStack>
 
-              <Link
-                _hover={hoverButton}
-                href={coord.mailtolink}
-                aria-label="mail me"
-                isExternal
-              >
-                <HStack spacing={2}>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <Text>{coord.mailto}</Text>
-                </HStack>
-              </Link>
+          <Link
+            _hover={hoverButton}
+            href={coord.mailtolink}
+            aria-label="mail me"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faEnvelope} size={"2x"} />
+              <Text>{coord.mailto}</Text>
+            </HStack>
+          </Link>
 
-              <Link
-                _hover={hoverButton}
-                href={coord.linkedinlink}
-                aria-label="linkedin"
-                isExternal
-              >
-                <HStack spacing={2}>
-                  <FontAwesomeIcon icon={faLinkedin} />
-                  <Text>{coord.linkedin}</Text>
-                </HStack>
-              </Link>
+          <Link
+            _hover={hoverButton}
+            href={coord.linkedinlink}
+            aria-label="linkedin"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
+              <Text>{coord.linkedin}</Text>
+            </HStack>
+          </Link>
 
-              <Link
-                _hover={hoverButton}
-                href={coord.githublink}
-                aria-label="github"
-                isExternal
-              >
-                <HStack spacing={2}>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <Text>{coord.github}</Text>
-                </HStack>
-              </Link>
+          <Link
+            _hover={hoverButton}
+            href={coord.githublink}
+            aria-label="github"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faGithub} size={"2x"} />
+              <Text>{coord.github}</Text>
+            </HStack>
+          </Link>
 
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faDiscord} />
-                <Text>{coord.discord}</Text>
-              </HStack>
-            </VStack>
-          </Box>
-        </ScaleFadeOnScroll>
+          <HStack spacing={4}>
+            <FontAwesomeIcon icon={faDiscord} size={"2x"} />
+            <Text>{coord.discord}</Text>
+          </HStack>
+        </VStack>
       </Grid>
     </Container>
   )
