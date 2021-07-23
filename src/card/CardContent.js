@@ -12,6 +12,7 @@ import {
   Spacer,
   Stack,
   Text,
+  Tooltip,
   Wrap,
 } from "@chakra-ui/react"
 import { faBuilding, faCalendar } from "@fortawesome/free-regular-svg-icons"
@@ -40,28 +41,14 @@ const CardContent = (props) => {
     img,
     details,
   } = props
-  const { colorCard, lang } = useCurriContext()
-  const { cardLinks, toggleFilter, filter } = useContentContext()
+  const { colorCard, lang, colorCardOpp } = useCurriContext()
+  const { cardLinks, toggleFilter, filter, filterSkill } = useContentContext()
 
   return (
     <SlideFadeOnScroll>
-      <Box
-        bg={`${color}.100`}
-        color={colorCard}
-        rounded={"md"}
-        _hover={{
-          transform: "scale(1.02)",
-          transition: "0.5s",
-        }}
-        shadow={"lg"}
-      >
+      <Box bg={`${color}.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
         <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-          <Heading
-            as={"h3"}
-            size={"md"}
-            textTransform={"uppercase"}
-            fontWeight={"bold"}
-          >
+          <Heading as={"h3"} size={"md"} fontWeight={"bold"}>
             {title}
           </Heading>
           <HStack justifyContent={"space-between"}>
@@ -74,7 +61,12 @@ const CardContent = (props) => {
                   isExternal
                   href={code}
                   aria-label={"source code"}
-                  _hover={{ textDecoration: "none", color: `${colorCard}` }}
+                  _hover={{
+                    textDecoration: "none",
+                    color: `${colorCard}`,
+                    transform: "scale(1.1)",
+                    transition: "0.5s",
+                  }}
                 >
                   <FontAwesomeIcon icon={faExternalLinkAlt} />{" "}
                   {cardLinks.code[lang]}
@@ -83,7 +75,12 @@ const CardContent = (props) => {
                   isExternal
                   href={link}
                   aria-label={"page link"}
-                  _hover={{ textDecoration: "none", color: `${colorCard}` }}
+                  _hover={{
+                    textDecoration: "none",
+                    color: `${colorCard}`,
+                    transform: "scale(1.1)",
+                    transition: "0.5s",
+                  }}
                 >
                   <FontAwesomeIcon icon={faLink} /> {cardLinks.link[lang]}{" "}
                 </Link>
@@ -134,26 +131,38 @@ const CardContent = (props) => {
             <Wrap direction={"row-reverse"}>
               {skills.map((skill) => {
                 return (
-                  <Button
-                    size={"xs"}
+                  <Tooltip
+                    label={
+                      filter.includes(Number(skill.key))
+                        ? filterSkill.buttonfilter.inactive[lang] +
+                          skill.text[lang]
+                        : filterSkill.buttonfilter.active[lang] +
+                          skill.text[lang]
+                    }
+                    bg={"gray.600"}
+                    color={colorCardOpp}
                     key={skill.key}
-                    bg={`${color}.200`}
-                    _hover={{
-                      bg: `${color}.300`,
-                      textDecoration: "none",
-                      color: `inherit`,
-                    }}
-                    _active={{
-                      bg: `${color}.300`,
-                      textDecoration: "none",
-                      color: `inherit`,
-                    }}
-                    value={skill.key}
-                    onClick={toggleFilter}
-                    isActive={filter.includes(Number(skill.key))}
                   >
-                    {skill.text[lang]}
-                  </Button>
+                    <Button
+                      size={"md"}
+                      bg={`${color}.200`}
+                      _hover={{
+                        bg: `${color}.300`,
+                        textDecoration: "none",
+                        color: `inherit`,
+                      }}
+                      _active={{
+                        bg: `${color}.300`,
+                        textDecoration: "none",
+                        color: `inherit`,
+                      }}
+                      value={skill.key}
+                      onClick={toggleFilter}
+                      isActive={filter.includes(Number(skill.key))}
+                    >
+                      {skill.text[lang]}
+                    </Button>
+                  </Tooltip>
                 )
               })}
             </Wrap>

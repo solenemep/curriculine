@@ -20,23 +20,9 @@ const CardHome = (props) => {
   const { lang, setSection, colorCard } = useCurriContext()
   return (
     <ScaleFadeOnScroll>
-      <Box
-        bg={`${color}.100`}
-        color={colorCard}
-        rounded={"md"}
-        _hover={{
-          transform: "scale(1.02)",
-          transition: "0.5s",
-        }}
-        shadow={"lg"}
-      >
+      <Box bg={`${color}.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
         <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-          <Heading
-            as={"h3"}
-            size={"md"}
-            textTransform={"uppercase"}
-            fontWeight={"bold"}
-          >
+          <Heading as={"h3"} size={"md"} fontWeight={"bold"}>
             {title}
           </Heading>
           <List spacing={2}>
@@ -55,7 +41,7 @@ const CardHome = (props) => {
             <Spacer />
             <Button
               as={Link}
-              size={"sm"}
+              size={"md"}
               href={path}
               bg={`${color}.200`}
               _hover={{

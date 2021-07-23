@@ -110,9 +110,23 @@ export const skills = [
 ]
 
 export const filterSkill = {
-  EN: "Filter by skills",
-  ES: "Filtrar por habilidad",
-  FR: "Filtrer par compétence",
+  asidefilter: {
+    EN: "Filter by skills",
+    ES: "Filtrar por habilidad",
+    FR: "Filtrer par compétence",
+  },
+  buttonfilter: {
+    active: {
+      EN: "Active filter ",
+      ES: "Activar filtro ",
+      FR: "Activer le filtre ",
+    },
+    inactive: {
+      EN: "Inactive filter ",
+      ES: "Desactivar filtro ",
+      FR: "Désactiver le filtre ",
+    },
+  },
 }
 
 export const cardLinks = {

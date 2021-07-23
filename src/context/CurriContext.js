@@ -21,12 +21,15 @@ export const CurriContextProvider = ({ children }) => {
 
   const hoverButton = {
     textDecoration: "none",
-    color: useColorModeValue("gray.600", "gray.400"),
+    color: "inherit",
     bg: "inherit",
+    transform: "scale(1.1)",
+    transition: "0.5s",
   }
 
   const colorFoot = "white"
   const colorCard = useColorModeValue("black", "black")
+  const colorCardOpp = useColorModeValue("white", "white")
   const colorTag = useColorModeValue("white", "black")
 
   // Section
@@ -51,6 +54,7 @@ export const CurriContextProvider = ({ children }) => {
         hoverButton,
         colorFoot,
         colorCard,
+        colorCardOpp,
         colorTag,
       }}
     >

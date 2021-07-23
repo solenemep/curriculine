@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, Text } from "@chakra-ui/react"
+import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useCurriContext } from "./hook/useCurriContext"
 import { useFooterContext } from "./hook/useFooterContext"
@@ -19,8 +19,9 @@ const Footer = () => {
         <Box id="madeby" px={2} py={1}>
           <Text>{madeby[lang]}</Text>
         </Box>
-        <HStack mx={4} spacing={4}>
+        <SimpleGrid columns={{ base: 2, sm: 4 }} spacing={0} mx={4}>
           <Link
+            mx={4}
             _hover={hoverButton}
             href={links.linkedin}
             aria-label="my linkedin"
@@ -30,6 +31,7 @@ const Footer = () => {
           </Link>
 
           <Link
+            mx={4}
             _hover={hoverButton}
             href={links.github}
             aria-label="my github"
@@ -39,6 +41,7 @@ const Footer = () => {
           </Link>
 
           <Link
+            mx={4}
             _hover={hoverButton}
             href={links.codepen}
             aria-label="my codepen"
@@ -48,6 +51,7 @@ const Footer = () => {
           </Link>
 
           <Link
+            mx={4}
             _hover={hoverButton}
             href={links.mail}
             aria-label="my email"
@@ -55,7 +59,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </Link>
-        </HStack>
+        </SimpleGrid>
         <Box id="copyright" px={2} py={1}>
           <Text>{copyright}</Text>
         </Box>

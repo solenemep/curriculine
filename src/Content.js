@@ -75,7 +75,7 @@ const Content = () => {
 
   return (
     <Container maxW={"container.xl"} pt={4}>
-      <Heading as="h2" textTransform={"uppercase"} size="2xl" mb={16}>
+      <Heading as="h2" size="2xl" mb={16}>
         {sections[section][lang]}
       </Heading>
       <Grid
@@ -140,7 +140,7 @@ const Content = () => {
           <FormControl id="skills">
             <FormLabel flex="1" textAlign="left">
               <HStack justifyContent={"space-between"}>
-                <Text fontWeight={"bold"}>{filterSkill[lang]}</Text>
+                <Text fontWeight={"bold"}>{filterSkill.asidefilter[lang]}</Text>
                 <IconButton
                   icon={<SmallCloseIcon />}
                   color={colorCard}

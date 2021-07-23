@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <Container maxW={"container.xl"} pt={4}>
-      <Heading as="h2" textTransform={"uppercase"} size="2xl" mb={16}>
+      <Heading as="h2" size="2xl" mb={16}>
         {contacts[lang]}
       </Heading>
       <Grid
@@ -106,16 +106,7 @@ const Contact = () => {
           )}
         </VStack>
         <ScaleFadeOnScroll>
-          <Box
-            bg={`blue.100`}
-            color={colorCard}
-            rounded={"md"}
-            _hover={{
-              transform: "scale(1.02)",
-              transition: "0.5s",
-            }}
-            shadow={"lg"}
-          >
+          <Box bg={`blue.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
             <VStack
               id="coord"
               mb={8}
