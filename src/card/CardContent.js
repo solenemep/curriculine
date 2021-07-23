@@ -9,6 +9,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  SimpleGrid,
   Spacer,
   Stack,
   Text,
@@ -97,20 +98,23 @@ const CardContent = (props) => {
             )}
           </HStack>
 
-          {section !== "education" && (
-            <HStack alignItems={"center"} spacing={4}>
-              {section === "portfolio" && (
-                <Image
-                  ratio={16 / 9}
-                  maxWidth={"250px"}
-                  shadow={"xs"}
-                  borderWidth="1px"
-                  borderRadius="lg"
-                  src={require(`../img/${img}`).default}
-                  alt={`img${img}`}
-                />
-              )}
-
+          {section === "portfolio" && (
+            <SimpleGrid
+              alignItems={"center"}
+              spacing={4}
+              columns={{ base: 1, md: 2 }}
+            >
+              <Image
+                sx={{ columnSpan: 1 }}
+                margin={{ base: "auto", md: 0 }}
+                ratio={16 / 9}
+                maxWidth={"250px"}
+                shadow={"xs"}
+                borderWidth="1px"
+                borderRadius="lg"
+                src={require(`../img/${img}`).default}
+                alt={`img${img}`}
+              />
               <List spacing={2} sx={{ columnSpan: 1 }}>
                 {details.map((detail) => {
                   return (
@@ -123,7 +127,22 @@ const CardContent = (props) => {
                   )
                 })}
               </List>
-            </HStack>
+            </SimpleGrid>
+          )}
+
+          {section === "experience" && (
+            <List spacing={2}>
+              {details.map((detail) => {
+                return (
+                  <ListItem key={detail.key}>
+                    <HStack>
+                      <ListIcon as={ArrowForwardIcon} color="green.300" />
+                      <Text>{detail.text[lang]}</Text>
+                    </HStack>
+                  </ListItem>
+                )
+              })}
+            </List>
           )}
 
           <HStack>
