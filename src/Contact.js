@@ -64,7 +64,7 @@ const Contact = () => {
               <FormControl id="user_name" isRequired>
                 <FormLabel>{mailme.name[lang]}</FormLabel>
                 <Input
-                  bg={"blue.200"}
+                  bg={"white"}
                   type="text"
                   name="user_name"
                   aria-label="name"
@@ -74,7 +74,7 @@ const Contact = () => {
               <FormControl id="user_email" isRequired>
                 <FormLabel>{mailme.mail[lang]}</FormLabel>
                 <Input
-                  bg={"blue.200"}
+                  bg={"white"}
                   type="email"
                   name="user_email"
                   aria-label="email"
@@ -84,7 +84,7 @@ const Contact = () => {
               <FormControl id="subject">
                 <FormLabel>{mailme.subject[lang]}</FormLabel>
                 <Input
-                  bg={"blue.200"}
+                  bg={"white"}
                   type="text"
                   name="subject"
                   aria-label="subject"
@@ -94,7 +94,7 @@ const Contact = () => {
               <FormControl id="message" isRequired>
                 <FormLabel>{mailme.message[lang]}</FormLabel>
                 <Textarea
-                  bg={"blue.200"}
+                  bg={"white"}
                   name="message"
                   rows="6"
                   aria-label="message"
