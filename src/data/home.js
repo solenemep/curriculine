@@ -10,9 +10,9 @@ export const intro = {
     FR: "Ingénieure Systèmes d'Information",
   },
   title2: {
-    EN: "Web & Blockchain full-stack developer",
-    ES: "Desarollada full-stack Web & Blockchain",
-    FR: "Développeuse full-stack Web & Blockchain",
+    EN: "Web3 & Blockchain developer",
+    ES: "Desarollada Web3 & Blockchain",
+    FR: "Développeuse Web3 & Blockchain",
   },
   paragraph: {
     EN: "Hello and welcome ! I'm Solène, french coming from Paris, IT Engineer and Web & Blockchain full-stack developper !",
