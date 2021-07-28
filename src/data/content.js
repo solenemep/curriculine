@@ -23,6 +23,12 @@ export const changeSection = {
   },
 }
 
+export const skillName = {
+  EN: "Skills",
+  ES: "Habilidades",
+  FR: "Compétences",
+}
+
 export const skills = [
   {
     key: 1,
@@ -102,9 +108,8 @@ export const skills = [
     title: { EN: "Tools", ES: "Heramientas", FR: "Outils" },
     items: [
       { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
-      { key: 62, text: { EN: "Trello", ES: "Trello", FR: "Trello" } },
-      { key: 63, text: { EN: "SAP", ES: "SAP", FR: "SAP" } },
-      { key: 64, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
+      { key: 62, text: { EN: "SAP", ES: "SAP", FR: "SAP" } },
+      { key: 63, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
     ],
   },
 ]
@@ -185,6 +190,7 @@ export const main = [
     link: "",
     details: [],
   },
+  /*
   {
     key: 2,
     color: "blue",
@@ -224,9 +230,10 @@ export const main = [
       },
     ],
   },
+  */
   {
     key: 3,
-    color: "cyan",
+    color: "blue",
     title: {
       EN: "Industrial Engineering",
       ES: "Genio Industrial",
@@ -561,9 +568,9 @@ export const main = [
       FR: "Développeur Full Stack Blockchain",
     },
     date: {
-      EN: "January 2021 - August 2021",
-      ES: "Enero 2021 - Agosto 2021",
-      FR: "Janvier 2021 - Août 2021",
+      EN: "February 2021 - August 2021",
+      ES: "Febrero 2021 - Agosto 2021",
+      FR: "Février 2021 - Août 2021",
     },
     establishment: { EN: "Alyra", ES: "Alyra", FR: "Alyra" },
     location: {

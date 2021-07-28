@@ -142,8 +142,8 @@ const Contact = () => {
           spacing={4}
         >
           {/* 
-              <HStack spacing={2}>
-                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <HStack spacing={4} >
+                <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
 */}
