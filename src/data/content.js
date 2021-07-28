@@ -556,9 +556,9 @@ export const main = [
     key: 9,
     color: "blue",
     title: {
-      EN: "Full Stack Ethereum Developer",
-      ES: "Desarrollador Full Stack Ethereum",
-      FR: "Développeur Full Stack Ethereum",
+      EN: "Full Stack Blockchain Developer",
+      ES: "Desarrollador Full Stack Blockchain",
+      FR: "Développeur Full Stack Blockchain",
     },
     date: {
       EN: "January 2021 - August 2021",
