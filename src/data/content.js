@@ -1016,71 +1016,8 @@ export const main = [
       },
     ],
   },
-  /*
   {
     key: 20,
-    color: "blue",
-    title: {
-      EN: "ICO Calculator",
-      ES: "ICO Calculadora",
-      FR: "ICO Calculatrice",
-    },
-    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
-    establishment: { EN: "", ES: "", FR: "" },
-    location: { EN: "", ES: "", FR: "" },
-    section: "portfolio",
-    skills: [
-      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
-      {
-        key: 15,
-        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
-      },
-      {
-        key: 21,
-        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
-      },
-      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
-      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
-      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
-      {
-        key: 34,
-        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
-      },
-      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
-    ],
-    code: "https://github.com/solenemhep/ico-calc-back",
-    link: "",
-    img: "nada.png",
-    details: [
-      {
-        key: 201,
-        text: {
-          EN: "detail alyra en 1",
-          ES: "detail alyra es 1",
-          FR: "detail alyra fr 1",
-        },
-      },
-      {
-        key: 202,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-      {
-        key: 203,
-        text: {
-          EN: "detail alyra en 2",
-          ES: "detail alyra es 2",
-          FR: "detail alyra fr 2",
-        },
-      },
-    ],
-  },
-  */
-  {
-    key: 21,
     color: "teal",
     title: {
       EN: "Faucet",
@@ -1115,11 +1052,72 @@ export const main = [
     img: "faucet.png",
     details: [
       {
+        key: 201,
+        text: {
+          EN: "Ethereum application compatible with MetaMask on Kovan network",
+          ES: "Aplicación Ethereum compatible con MetaMask en la red Kovan",
+          FR: "Application Ethereum compatible avec MetaMask sur le réseau Kovan",
+        },
+      },
+      {
+        key: 202,
+        text: {
+          EN: "Smart Contract base on ERC20 Token OpenZepellin",
+          ES: "Contrato Intelligente basado sobre el Token ERC20 de OpenZepellin",
+          FR: "Contrat Intelligent basé sur le Token ERC20 d'OpenZepellin",
+        },
+      },
+      {
+        key: 203,
+        text: {
+          EN: "Faucet application to get 100 free tokens each 3 days",
+          ES: "Aplicación Faucet para obtener 100 tokens gratuito cada 3 días",
+          FR: "Application Faucet pour obtenir 100 tokens gratuits tous les 3 jours",
+        },
+      },
+    ],
+  },
+  {
+    key: 21,
+    color: "blue",
+    title: {
+      EN: "ICO Calculator",
+      ES: "ICO Calculadora",
+      FR: "ICO Calculatrice",
+    },
+    date: { EN: "June 2021", ES: "Junio 2021", FR: "Juin 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      {
+        key: 34,
+        text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
+      },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/ico-calc-back",
+    link: "https://solenemhep-ico-calc.netlify.app/",
+    img: "icocalc.png",
+    details: [
+      {
         key: 211,
         text: {
-          EN: "Decentralized application compatible with MetaMask on Kovan network",
-          ES: "Aplicación decentralizada compatible con MetaMask en la red Kovan",
-          FR: "Application décentralisée compatible avec MetaMask sur le réseau Kovan",
+          EN: "Ethereum application compatible with MetaMask on Kovan network",
+          ES: "Aplicación Ethereum compatible con MetaMask en la red Kovan",
+          FR: "Application Ethereum compatible avec MetaMask sur le réseau Kovan",
         },
       },
       {
@@ -1133,9 +1131,9 @@ export const main = [
       {
         key: 213,
         text: {
-          EN: "Faucet application to get 100 free tokens each 3 days",
-          ES: "Aplicación Faucet para obtener 100 tokens gratuito cada 3 días",
-          FR: "Application Faucet pour obtenir 100 tokens gratuits tous les 3 jours",
+          EN: "ICO & Calculator application to buy tokens and spend them calculating",
+          ES: "Aplicación ICO & Calculadora para comprar tokens y gastarlos calculando",
+          FR: "Application ICO & Calculatrice pour acheter des tokens et les dépenser en calculant",
         },
       },
     ],
@@ -1178,9 +1176,9 @@ export const main = [
       {
         key: 221,
         text: {
-          EN: "Decentralized application compatible with MetaMask on Kovan network",
-          ES: "Aplicación decentralizada compatible con MetaMask en la red Kovan",
-          FR: "Application décentralisée compatible avec MetaMask sur le réseau Kovan",
+          EN: "Ethereum application compatible with MetaMask on Kovan network",
+          ES: "Aplicación Ethereum compatible con MetaMask en la red Kovan",
+          FR: "Application Ethereum compatible avec MetaMask sur le réseau Kovan",
         },
       },
       {
