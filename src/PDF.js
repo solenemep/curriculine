@@ -18,7 +18,11 @@ import { coord, contacts } from "./data/contact"
 import { sections, main, skills, skillName } from "./data/content"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons"
+import {
+  faLink,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import {
   faDiscord,
@@ -28,7 +32,7 @@ import {
 import CardPDF from "./card/CardPDF"
 
 const PDF = () => {
-  const { lang } = useCurriContext()
+  const { lang, colorCard } = useCurriContext()
 
   const filterMain = (section) => {
     return main.filter((el) => el.section === section)
@@ -37,7 +41,7 @@ const PDF = () => {
   const experience = filterMain("experience").reverse()
 
   return (
-    <Box p={16}>
+    <Box p={12}>
       <HStack
         id="head"
         alignItems={"center"}
@@ -47,7 +51,7 @@ const PDF = () => {
       >
         <Avatar size="2xl" src={SP} name={"SP"} />
         <VStack alignItems={"start"} spacing={2}>
-          <Heading as="h1" size={"2xl"}>
+          <Heading as="h1" size={"3xl"}>
             {intro.name}
           </Heading>
           <Text fontSize="xl">{intro.title1[lang]}</Text>
@@ -64,9 +68,9 @@ const PDF = () => {
         alignItems={"start"}
         justifyContent={"space-between"}
       >
-        <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"}>
-          <VStack alignItems={"stretch"} spacing={2} mb={8}>
-            <Heading as="h2" size="xl" mb={4}>
+        <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"} spacing={12}>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
               {sections.education[lang]}
             </Heading>
             {education.map((item) => {
@@ -84,8 +88,8 @@ const PDF = () => {
               )
             })}
           </VStack>
-          <VStack alignItems={"stretch"} spacing={2} mb={8}>
-            <Heading as="h2" size="xl" mb={4}>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
               {sections.experience[lang]}
             </Heading>
             {experience.map((item) => {
@@ -104,61 +108,79 @@ const PDF = () => {
             })}
           </VStack>
         </VStack>
-        <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"}>
-          <VStack alignItems={"stretch"} spacing={2} mb={8}>
-            <Heading as="h2" size="xl" mb={4}>
+        <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"} spacing={12}>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
+              {sections.portfolio[lang]}
+            </Heading>
+            <VStack alignItems={"start"} spacing={8}>
+              <HStack spacing={4}>
+                <FontAwesomeIcon icon={faLink} size={"2x"} />
+                <Text>{coord.portfolio}</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
               {skillName[lang]}
             </Heading>
-            {skills.map((category) => {
-              return (
-                <Box key={category.key} mb={2} pb={4}>
-                  <Heading as="h2" size="md" mb={2}>
-                    {category.title[lang]}
-                  </Heading>
-                  <Wrap>
-                    {category.items.map((skill) => {
-                      return (
-                        <Button size={"md"} bg={`cyan.100`} key={skill.key}>
-                          {skill.text[lang]}
-                        </Button>
-                      )
-                    })}
-                  </Wrap>
-                </Box>
-              )
-            })}
+            <VStack alignItems={"start"} spacing={8}>
+              {skills.map((category) => {
+                return (
+                  <Box key={category.key}>
+                    <Heading as="h2" size="md" mb={4}>
+                      {category.title[lang]}
+                    </Heading>
+                    <Wrap>
+                      {category.items.map((skill) => {
+                        return (
+                          <Button
+                            color={colorCard}
+                            size={"md"}
+                            bg={`cyan.100`}
+                            key={skill.key}
+                          >
+                            {skill.text[lang]}
+                          </Button>
+                        )
+                      })}
+                    </Wrap>
+                  </Box>
+                )
+              })}
+            </VStack>
           </VStack>
-          <VStack alignItems={"stretch"} spacing={2} mb={8}>
-            <Heading as="h2" size="xl" mb={4}>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
               {contacts[lang]}
             </Heading>
-            <VStack alignItems={"start"} spacing={2} mb={2}>
-              <HStack spacing={4} pb={4}>
+            <VStack alignItems={"start"} spacing={8}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
 
-              <HStack spacing={4} pb={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faPhone} size={"2x"} />
                 <Text>{coord.phone}</Text>
               </HStack>
 
-              <HStack spacing={4} pb={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faEnvelope} size={"2x"} />
                 <Text>{coord.mailto}</Text>
               </HStack>
 
-              <HStack spacing={4} pb={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
-                <Text>{coord.linkedin}</Text>
+                <Text>{coord.linkedinlink}</Text>
               </HStack>
 
-              <HStack spacing={4} pb={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faGithub} size={"2x"} />
-                <Text>{coord.github}</Text>
+                <Text>{coord.githublink}</Text>
               </HStack>
 
-              <HStack spacing={4} pb={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faDiscord} size={"2x"} />
                 <Text>{coord.discord}</Text>
               </HStack>

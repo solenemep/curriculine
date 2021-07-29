@@ -17,6 +17,7 @@ export const coord = {
   githublink: "https://github.com/solenemhep",
   linkedin: "/solenemhep",
   linkedinlink: "https://www.linkedin.com/in/solenemhep",
+  portfolio: "https://solenemhep.netlify.app",
 }
 
 export const mailme = {

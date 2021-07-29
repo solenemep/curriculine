@@ -20,7 +20,7 @@ const CardPDF = (props) => {
   const { colorCard, lang } = useCurriContext()
 
   return (
-    <Box bg={`${color}.100`} color={colorCard} rounded={"md"} mb={2}>
+    <Box bg={`${color}.100`} color={colorCard} rounded={"md"}>
       <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
         <Heading as={"h3"} size={"md"} fontWeight={"bold"}>
           {title}
