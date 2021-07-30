@@ -27,7 +27,7 @@ const Home = () => {
         justifyContent={"left"}
         spacing={16}
       >
-        <Avatar size="2xl" src={SP} name={"SP"} />
+        <Avatar size="2xl" src={SP} name={"SP"} ms={8} />
         <VStack alignItems={"left"} spacing={2}>
           <Heading as="h1" size={"2xl"}>
             {intro.name}

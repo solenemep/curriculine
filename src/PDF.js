@@ -49,7 +49,7 @@ const PDF = () => {
         mb={8}
         spacing={16}
       >
-        <Avatar size="2xl" src={SP} name={"SP"} />
+        <Avatar size="2xl" src={SP} name={"SP"} ms={8} />
         <VStack alignItems={"start"} spacing={2}>
           <Heading as="h1" size={"3xl"}>
             {intro.name}
