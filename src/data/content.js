@@ -1192,9 +1192,9 @@ export const main = [
       {
         key: 223,
         text: {
-          EN: "Token has a unique text content identified with hash",
-          ES: "El Token tiene un contenido texto único indentificado con un hash",
-          FR: "Le Token a un contenu texte unique identifié avec un hash",
+          EN: "NFT has a unique text content identified with hash",
+          ES: "El NFT tiene un contenido texto único indentificado con un hash",
+          FR: "Le NFT a un contenu texte unique identifié avec un hash",
         },
       },
     ],
