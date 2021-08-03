@@ -1318,4 +1318,53 @@ export const main = [
     ],
   },
   */
+  {
+    key: 25,
+    color: "teal",
+    title: {
+      EN: "Storage BSC",
+      ES: "Storage BSC",
+      FR: "Storage BSC",
+    },
+    date: { EN: "August 2021", ES: "Agosto 2021", FR: "Août 2021" },
+    establishment: { EN: "", ES: "", FR: "" },
+    location: { EN: "", ES: "", FR: "" },
+    section: "portfolio",
+    skills: [
+      { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
+      {
+        key: 15,
+        text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
+      },
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+    ],
+    code: "https://github.com/solenemhep/bsc-back",
+    link: "https://solenemhep-bsc.netlify.app/",
+    img: "storage.png",
+    details: [
+      {
+        key: 251,
+        text: {
+          EN: "Binance Smart Chain application compatible with MetaMask on Kovan network",
+          ES: "Aplicación Binance Smart Chain compatible con MetaMask en la red Kovan",
+          FR: "Application Binance Smart Chain compatible avec MetaMask sur le réseau Kovan",
+        },
+      },
+      {
+        key: 252,
+        text: {
+          EN: "Data storage Smart Contract",
+          ES: "Contrato Intelligente de almacenamiento de data",
+          FR: "Contrat Intelligent de stockage de donnée",
+        },
+      },
+    ],
+  },
 ]
