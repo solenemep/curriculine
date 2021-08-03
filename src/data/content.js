@@ -1352,9 +1352,9 @@ export const main = [
       {
         key: 251,
         text: {
-          EN: "Binance Smart Chain application compatible with MetaMask on Kovan network",
-          ES: "Aplicación Binance Smart Chain compatible con MetaMask en la red Kovan",
-          FR: "Application Binance Smart Chain compatible avec MetaMask sur le réseau Kovan",
+          EN: "Binance Smart Chain application compatible with MetaMask on BSC Testnet network",
+          ES: "Aplicación Binance Smart Chain compatible con MetaMask en la red BSC Testnet",
+          FR: "Application Binance Smart Chain compatible avec MetaMask sur le réseau BSC Testnet",
         },
       },
       {
