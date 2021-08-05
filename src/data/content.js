@@ -56,7 +56,10 @@ export const skills = [
         text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
       { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
-      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      {
+        key: 23,
+        text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" },
+      },
       { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
       { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
@@ -345,7 +348,10 @@ export const main = [
     skills: [
       { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
       { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
-      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      {
+        key: 23,
+        text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" },
+      },
       { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
     ],
@@ -374,7 +380,10 @@ export const main = [
     },
     section: "experience",
     skills: [
-      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      {
+        key: 23,
+        text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" },
+      },
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
       { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
       { key: 64, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
@@ -510,7 +519,10 @@ export const main = [
     },
     section: "experience",
     skills: [
-      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      {
+        key: 23,
+        text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" },
+      },
       { key: 51, text: { EN: "Agil", ES: "Ágil", FR: "Agile" } },
       { key: 61, text: { EN: "JIRA", ES: "JIRA", FR: "JIRA" } },
     ],
@@ -1284,7 +1296,7 @@ export const main = [
         text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
       },
       { key: 22, text: { EN: "Node", ES: "Node", FR: "Node" } },
-      { key: 23, text: { EN: "SQL", ES: "SQL", FR: "SQL" } },
+      { key: 23, text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" } },
       { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
     ],
     code: "https://github.com/solenemhep/login-back",

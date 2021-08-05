@@ -155,10 +155,10 @@ const PDF = () => {
               {contacts[lang]}
             </Heading>
             <VStack alignItems={"start"} spacing={8}>
-              <HStack spacing={4}>
+              {/*<HStack spacing={4}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
                 <Text>{coord.address[lang]}</Text>
-              </HStack>
+            </HStack>*/}
 
               <HStack spacing={4}>
                 <FontAwesomeIcon icon={faPhone} size={"2x"} />
