@@ -5,6 +5,7 @@ import {
   Grid,
   Heading,
   HStack,
+  Link,
   Text,
   VStack,
   Wrap,
@@ -114,10 +115,12 @@ const PDF = () => {
               {sections.portfolio[lang]}
             </Heading>
             <VStack alignItems={"start"} spacing={8}>
-              <HStack spacing={4}>
-                <FontAwesomeIcon icon={faLink} size={"2x"} />
-                <Text>{coord.portfolio}</Text>
-              </HStack>
+              <Link href={coord.portfolio}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faLink} size={"2x"} />
+                  <Text>{coord.portfolio}</Text>
+                </HStack>
+              </Link>
             </VStack>
           </VStack>
           <VStack alignItems={"stretch"} spacing={2}>
@@ -155,30 +158,33 @@ const PDF = () => {
               {contacts[lang]}
             </Heading>
             <VStack alignItems={"start"} spacing={8}>
-              {/*<HStack spacing={4}>
+              <HStack spacing={4}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
                 <Text>{coord.address[lang]}</Text>
-            </HStack>*/}
+              </HStack>
 
               <HStack spacing={4}>
                 <FontAwesomeIcon icon={faPhone} size={"2x"} />
                 <Text>{coord.phone}</Text>
               </HStack>
-
-              <HStack spacing={4}>
-                <FontAwesomeIcon icon={faEnvelope} size={"2x"} />
-                <Text>{coord.mailto}</Text>
-              </HStack>
-
-              <HStack spacing={4}>
-                <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
-                <Text>{coord.linkedinlink}</Text>
-              </HStack>
-
-              <HStack spacing={4}>
-                <FontAwesomeIcon icon={faGithub} size={"2x"} />
-                <Text>{coord.githublink}</Text>
-              </HStack>
+              <Link href={coord.mailtolink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faEnvelope} size={"2x"} />
+                  <Text>{coord.mailto}</Text>
+                </HStack>
+              </Link>
+              <Link href={coord.linkedinlink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
+                  <Text>{coord.linkedinlink}</Text>
+                </HStack>
+              </Link>
+              <Link href={coord.githublink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faGithub} size={"2x"} />
+                  <Text>{coord.githublink}</Text>
+                </HStack>
+              </Link>
 
               <HStack spacing={4}>
                 <FontAwesomeIcon icon={faDiscord} size={"2x"} />
