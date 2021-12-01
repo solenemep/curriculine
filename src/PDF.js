@@ -9,37 +9,37 @@ import {
   Text,
   VStack,
   Wrap,
-} from "@chakra-ui/react"
-import React from "react"
-import { useCurriContext } from "./hook/useCurriContext"
+} from "@chakra-ui/react";
+import React from "react";
+import { useCurriContext } from "./hook/useCurriContext";
 
-import SP from "./img/SP.jpg"
-import { intro } from "./data/home"
-import { coord, contacts } from "./data/contact"
-import { sections, main, skills, skillName } from "./data/content"
+import SP from "./img/SP.jpg";
+import { intro } from "./data/home";
+import { coord, contacts } from "./data/contact";
+import { sections, main, skills, skillName } from "./data/content";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLink,
   faMapMarkerAlt,
   faPhone,
-} from "@fortawesome/free-solid-svg-icons"
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
+} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faDiscord,
   faGithub,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
-import CardPDF from "./card/CardPDF"
+} from "@fortawesome/free-brands-svg-icons";
+import CardPDF from "./card/CardPDF";
 
 const PDF = () => {
-  const { lang, colorCard } = useCurriContext()
+  const { lang, colorCard } = useCurriContext();
 
   const filterMain = (section) => {
-    return main.filter((el) => el.section === section)
-  }
-  const education = filterMain("education").reverse()
-  const experience = filterMain("experience").reverse()
+    return main.filter((el) => el.section === section);
+  };
+  const education = filterMain("education").reverse();
+  const experience = filterMain("experience").reverse();
 
   return (
     <Box p={12}>
@@ -86,7 +86,7 @@ const PDF = () => {
                   section={item.section}
                   details={item.details}
                 />
-              )
+              );
             })}
           </VStack>
           <VStack alignItems={"stretch"} spacing={2}>
@@ -105,11 +105,12 @@ const PDF = () => {
                   section={item.section}
                   details={item.details}
                 />
-              )
+              );
             })}
           </VStack>
         </VStack>
         <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"} spacing={12}>
+          {/*
           <VStack alignItems={"stretch"} spacing={2}>
             <Heading as="h2" size="2xl" mb={4}>
               {sections.portfolio[lang]}
@@ -122,7 +123,7 @@ const PDF = () => {
                 </HStack>
               </Link>
             </VStack>
-          </VStack>
+          </VStack>*/}
           <VStack alignItems={"stretch"} spacing={2}>
             <Heading as="h2" size="2xl" mb={4}>
               {skillName[lang]}
@@ -145,11 +146,11 @@ const PDF = () => {
                           >
                             {skill.text[lang]}
                           </Button>
-                        )
+                        );
                       })}
                     </Wrap>
                   </Box>
-                )
+                );
               })}
             </VStack>
           </VStack>
@@ -195,6 +196,6 @@ const PDF = () => {
         </VStack>
       </Grid>
     </Box>
-  )
-}
-export default PDF
+  );
+};
+export default PDF;

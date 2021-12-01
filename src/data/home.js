@@ -1,6 +1,6 @@
 // Add paragraph
 
-export const home = { EN: "Home", ES: "Home", FR: "Accueil" }
+export const home = { EN: "Home", ES: "Home", FR: "Accueil" };
 
 export const intro = {
   name: "Solène PETTIER",
@@ -10,9 +10,9 @@ export const intro = {
     FR: "Ingénieure Systèmes d'Information",
   },
   title2: {
-    EN: "Web3 & Blockchain developer",
-    ES: "Desarollada Web3 & Blockchain",
-    FR: "Développeuse Web3 & Blockchain",
+    EN: "Blockchain developer",
+    ES: "Desarollada Blockchain",
+    FR: "Développeuse Blockchain",
   },
   paragraph: {
     EN: "Hello and welcome ! I'm Solène, french coming from Paris, IT Engineer and Web & Blockchain full-stack developper !",
@@ -24,7 +24,7 @@ export const intro = {
     ES: "28 años, francesa originaria de París, habla Inglés, Español & Francés",
     FR: "28 ans, française originaire de Paris, parle Anglais, Espagnol & Français",
   },
-}
+};
 
 export const highlights = [
   {
@@ -149,4 +149,4 @@ export const highlights = [
       },
     ],
   },
-]
+];

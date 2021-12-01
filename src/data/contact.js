@@ -2,7 +2,7 @@ export const contacts = {
   EN: "Contact me",
   ES: "Contactarme",
   FR: "Me contacter",
-}
+};
 export const coord = {
   address: {
     EN: "Barcelona, Spain",
@@ -14,11 +14,11 @@ export const coord = {
   mailtolink: "mailto:solene.pettier@gmail.com",
   discord: "solène#5763",
   github: "/solenemhep",
-  githublink: "https://github.com/solenemhep",
+  githublink: "https://github.com/solenemep",
   linkedin: "/solenemhep",
-  linkedinlink: "https://www.linkedin.com/in/solenemhep",
+  linkedinlink: "https://www.linkedin.com/in/solenemep",
   portfolio: "https://solenemhep.netlify.app",
-}
+};
 
 export const mailme = {
   name: { EN: "Your name", ES: "Su nombre", FR: "Votre nom" },
@@ -36,4 +36,4 @@ export const mailme = {
     ES: "Error en el envío del mensaje, por favor contácteme a ",
     FR: "Erreur à l'envoi du message, veuillez me contacter sur ",
   },
-}
+};

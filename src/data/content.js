@@ -2,13 +2,13 @@ export const curriculum = {
   EN: "Curriculum",
   ES: "Currículum",
   FR: "Curriculum",
-}
+};
 
 export const sections = {
   education: { EN: "Education", ES: "Formación", FR: "Formation" },
   experience: { EN: "Experience", ES: "Experiencia", FR: "Expérience" },
   portfolio: { EN: "Portfolio", ES: "Portafolio", FR: "Portefolio" },
-}
+};
 
 export const changeSection = {
   choose: {
@@ -21,13 +21,13 @@ export const changeSection = {
     ES: "Nada para monstrar con este filtro en la sección ",
     FR: "Rien à afficher avec ce filtre dans la section ",
   },
-}
+};
 
 export const skillName = {
   EN: "Skills",
   ES: "Habilidades",
   FR: "Compétences",
-}
+};
 
 export const skills = [
   {
@@ -36,15 +36,15 @@ export const skills = [
     items: [
       { key: 11, text: { EN: "HTML", ES: "HTML", FR: "HTML" } },
       { key: 12, text: { EN: "CSS", ES: "CSS", FR: "CSS" } },
-      {
+      /*{
         key: 13,
         text: { EN: "Bootstrap", ES: "Bootstrap", FR: "Bootstrap" },
-      },
+      },*/
       { key: 14, text: { EN: "React", ES: "React", FR: "React" } },
-      {
+      /*{
         key: 15,
         text: { EN: "Chakra UI", ES: "Chakra UI", FR: "Chakra UI" },
-      },
+      },*/
     ],
   },
   {
@@ -60,8 +60,8 @@ export const skills = [
         key: 23,
         text: { EN: "PostgreSQL", ES: "PostgreSQL", FR: "PostgreSQL" },
       },
-      { key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },
-      { key: 25, text: { EN: "API", ES: "API", FR: "API" } },
+      /*{ key: 24, text: { EN: "Perl", ES: "Perl", FR: "Perl" } },*/
+      /*{ key: 25, text: { EN: "API", ES: "API", FR: "API" } },*/
     ],
   },
 
@@ -77,6 +77,7 @@ export const skills = [
         text: { EN: "OpenZepellin", ES: "OpenZepellin", FR: "OpenZepellin" },
       },
       { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+      { key: 36, text: { EN: "Truffle", ES: "Truffle", FR: "Truffle" } },
     ],
   },
   {
@@ -91,7 +92,7 @@ export const skills = [
       { key: 43, text: { EN: "Geometry", ES: "Geometría", FR: "Géométrie" } },
     ],
   },
-  {
+  /*{
     key: 5,
     title: { EN: "Method", ES: "Método", FR: "Méthode" },
     items: [
@@ -105,8 +106,8 @@ export const skills = [
         text: { EN: "Robotics", ES: "Robótica", FR: "Robotique" },
       },
     ],
-  },
-  {
+  },*/
+  /*{
     key: 6,
     title: { EN: "Tools", ES: "Heramientas", FR: "Outils" },
     items: [
@@ -114,8 +115,8 @@ export const skills = [
       { key: 62, text: { EN: "SAP", ES: "SAP", FR: "SAP" } },
       { key: 63, text: { EN: "Odoo", ES: "Odoo", FR: "Odoo" } },
     ],
-  },
-]
+  },*/
+];
 
 export const filterSkill = {
   asidefilter: {
@@ -135,7 +136,7 @@ export const filterSkill = {
       FR: "Désactiver le filtre ",
     },
   },
-}
+};
 
 export const cardLinks = {
   code: {
@@ -148,7 +149,7 @@ export const cardLinks = {
     ES: "Enlace de la página",
     FR: "Lien vers la page",
   },
-}
+};
 
 export const main = [
   {
@@ -234,7 +235,7 @@ export const main = [
     ],
   },
   */
-  {
+  /*{
     key: 3,
     color: "blue",
     title: {
@@ -272,8 +273,8 @@ export const main = [
     code: "",
     link: "",
     details: [],
-  },
-  {
+  },*/
+  /*{
     key: 4,
     color: "teal",
     title: {
@@ -324,12 +325,12 @@ export const main = [
         },
       },
     ],
-  },
+  },*/
   {
     key: 5,
     color: "cyan",
     title: {
-      EN: "MSc Information Technology & Process Engineer",
+      EN: "MSc Information Technology Engineer",
       ES: "MSc Ingenería Sistemas de Información & Procesos",
       FR: "MSc Ingénieur Sysèmes d'Information & Processus",
     },
@@ -363,7 +364,7 @@ export const main = [
     key: 6,
     color: "blue",
     title: {
-      EN: "Functional & Technical Consultant",
+      EN: "Functional & Technical Consultant ERP",
       ES: "Consultora Functional & Tecnica",
       FR: "Consultant Fonctionnel & Technique",
     },
@@ -407,22 +408,22 @@ export const main = [
           FR: "Coordination de projet et affectation des tâches aux équipes de développeurs et testeurs",
         },
       },
-      {
+      /*{
         key: 63,
         text: {
           EN: "Supported and trained customers during the implementation and exploitation stage",
           ES: "Soporte y formación cliente durante las etapas de implementación y de explotación",
           FR: "Support et formation client pendant les étapes d'implémentation et d'exploitation",
         },
-      },
-      {
+      },*/
+      /*{
         key: 64,
         text: {
           EN: "Optimized internal management tool for resources workload monitoring",
           ES: "Optimización del herramienta de gestión interno para controlar la carga de trabajo de los empleados",
           FR: "Optimisation de l'outil de management interne pour contrôler la charge de travail des employés",
         },
-      },
+      },*/
     ],
   },
   {
@@ -468,22 +469,22 @@ export const main = [
           FR: "Direction de l'industralisation de deux lignes de production",
         },
       },
-      {
+      /*{
         key: 72,
         text: {
           EN: "Animated progress meetings to liaise management and operational teams",
           ES: "Animación de reuniónes para vincular los equipos de management y los equipos operacionales",
           FR: "Animation de réunions pour lier les équipes de management et les équipes opérationnelles",
         },
-      },
-      {
+      },*/
+      /*{
         key: 73,
         text: {
           EN: "Identified process issues to establish action plans supporting engineering production and exploitation unit",
           ES: "Identificación de los procesos bloqueantes y implementación de un plan de acciónes para soportar la concepción y la producción",
           FR: "Identification des processus bloquants et mise en place de plan d'action pour supporter la conception et la production",
         },
-      },
+      },*/
       {
         key: 74,
         text: {
@@ -498,7 +499,7 @@ export const main = [
     key: 8,
     color: "cyan",
     title: {
-      EN: "Technical Product Specialist",
+      EN: "Technical Product Specialist ERP",
       ES: "Especialista Tecnico de Producto",
       FR: "Spécialiste Technique de Produit",
     },
@@ -545,14 +546,14 @@ export const main = [
           FR: "Producion des spécifications techniques pour créer / améliorer les fonctionalités de la solution",
         },
       },
-      {
+      /*{
         key: 83,
         text: {
           EN: "Implemented walkthrough programming HTML and CSS",
           ES: "Implementación tutoriales dinámicos con HTML y CSS",
           FR: "Implémentation de tutoriels dynamiques avec HTML et CSS",
         },
-      },
+      },*/
       {
         key: 84,
         text: {
@@ -561,14 +562,14 @@ export const main = [
           FR: "Indentification des bugs, investigation et rédaction de rapports de résolution détaillés",
         },
       },
-      {
+      /*{
         key: 65,
         text: {
           EN: "Provided online instructions for users",
           ES: "Redacción de las instrucciónes de uso en línea",
           FR: "Rédaction des instructions d'utilisation en ligne",
         },
-      },
+      },*/
     ],
   },
   {
@@ -1379,4 +1380,52 @@ export const main = [
       },
     ],
   },
-]
+  {
+    key: 26,
+    color: "blue",
+    title: {
+      EN: "Blockchain Developer",
+      ES: "Desarolladora Blockchain",
+      FR: "Dévelopeuse Blockchain",
+    },
+    date: {
+      EN: "September 2021 - now",
+      ES: "Septiembre 2021 - ahora",
+      FR: "Septembre 2021 - aujourd'hui",
+    },
+    establishment: { EN: "Ideasoft", ES: "Ideasoft", FR: "Ideasoft" },
+    location: { EN: "Remote", ES: "Remoto", FR: "Remote" },
+    section: "experience",
+    skills: [
+      {
+        key: 21,
+        text: { EN: "JavaScript", ES: "JavaScript", FR: "JavaScript" },
+      },
+      { key: 31, text: { EN: "Solidity", ES: "Solidity", FR: "Solidity" } },
+      { key: 32, text: { EN: "Hardhat", ES: "Hardhat", FR: "Hardhat" } },
+      { key: 33, text: { EN: "Web3", ES: "Web3", FR: "Web3" } },
+      { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
+      { key: 36, text: { EN: "Truffle", ES: "Truffle", FR: "Truffle" } },
+    ],
+    code: "",
+    link: "https://ideasoft.io/",
+    details: [
+      {
+        key: 261,
+        text: {
+          EN: "Solidity Developer on Bridge-Mutual DEFI project",
+          ES: "",
+          FR: "",
+        },
+      },
+      {
+        key: 262,
+        text: {
+          EN: "Solidity Developer on NFT project",
+          ES: "",
+          FR: "",
+        },
+      },
+    ],
+  },
+];
