@@ -78,6 +78,8 @@ export const skills = [
       },
       { key: 35, text: { EN: "Ethers", ES: "Ethers", FR: "Ethers" } },
       { key: 36, text: { EN: "Truffle", ES: "Truffle", FR: "Truffle" } },
+      { key: 37, text: { EN: "DEFI", ES: "DEFI", FR: "DEFI" } },
+      { key: 38, text: { EN: "NFT", ES: "NFT", FR: "NFT" } },
     ],
   },
   {

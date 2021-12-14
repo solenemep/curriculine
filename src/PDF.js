@@ -48,6 +48,7 @@ const PDF = () => {
         alignItems={"center"}
         justifyContent={"start"}
         mb={8}
+        mt={2}
         spacing={16}
       >
         <Avatar size="2xl" src={SP} name={"SP"} ms={8} />
@@ -64,7 +65,7 @@ const PDF = () => {
         sx={{
           display: "grid",
           gridTemplateColumns: { base: "2fr 1fr" },
-          gap: "6rem",
+          gap: "4rem",
         }}
         alignItems={"start"}
         justifyContent={"space-between"}
