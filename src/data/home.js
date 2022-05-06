@@ -133,18 +133,18 @@ export const highlights = [
       {
         key: 32,
         text: {
-          EN: "Smart contract testing and deploying on Hardhat with Ethers & Web3",
-          ES: "Prueba y despliegue de smart contract en Hardhat con Ethers & Web3",
-          FR: "Test et déploiement de smart contract sur Hardhat avec Ethers & Web3",
+          EN: "Smart contract testing and deploying on Hardhat and Truffle",
+          ES: "Prueba y despliegue de smart contract en Hardhat y Truffle",
+          FR: "Test et déploiement de smart contract sur Hardhat et Truffle",
         },
       },
 
       {
         key: 33,
         text: {
-          EN: "Use of OpenZeppelin library",
-          ES: "Uso de la biblioteca OpenZeppelin",
-          FR: "Utilisation de la librairie OpenZeppelin",
+          EN: "Experience on NFT and DEFI projects",
+          ES: "Experienca en proyectos NFT y DEFI",
+          FR: "Expérience sur des projets NFT et DEFI",
         },
       },
     ],
