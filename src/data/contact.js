@@ -13,11 +13,11 @@ export const coord = {
   mailto: "solene.pettier@gmail.com",
   mailtolink: "mailto:solene.pettier@gmail.com",
   discord: "solène#5763",
-  github: "/solenemhep",
+  github: "/solenemep",
   githublink: "https://github.com/solenemep",
-  linkedin: "/solenemhep",
+  linkedin: "/solenemep",
   linkedinlink: "https://www.linkedin.com/in/solenemep",
-  portfolio: "https://solenemhep.netlify.app",
+  portfolio: "https://solenemep.netlify.app",
 };
 
 export const mailme = {

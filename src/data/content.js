@@ -1416,16 +1416,16 @@ export const main = [
         key: 261,
         text: {
           EN: "Solidity Developer on Bridge-Mutual DEFI project",
-          ES: "",
-          FR: "",
+          ES: "Desarolladora Solidity en el proyecto DEFI Bridge-Mutual",
+          FR: "Développeuse Solidity sur le projet DEFI Bridge-Mutual",
         },
       },
       {
         key: 262,
         text: {
-          EN: "Solidity Developer on NFT project",
-          ES: "",
-          FR: "",
+          EN: "Solidity Developer on NFT MarketPlace project",
+          ES: "Desarolladora Solidity en proyecto NFT MarketPlace",
+          FR: "Développeuse Solidity sur un projet NFT MarketPlace",
         },
       },
     ],
