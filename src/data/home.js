@@ -20,9 +20,9 @@ export const intro = {
     FR: "Bonjour et bienvenue ! Je suis Solène, française originaire de Paris, Ingénieure SI et développeuse full-stack Web & Blockchain !",
   },
   speaks: {
-    EN: "28 years old, french from Paris, speaks English, Spanish & French",
-    ES: "28 años, francesa originaria de París, habla Inglés, Español & Francés",
-    FR: "28 ans, française originaire de Paris, parle Anglais, Espagnol & Français",
+    EN: "29 years old, french from Paris, speaks English, Spanish & French",
+    ES: "29 años, francesa originaria de París, habla Inglés, Español & Francés",
+    FR: "29 ans, française originaire de Paris, parle Anglais, Espagnol & Français",
   },
 };
 

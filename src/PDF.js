@@ -19,7 +19,11 @@ import { coord, contacts } from "./data/contact";
 import { sections, main, skills, skillName } from "./data/content";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLink,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faDiscord,
@@ -107,12 +111,17 @@ const PDF = () => {
           </VStack>
         </VStack>
         <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"} spacing={12}>
-          {/*
           <VStack alignItems={"stretch"} spacing={2}>
             <Heading as="h2" size="2xl" mb={4}>
               {sections.portfolio[lang]}
             </Heading>
             <VStack alignItems={"start"} spacing={8}>
+              <Link href={coord.githublink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faGithub} size={"2x"} />
+                  <Text>{coord.githublink}</Text>
+                </HStack>
+              </Link>
               <Link href={coord.portfolio}>
                 <HStack spacing={4}>
                   <FontAwesomeIcon icon={faLink} size={"2x"} />
@@ -120,7 +129,7 @@ const PDF = () => {
                 </HStack>
               </Link>
             </VStack>
-          </VStack>*/}
+          </VStack>
           <VStack alignItems={"stretch"} spacing={2}>
             <Heading as="h2" size="2xl" mb={4}>
               {skillName[lang]}
@@ -175,12 +184,6 @@ const PDF = () => {
                 <HStack spacing={4}>
                   <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
                   <Text>{coord.linkedinlink}</Text>
-                </HStack>
-              </Link>
-              <Link href={coord.githublink}>
-                <HStack spacing={4}>
-                  <FontAwesomeIcon icon={faGithub} size={"2x"} />
-                  <Text>{coord.githublink}</Text>
                 </HStack>
               </Link>
 
