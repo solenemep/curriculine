@@ -17,7 +17,7 @@ import Footer from "./Footer"
 import PDF from "./PDF"
 
 const CurricuLine = () => {
-  const { bgContent } = useCurriContext()
+  const { colorCurri, bgCurri } = useCurriContext()
   return (
     <Router>
       <Switch>
@@ -26,7 +26,7 @@ const CurricuLine = () => {
             <Nav />
           </NavContextProvider>
           <HomeContextProvider>
-            <Box bg={bgContent} minH={"100vh"} py={24}>
+            <Box bg={bgCurri} color={colorCurri} minH={"100vh"} py={24}>
               <Home />
             </Box>
           </HomeContextProvider>
@@ -40,7 +40,7 @@ const CurricuLine = () => {
             <Nav />
           </NavContextProvider>
           <ContentContextProvider>
-            <Box bg={bgContent} minH={"100vh"} pt={28} pb={24}>
+            <Box bg={bgCurri} color={colorCurri} minH={"100vh"} pt={28} pb={24}>
               <Content />
             </Box>
           </ContentContextProvider>
@@ -54,7 +54,7 @@ const CurricuLine = () => {
             <Nav />
           </NavContextProvider>
           <ContactContextProvider>
-            <Box bg={bgContent} minH={"100vh"} pt={28} pb={24}>
+            <Box bg={bgCurri} color={colorCurri} minH={"100vh"} pt={28} pb={24}>
               <Contact />
             </Box>
           </ContactContextProvider>
@@ -64,7 +64,9 @@ const CurricuLine = () => {
         </Route>
 
         <Route exact path="/pdf">
-          <PDF />
+          <Box p={12} bg={bgCurri} color={colorCurri}>
+            <PDF />
+          </Box>
         </Route>
       </Switch>
     </Router>

@@ -15,14 +15,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useCurriContext } from "../hook/useCurriContext"
 
 const CardPDF = (props) => {
-  const { color, title, date, establishment, location, section, details } =
-    props
-  const { colorCard, lang } = useCurriContext()
+  const { title, date, establishment, location, section, details } = props
+  const { lang, colorCard, bgCard } = useCurriContext()
 
   return (
-    <Box bg={`${color}.100`} color={colorCard} rounded={"md"}>
+    <Box bg={bgCard} color={colorCard} rounded={"md"}>
       <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-        <Heading as={"h3"} size={"md"} fontWeight={"bold"}>
+        <Heading as="h3" size="lg">
           {title}
         </Heading>
         <HStack justifyContent={"space-between"}>
@@ -43,7 +42,7 @@ const CardPDF = (props) => {
               return (
                 <ListItem key={detail.key}>
                   <HStack>
-                    <ListIcon as={ArrowForwardIcon} color="green.300" />
+                    <ListIcon as={ArrowForwardIcon} />
                     <Text>{detail.text[lang]}</Text>
                   </HStack>
                 </ListItem>

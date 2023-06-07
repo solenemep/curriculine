@@ -23,6 +23,18 @@ export const ContentContextProvider = ({ children }) => {
     }
   }
 
+  const getSkillLabel = (key, lang) => {
+    let label
+    skills.map((skill) =>
+      skill.items.forEach((item) => {
+        if (Number(item.key) === key) {
+          label = item.text[lang]
+        }
+      })
+    )
+    return label
+  }
+
   return (
     <ContentContext.Provider
       value={{
@@ -35,6 +47,7 @@ export const ContentContextProvider = ({ children }) => {
         filter,
         setFilter,
         toggleFilter,
+        getSkillLabel,
       }}
     >
       {children}

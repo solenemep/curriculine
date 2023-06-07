@@ -5,12 +5,12 @@ import SP from "./img/SP.jpg"
 
 import {
   VStack,
-  HStack,
   Heading,
   SimpleGrid,
-  Avatar,
   Container,
   Text,
+  Image,
+  Stack,
 } from "@chakra-ui/react"
 import CardHome from "./card/CardHome"
 
@@ -20,24 +20,37 @@ const Home = () => {
 
   return (
     <Container maxW={"container.xl"} pt={8}>
-      <HStack
+      <Stack
         id="intro"
+        direction={{ base: "column", lg: "row" }}
         alignItems={"center"}
-        mb={24}
-        justifyContent={"left"}
+        mb={16}
+        justifyContent={{ base: "center", lg: "left" }}
         spacing={16}
       >
-        <Avatar size="2xl" src={SP} name={"SP"} ms={8} />
-        <VStack alignItems={"left"} spacing={2}>
-          <Heading as="h1" size={"2xl"}>
+        <Image
+          borderRadius="full"
+          boxSize="200px"
+          src={SP}
+          name={"SP"}
+          ms={8}
+          my={{ base: 0, lg: 4 }}
+        />
+        <VStack alignItems={"start"} spacing={2}>
+          <Heading as="h1" size={"3xl"} mb={4}>
             {intro.name}
           </Heading>
-
-          <Text fontSize="xl">{intro.title1[lang]}</Text>
-          <Text fontSize="xl">{intro.title2[lang]}</Text>
-          <Text as="small">{intro.speaks[lang]}</Text>
+          <Text fontSize="2xl">{intro.title1[lang]}</Text>
+          <Text fontSize="2xl">{intro.title2[lang]}</Text>
+          <Text fontSize="md" pt={4}>
+            {intro.who[lang]}
+            {", "}
+            {intro.speaks[lang]}
+            {", "}
+            {intro.remote[lang]}
+          </Text>
         </VStack>
-      </HStack>
+      </Stack>
 
       <SimpleGrid
         id="highlight"
@@ -49,12 +62,8 @@ const Home = () => {
           return (
             <CardHome
               key={highlight.key}
-              color={highlight.color}
               title={highlight.title[lang]}
-              section={highlight.section}
-              path={highlight.path}
-              more={highlight.more}
-              filter={highlight.filter}
+              speach={highlight.speach[lang]}
               details={highlight.details}
             />
           )

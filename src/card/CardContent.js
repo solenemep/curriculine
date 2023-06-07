@@ -15,6 +15,7 @@ import {
   Text,
   Tooltip,
   Wrap,
+  WrapItem,
 } from "@chakra-ui/react"
 import { faBuilding, faCalendar } from "@fortawesome/free-regular-svg-icons"
 import {
@@ -30,7 +31,6 @@ import { Fragment } from "react"
 
 const CardContent = (props) => {
   const {
-    color,
     title,
     date,
     establishment,
@@ -42,14 +42,24 @@ const CardContent = (props) => {
     img,
     details,
   } = props
-  const { colorCard, lang, colorCardOpp } = useCurriContext()
-  const { cardLinks, toggleFilter, filter, filterSkill } = useContentContext()
+  const {
+    lang,
+    colorCard,
+    bgContent,
+    bgGradientCard,
+    bgButton,
+    hoverButton,
+    activeButton,
+    hoverLink,
+  } = useCurriContext()
+  const { cardLinks, toggleFilter, filter, filterSkill, getSkillLabel } =
+    useContentContext()
 
   return (
     <SlideFadeOnScroll>
-      <Box bg={`${color}.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
+      <Box bgGradient={bgGradientCard} color={colorCard} rounded={"md"}>
         <Stack direction={"column"} alignItems={"left"} p={8} spacing={8}>
-          <Heading as={"h3"} size={"md"} fontWeight={"bold"}>
+          <Heading as="h3" size="lg">
             {title}
           </Heading>
           <HStack justifyContent={"space-between"}>
@@ -58,32 +68,26 @@ const CardContent = (props) => {
             </Text>
             {section === "portfolio" ? (
               <Fragment>
+                {link.length !== 0 ? (
+                  <Link
+                    isExternal
+                    href={link}
+                    aria-label={"page link"}
+                    _hover={hoverLink}
+                  >
+                    <FontAwesomeIcon icon={faLink} /> {cardLinks.link[lang]}{" "}
+                  </Link>
+                ) : (
+                  <Fragment></Fragment>
+                )}
                 <Link
                   isExternal
                   href={code}
                   aria-label={"source code"}
-                  _hover={{
-                    textDecoration: "none",
-                    color: `${colorCard}`,
-                    transform: "scale(1.1)",
-                    transition: "0.5s",
-                  }}
+                  _hover={hoverLink}
                 >
                   <FontAwesomeIcon icon={faExternalLinkAlt} />{" "}
                   {cardLinks.code[lang]}
-                </Link>
-                <Link
-                  isExternal
-                  href={link}
-                  aria-label={"page link"}
-                  _hover={{
-                    textDecoration: "none",
-                    color: `${colorCard}`,
-                    transform: "scale(1.1)",
-                    transition: "0.5s",
-                  }}
-                >
-                  <FontAwesomeIcon icon={faLink} /> {cardLinks.link[lang]}{" "}
                 </Link>
               </Fragment>
             ) : (
@@ -108,23 +112,24 @@ const CardContent = (props) => {
               alignItems={"center"}
               justifyContent={"start"}
             >
-              <Image
-                sx={{ columnSpan: 1 }}
-                margin={{ base: "auto", md: 0 }}
-                ratio={16 / 9}
-                maxWidth={"250px"}
-                shadow={"xs"}
-                borderWidth="1px"
-                borderRadius="lg"
-                src={require(`../img/${img}`).default}
-                alt={`img${img}`}
-              />
+              {img.length !== 0 && (
+                <Image
+                  sx={{ columnSpan: 1 }}
+                  margin={{ base: "auto", md: 0 }}
+                  ratio={16 / 9}
+                  maxWidth={"250px"}
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  src={require(`../img/${img}`).default}
+                  alt={`img${img}`}
+                />
+              )}
               <List spacing={2} sx={{ columnSpan: 2 }}>
                 {details.map((detail) => {
                   return (
                     <ListItem key={detail.key}>
                       <HStack>
-                        <ListIcon as={ArrowForwardIcon} color="green.300" />
+                        <ListIcon as={ArrowForwardIcon} />
                         <Text>{detail.text[lang]}</Text>
                       </HStack>
                     </ListItem>
@@ -140,7 +145,7 @@ const CardContent = (props) => {
                 return (
                   <ListItem key={detail.key}>
                     <HStack>
-                      <ListIcon as={ArrowForwardIcon} color="green.300" />
+                      <ListIcon as={ArrowForwardIcon} />
                       <Text>{detail.text[lang]}</Text>
                     </HStack>
                   </ListItem>
@@ -151,40 +156,31 @@ const CardContent = (props) => {
 
           <HStack>
             <Spacer />
-            <Wrap direction={"row-reverse"}>
-              {skills.map((skill) => {
+            <Wrap direction={"row"}>
+              {skills.map((item) => {
                 return (
                   <Tooltip
                     label={
-                      filter.includes(Number(skill.key))
-                        ? filterSkill.buttonfilter.inactive[lang] +
-                          skill.text[lang]
-                        : filterSkill.buttonfilter.active[lang] +
-                          skill.text[lang]
+                      filter.includes(Number(item.key))
+                        ? filterSkill.buttonfilter.inactive[lang]
+                        : filterSkill.buttonfilter.active[lang]
                     }
-                    bg={"gray.600"}
-                    color={colorCardOpp}
-                    key={skill.key}
+                    bg={bgContent}
+                    key={item.key}
                   >
-                    <Button
-                      size={"md"}
-                      bg={`${color}.200`}
-                      _hover={{
-                        bg: `${color}.300`,
-                        textDecoration: "none",
-                        color: `inherit`,
-                      }}
-                      _active={{
-                        bg: `${color}.300`,
-                        textDecoration: "none",
-                        color: `inherit`,
-                      }}
-                      value={skill.key}
-                      onClick={toggleFilter}
-                      isActive={filter.includes(Number(skill.key))}
-                    >
-                      {skill.text[lang]}
-                    </Button>
+                    <WrapItem>
+                      <Button
+                        size={"xs"}
+                        bg={bgButton}
+                        _hover={hoverButton}
+                        _active={activeButton}
+                        value={item.key}
+                        onClick={toggleFilter}
+                        isActive={filter.includes(Number(item.key))}
+                      >
+                        {getSkillLabel(item.key, lang)}
+                      </Button>{" "}
+                    </WrapItem>
                   </Tooltip>
                 )
               })}

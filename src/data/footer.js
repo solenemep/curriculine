@@ -1,9 +1,9 @@
 export const copyright = "© Solène PETTIER - 2021";
 
 export const madeby = {
-  EN: "Made with React & Chakra UI",
-  ES: "Hecho con React & Chakra UI",
-  FR: "Fait avec React & Chakra UI",
+  EN: "Made with React",
+  ES: "Hecho con React",
+  FR: "Fait avec React",
 };
 
 export const links = {

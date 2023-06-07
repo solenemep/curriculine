@@ -27,7 +27,7 @@ import { AddIcon, MinusIcon, SmallCloseIcon } from "@chakra-ui/icons"
 import CardContent from "./card/CardContent"
 
 const Content = () => {
-  const { lang, section, setSection, colorCard } = useCurriContext()
+  const { lang, section, setSection, bgButton, hoverButton } = useCurriContext()
   const {
     sections,
     changeSection,
@@ -105,7 +105,6 @@ const Content = () => {
               return (
                 <CardContent
                   key={item.key}
-                  color={item.color}
                   title={item.title[lang]}
                   date={item.date[lang]}
                   establishment={item.establishment[lang]}
@@ -143,15 +142,10 @@ const Content = () => {
                 <Text fontWeight={"bold"}>{filterSkill.asidefilter[lang]}</Text>
                 <IconButton
                   icon={<SmallCloseIcon />}
-                  color={colorCard}
                   type="button"
-                  bg={"teal.100"}
-                  size={"xs"}
-                  _hover={{
-                    bg: `teal.300`,
-                    textDecoration: "none",
-                    color: `${colorCard}`,
-                  }}
+                  bg={bgButton}
+                  aria-label="remove filter"
+                  _hover={hoverButton}
                   onClick={() => setFilter([])}
                 />
               </HStack>
@@ -165,7 +159,7 @@ const Content = () => {
                         <AccordionButton justifyContent={"space-between"}>
                           <Text textAlign="left">{category.title[lang]} </Text>
                           <HStack justifyContent={"space-between"}>
-                            <Text as={"small"}>
+                            <Text>
                               {
                                 filter.filter((el) =>
                                   el.toString().startsWith(`${category.key}`)
@@ -186,6 +180,7 @@ const Content = () => {
                             {category.items.map((skill) => {
                               return (
                                 <Checkbox
+                                  colorScheme={"gray"}
                                   key={skill.key}
                                   value={skill.key}
                                   onChange={toggleFilter}

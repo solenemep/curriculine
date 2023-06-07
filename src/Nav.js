@@ -17,7 +17,7 @@ import { useCurriContext } from "./hook/useCurriContext"
 import NavItems from "./componentsNav/NavItems"
 
 const Nav = () => {
-  const { bgNav, hoverButton } = useCurriContext()
+  const { bgCurri, bgButton, hoverButton } = useCurriContext()
 
   const {
     isOpen: navIsOpen,
@@ -26,14 +26,14 @@ const Nav = () => {
   } = useDisclosure()
 
   return (
-    <Box bg={bgNav} position="fixed" px={4} w="100%" zIndex="sticky">
+    <Box bg={bgCurri} position="fixed" px={4} w="100%" zIndex="sticky">
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           aria-label={"Open Menu"}
           display={{ lg: "none" }}
           onClick={navIsOpen ? navOnClose : navOnOpen}
-          bg={bgNav}
+          bg={bgButton}
           _hover={hoverButton}
         >
           {navIsOpen ? <CloseIcon /> : <HamburgerIcon />}

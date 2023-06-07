@@ -2,23 +2,30 @@ export const contacts = {
   EN: "Contact me",
   ES: "Contactarme",
   FR: "Me contacter",
-};
+}
 export const coord = {
   address: {
-    EN: "Barcelona, Spain",
-    ES: "Barcelona, España",
-    FR: "Barcelone, Espagne",
+    EN: "Buenos Aires, Argentina",
+    ES: "Buenos Aires, Argentina",
+    FR: "Buenos Aires, Argentine",
   },
-  phone: "+33 6 74 66 29 38",
+  whatsapp: "+33 6 74 66 29 38",
+  whatsapplink: "https://api.whatsapp.com/send?phone=33674662938",
+  telegram: "+33 6 74 66 29 38",
+  telegramlink: "https://t.me/solenemep",
+  phone: "+54 9 11 3124 9133",
   mailto: "solene.pettier@gmail.com",
   mailtolink: "mailto:solene.pettier@gmail.com",
   discord: "solène#5763",
+  discordlink: "https://discordapp.com/users/807710224278355968",
   github: "/solenemep",
   githublink: "https://github.com/solenemep",
   linkedin: "/solenemep",
   linkedinlink: "https://www.linkedin.com/in/solenemep",
   portfolio: "https://solenemep.netlify.app",
-};
+  codepen: "/solenemep",
+  codepenlink: "https://codepen.io/solenemep",
+}
 
 export const mailme = {
   name: { EN: "Your name", ES: "Su nombre", FR: "Votre nom" },
@@ -36,4 +43,4 @@ export const mailme = {
     ES: "Error en el envío del mensaje, por favor contácteme a ",
     FR: "Erreur à l'envoi du message, veuillez me contacter sur ",
   },
-};
+}

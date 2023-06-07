@@ -6,9 +6,11 @@ import {
   faDiscord,
   faGithub,
   faLinkedin,
+  faTelegram,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons"
 import {
-  // faMapMarkerAlt,
+  faMapMarkerAlt,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons"
@@ -27,12 +29,14 @@ import {
   Grid,
   AlertIcon,
   Link,
+  Spacer,
   Box,
 } from "@chakra-ui/react"
 import ScaleFadeOnScroll from "./transitions/ScaleFadeOnScroll"
 
 const Contact = () => {
-  const { lang, colorCard, hoverButton } = useCurriContext()
+  const { lang, colorCard, bgGradientCard, hoverButton, bgButton } =
+    useCurriContext()
   const { contacts, coord, mailme, submitEmail, isLoading, alert } =
     useContactContext()
 
@@ -51,7 +55,7 @@ const Contact = () => {
         justifyContent={"space-between"}
       >
         <ScaleFadeOnScroll>
-          <Box bg={`blue.100`} color={colorCard} rounded={"md"} shadow={"lg"}>
+          <Box bgGradient={bgGradientCard} color={colorCard} rounded={"md"}>
             <VStack
               p={8}
               id="mail"
@@ -101,16 +105,14 @@ const Contact = () => {
                   required
                 />
               </FormControl>
+              <Spacer />
               {alert === "" && (
                 <Button
+                  size={"md"}
                   type="submit"
                   color={colorCard}
-                  bg={"blue.200"}
-                  _hover={{
-                    bg: `blue.300`,
-                    textDecoration: "none",
-                    color: `inherit`,
-                  }}
+                  bg={bgButton}
+                  _hover={hoverButton}
                   isLoading={isLoading}
                   isFullWidth
                 >
@@ -141,17 +143,47 @@ const Contact = () => {
           sx={{ columnSpan: 1 }}
           spacing={4}
         >
-          {/* 
-              <HStack spacing={4} >
-                <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
-                <Text>{coord.address[lang]}</Text>
-              </HStack>
-*/}
+          <HStack spacing={4}>
+            <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
+            <Text>{coord.address[lang]}</Text>
+          </HStack>
+          <Link
+            _hover={hoverButton}
+            href={coord.whatsapplink}
+            aria-label="whatsapp me"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faWhatsapp} size={"2x"} />
+              <Text>{coord.whatsapp}</Text>
+            </HStack>
+          </Link>
+          <Link
+            _hover={hoverButton}
+            href={coord.telegramlink}
+            aria-label="telegram me"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faTelegram} size={"2x"} />
+              <Text>{coord.telegram}</Text>
+            </HStack>
+          </Link>
+          <Link
+            _hover={hoverButton}
+            href={coord.discordlink}
+            aria-label="discord me"
+            isExternal
+          >
+            <HStack spacing={4}>
+              <FontAwesomeIcon icon={faDiscord} size={"2x"} />
+              <Text>{coord.discord}</Text>
+            </HStack>
+          </Link>
           <HStack spacing={4}>
             <FontAwesomeIcon icon={faPhone} size={"2x"} />
             <Text>{coord.phone}</Text>
           </HStack>
-
           <Link
             _hover={hoverButton}
             href={coord.mailtolink}
@@ -163,7 +195,6 @@ const Contact = () => {
               <Text>{coord.mailto}</Text>
             </HStack>
           </Link>
-
           <Link
             _hover={hoverButton}
             href={coord.linkedinlink}
@@ -175,7 +206,6 @@ const Contact = () => {
               <Text>{coord.linkedin}</Text>
             </HStack>
           </Link>
-
           <Link
             _hover={hoverButton}
             href={coord.githublink}
@@ -187,11 +217,6 @@ const Contact = () => {
               <Text>{coord.github}</Text>
             </HStack>
           </Link>
-
-          <HStack spacing={4}>
-            <FontAwesomeIcon icon={faDiscord} size={"2x"} />
-            <Text>{coord.discord}</Text>
-          </HStack>
         </VStack>
       </Grid>
     </Container>

@@ -1,64 +1,73 @@
 import {
-  Avatar,
   Box,
-  Button,
   Grid,
   Heading,
   HStack,
+  Image,
   Link,
+  Tag,
   Text,
   VStack,
   Wrap,
-} from "@chakra-ui/react";
-import React from "react";
-import { useCurriContext } from "./hook/useCurriContext";
+} from "@chakra-ui/react"
+import { useCurriContext } from "./hook/useCurriContext"
 
-import SP from "./img/SP.jpg";
-import { intro } from "./data/home";
-import { coord, contacts } from "./data/contact";
-import { sections, main, skills, skillName } from "./data/content";
+import SP from "./img/SP.jpg"
+import { intro, presentationName } from "./data/home"
+import { coord, contacts } from "./data/contact"
+import { sections, main, skills, skillName } from "./data/content"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faLink,
   faMapMarkerAlt,
   faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import {
+  faCodepen,
   faDiscord,
   faGithub,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import CardPDF from "./card/CardPDF";
+  faTelegram,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons"
+import CardPDF from "./card/CardPDF"
+import { Fragment } from "react"
 
 const PDF = () => {
-  const { lang, colorCard } = useCurriContext();
+  const { lang, bgCard } = useCurriContext()
 
   const filterMain = (section) => {
-    return main.filter((el) => el.section === section);
-  };
-  const education = filterMain("education").reverse();
-  const experience = filterMain("experience").reverse();
+    return main.filter((el) => el.section === section)
+  }
+  const education = filterMain("education").reverse()
+  const experience = filterMain("experience").reverse()
 
   return (
-    <Box p={12}>
+    <Fragment>
       <HStack
         id="head"
         alignItems={"center"}
         justifyContent={"start"}
         mb={8}
-        mt={2}
+        mt={8}
         spacing={16}
       >
-        <Avatar size="2xl" src={SP} name={"SP"} ms={8} />
+        <Image
+          borderRadius="full"
+          boxSize="200px"
+          src={SP}
+          name={"SP"}
+          ms={8}
+          my={4}
+        />
         <VStack alignItems={"start"} spacing={2}>
-          <Heading as="h1" size={"3xl"}>
+          <Heading as="h1" size={"3xl"} mb={4}>
             {intro.name}
           </Heading>
           <Text fontSize="xl">{intro.title1[lang]}</Text>
           <Text fontSize="xl">{intro.title2[lang]}</Text>
-          <Text as="small">{intro.speaks[lang]}</Text>
         </VStack>
       </HStack>
       <Grid
@@ -79,7 +88,6 @@ const PDF = () => {
               return (
                 <CardPDF
                   key={item.key}
-                  color={item.color}
                   title={item.title[lang]}
                   date={item.date[lang]}
                   establishment={item.establishment[lang]}
@@ -87,7 +95,7 @@ const PDF = () => {
                   section={item.section}
                   details={item.details}
                 />
-              );
+              )
             })}
           </VStack>
           <VStack alignItems={"stretch"} spacing={2}>
@@ -98,7 +106,6 @@ const PDF = () => {
               return (
                 <CardPDF
                   key={item.key}
-                  color={item.color}
                   title={item.title[lang]}
                   date={item.date[lang]}
                   establishment={item.establishment[lang]}
@@ -106,11 +113,21 @@ const PDF = () => {
                   section={item.section}
                   details={item.details}
                 />
-              );
+              )
             })}
           </VStack>
         </VStack>
         <VStack sx={{ columnSpan: 1 }} alignItems={"stretch"} spacing={12}>
+          <VStack alignItems={"stretch"} spacing={2}>
+            <Heading as="h2" size="2xl" mb={4}>
+              {presentationName[lang]}
+            </Heading>
+            <VStack alignItems={"start"} spacing={8}>
+              <Text>{intro.who[lang]}</Text>
+              <Text>{intro.speaks[lang]}</Text>
+              <Text>{intro.remote[lang]}</Text>
+            </VStack>
+          </VStack>
           <VStack alignItems={"stretch"} spacing={2}>
             <Heading as="h2" size="2xl" mb={4}>
               {sections.portfolio[lang]}
@@ -122,10 +139,22 @@ const PDF = () => {
                   <Text>{coord.githublink}</Text>
                 </HStack>
               </Link>
+              <Link href={coord.linkedinlink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
+                  <Text>{coord.linkedinlink}</Text>
+                </HStack>
+              </Link>
               <Link href={coord.portfolio}>
                 <HStack spacing={4}>
                   <FontAwesomeIcon icon={faLink} size={"2x"} />
                   <Text>{coord.portfolio}</Text>
+                </HStack>
+              </Link>
+              <Link href={coord.codepenlink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faCodepen} size={"2x"} />
+                  <Text>{coord.codepenlink}</Text>
                 </HStack>
               </Link>
             </VStack>
@@ -138,25 +167,20 @@ const PDF = () => {
               {skills.map((category) => {
                 return (
                   <Box key={category.key}>
-                    <Heading as="h2" size="md" mb={4}>
+                    <Heading as="h3" size="lg" mb={4}>
                       {category.title[lang]}
                     </Heading>
                     <Wrap>
                       {category.items.map((skill) => {
                         return (
-                          <Button
-                            color={colorCard}
-                            size={"md"}
-                            bg={`cyan.100`}
-                            key={skill.key}
-                          >
+                          <Tag bg={bgCard} size={"lg"} key={skill.key}>
                             {skill.text[lang]}
-                          </Button>
-                        );
+                          </Tag>
+                        )
                       })}
                     </Wrap>
                   </Box>
-                );
+                )
               })}
             </VStack>
           </VStack>
@@ -169,7 +193,24 @@ const PDF = () => {
                 <FontAwesomeIcon icon={faMapMarkerAlt} size={"2x"} />
                 <Text>{coord.address[lang]}</Text>
               </HStack>
-
+              <Link href={coord.whatsapplink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faWhatsapp} size={"2x"} />
+                  <Text>{coord.whatsapp}</Text>
+                </HStack>
+              </Link>
+              <Link href={coord.telegramlink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faTelegram} size={"2x"} />
+                  <Text>{coord.telegram}</Text>
+                </HStack>
+              </Link>
+              <Link href={coord.discordlink}>
+                <HStack spacing={4}>
+                  <FontAwesomeIcon icon={faDiscord} size={"2x"} />
+                  <Text>{coord.discord}</Text>
+                </HStack>
+              </Link>
               <HStack spacing={4}>
                 <FontAwesomeIcon icon={faPhone} size={"2x"} />
                 <Text>{coord.phone}</Text>
@@ -180,22 +221,11 @@ const PDF = () => {
                   <Text>{coord.mailto}</Text>
                 </HStack>
               </Link>
-              <Link href={coord.linkedinlink}>
-                <HStack spacing={4}>
-                  <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
-                  <Text>{coord.linkedinlink}</Text>
-                </HStack>
-              </Link>
-
-              <HStack spacing={4}>
-                <FontAwesomeIcon icon={faDiscord} size={"2x"} />
-                <Text>{coord.discord}</Text>
-              </HStack>
             </VStack>
           </VStack>
         </VStack>
       </Grid>
-    </Box>
-  );
-};
-export default PDF;
+    </Fragment>
+  )
+}
+export default PDF
