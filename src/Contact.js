@@ -35,8 +35,14 @@ import {
 import ScaleFadeOnScroll from "./transitions/ScaleFadeOnScroll"
 
 const Contact = () => {
-  const { lang, colorCard, bgGradientCard, hoverButton, bgButton } =
-    useCurriContext()
+  const {
+    lang,
+    colorCard,
+    bgGradientCard,
+    bgButtonCard,
+    hoverButton,
+    hoverButtonCard,
+  } = useCurriContext()
   const { contacts, coord, mailme, submitEmail, isLoading, alert } =
     useContactContext()
 
@@ -111,8 +117,8 @@ const Contact = () => {
                   size={"md"}
                   type="submit"
                   color={colorCard}
-                  bg={bgButton}
-                  _hover={hoverButton}
+                  bg={bgButtonCard}
+                  _hover={hoverButtonCard}
                   isLoading={isLoading}
                   isFullWidth
                 >

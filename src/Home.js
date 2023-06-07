@@ -35,13 +35,18 @@ const Home = () => {
           name={"SP"}
           ms={8}
           my={{ base: 0, lg: 4 }}
+          alt="SP"
         />
         <VStack alignItems={"start"} spacing={2}>
           <Heading as="h1" size={"3xl"} mb={4}>
             {intro.name}
           </Heading>
-          <Text fontSize="2xl">{intro.title1[lang]}</Text>
-          <Text fontSize="2xl">{intro.title2[lang]}</Text>
+          <Heading as="h2" fontSize="2xl">
+            {intro.title1[lang]}
+          </Heading>
+          <Heading as="h2" fontSize="2xl">
+            {intro.title2[lang]}
+          </Heading>
           <Text fontSize="md" pt={4}>
             {intro.who[lang]}
             {", "}

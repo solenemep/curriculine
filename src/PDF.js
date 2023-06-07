@@ -66,8 +66,12 @@ const PDF = () => {
           <Heading as="h1" size={"3xl"} mb={4}>
             {intro.name}
           </Heading>
-          <Text fontSize="xl">{intro.title1[lang]}</Text>
-          <Text fontSize="xl">{intro.title2[lang]}</Text>
+          <Heading as="h2" fontSize="2xl">
+            {intro.title1[lang]}
+          </Heading>
+          <Heading as="h2" fontSize="2xl">
+            {intro.title2[lang]}
+          </Heading>
         </VStack>
       </HStack>
       <Grid

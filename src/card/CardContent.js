@@ -44,11 +44,12 @@ const CardContent = (props) => {
   } = props
   const {
     lang,
+    colorCurri,
     colorCard,
-    bgContent,
+    bgCurri,
     bgGradientCard,
-    bgButton,
-    hoverButton,
+    bgButtonCard,
+    hoverButtonCard,
     activeButton,
     hoverLink,
   } = useCurriContext()
@@ -165,14 +166,15 @@ const CardContent = (props) => {
                         ? filterSkill.buttonfilter.inactive[lang]
                         : filterSkill.buttonfilter.active[lang]
                     }
-                    bg={bgContent}
+                    bg={bgCurri}
+                    color={colorCurri}
                     key={item.key}
                   >
                     <WrapItem>
                       <Button
                         size={"xs"}
-                        bg={bgButton}
-                        _hover={hoverButton}
+                        bg={bgButtonCard}
+                        _hover={hoverButtonCard}
                         _active={activeButton}
                         value={item.key}
                         onClick={toggleFilter}

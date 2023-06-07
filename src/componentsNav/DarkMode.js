@@ -1,11 +1,9 @@
 import { Button } from "@chakra-ui/button"
-import { useColorMode } from "@chakra-ui/color-mode"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useCurriContext } from "../hook/useCurriContext"
 
 const DarkMode = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-  const { bgNav, hoverButton } = useCurriContext()
+  const { darkMode, setDarkMode, bgButton, hoverButton } = useCurriContext()
 
   return (
     <Button
@@ -14,11 +12,11 @@ const DarkMode = () => {
       mx={4}
       size={"md"}
       aria-label="Dark Mode"
-      onClick={toggleColorMode}
-      bg={bgNav}
+      onClick={() => setDarkMode(!darkMode)}
+      bg={bgButton}
       _hover={hoverButton}
     >
-      {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+      {darkMode === false ? <MoonIcon /> : <SunIcon />}
     </Button>
   )
 }

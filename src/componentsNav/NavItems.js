@@ -4,7 +4,7 @@ import { useCurriContext } from "../hook/useCurriContext"
 import { useNavContext } from "../hook/useNavContext"
 
 const NavItems = () => {
-  const { lang, setSection, bgNav, hoverButton } = useCurriContext()
+  const { lang, setSection, bgButton, hoverButton } = useCurriContext()
   const { home, curriculum, contacts } = useNavContext()
   return (
     <Fragment>
@@ -16,7 +16,7 @@ const NavItems = () => {
         px={2}
         py={1}
         rounded={"md"}
-        bg={bgNav}
+        bg={bgButton}
         _hover={hoverButton}
       >
         {home[lang]}
@@ -30,7 +30,7 @@ const NavItems = () => {
         px={2}
         py={1}
         rounded={"md"}
-        bg={bgNav}
+        bg={bgButton}
         _hover={hoverButton}
         onClick={() => setSection("education")}
       >
@@ -45,7 +45,7 @@ const NavItems = () => {
         px={2}
         py={1}
         rounded={"md"}
-        bg={bgNav}
+        bg={bgButton}
         _hover={hoverButton}
       >
         {contacts[lang]}
