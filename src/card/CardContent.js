@@ -107,7 +107,8 @@ const CardContent = (props) => {
             <Grid
               sx={{
                 display: "grid",
-                gridTemplateColumns: { base: "1fr", md: "1fr 2fr" },
+                gridTemplateColumns:
+                  img.length !== 0 ? { base: "1fr", md: "1fr 2fr" } : "1fr",
                 gap: "1.5rem",
               }}
               alignItems={"center"}

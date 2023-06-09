@@ -28,8 +28,8 @@ const CardHome = (props) => {
               return (
                 <ListItem key={detail.key}>
                   <HStack>
-                    <ListIcon as={CheckIcon} color={colorCard} />
-                    <Text as="small">{detail.text[lang]}</Text>
+                    <ListIcon as={CheckIcon} />
+                    <Text>{detail.text[lang]}</Text>
                   </HStack>
                 </ListItem>
               )

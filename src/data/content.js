@@ -335,22 +335,22 @@ export const main = [
     code: "",
     link: "https://www.pernod-ricard.com/en",
     details: [
-      // {
-      //   key: 2021,
-      //   text: {
-      //     EN: "Designed a logistic plan to integrate a new supply chain activity",
-      //     ES: "Creación de un plano logístico para integrar una nueva actividad supply chain",
-      //     FR: "Création d'un plan logistique afin d'intégrer une nouvelle activité supply chain",
-      //   },
-      // },
-      // {
-      //   key: 2022,
-      //   text: {
-      //     EN: "Optimized goods picking & packing processes",
-      //     ES: "Optimización de los procesos de recogida et preparación de la mercancía",
-      //     FR: "Optimisation des processus de collecte et préparation de la marchandise",
-      //   },
-      // },
+      {
+        key: 2021,
+        text: {
+          EN: "Designed a logistic plan to integrate a new supply chain activity",
+          ES: "Creación de un plano logístico para integrar una nueva actividad supply chain",
+          FR: "Création d'un plan logistique afin d'intégrer une nouvelle activité supply chain",
+        },
+      },
+      {
+        key: 2022,
+        text: {
+          EN: "Optimized goods picking & packing processes",
+          ES: "Optimización de los procesos de recogida et preparación de la mercancía",
+          FR: "Optimisation des processus de collecte et préparation de la marchandise",
+        },
+      },
     ],
   },
   {
@@ -382,38 +382,38 @@ export const main = [
     code: "",
     link: "https://trobz.com/about",
     details: [
-      // {
-      //   key: 61,
-      //   text: {
-      //     EN: "Analysed functional specification to match customer requirements",
-      //     ES: "Análisis de las especificaciónes funcionales para responder a las necesidades del cliente",
-      //     FR: "Analyse des spécifications fonctionnelles pour répondre au besoin client",
-      //   },
-      // },
-      // {
-      //   key: 62,
-      //   text: {
-      //     EN: "Coordinated projects and assigned tasks to developers and QA testing unit",
-      //     ES: "Coordinación de proyectos y asignación de las tareas a los equipos de desarrolladores y testadores",
-      //     FR: "Coordination de projet et affectation des tâches aux équipes de développeurs et testeurs",
-      //   },
-      // },
-      // {
-      //   key: 63,
-      //   text: {
-      //     EN: "Supported and trained customers during the implementation and exploitation stage",
-      //     ES: "Soporte y formación cliente durante las etapas de implementación y de explotación",
-      //     FR: "Support et formation client pendant les étapes d'implémentation et d'exploitation",
-      //   },
-      // },
-      // {
-      //   key: 64,
-      //   text: {
-      //     EN: "Optimized internal management tool for resources workload monitoring",
-      //     ES: "Optimización del herramienta de gestión interno para controlar la carga de trabajo de los empleados",
-      //     FR: "Optimisation de l'outil de management interne pour contrôler la charge de travail des employés",
-      //   },
-      // },
+      {
+        key: 2031,
+        text: {
+          EN: "Analysed functional specification to match customer requirements",
+          ES: "Análisis de las especificaciónes funcionales para responder a las necesidades del cliente",
+          FR: "Analyse des spécifications fonctionnelles pour répondre au besoin client",
+        },
+      },
+      {
+        key: 2032,
+        text: {
+          EN: "Coordinated projects and assigned tasks to developers and QA testing unit",
+          ES: "Coordinación de proyectos y asignación de las tareas a los equipos de desarrolladores y testadores",
+          FR: "Coordination de projet et affectation des tâches aux équipes de développeurs et testeurs",
+        },
+      },
+      {
+        key: 2033,
+        text: {
+          EN: "Supported and trained customers during the implementation and exploitation stage",
+          ES: "Soporte y formación cliente durante las etapas de implementación y de explotación",
+          FR: "Support et formation client pendant les étapes d'implémentation et d'exploitation",
+        },
+      },
+      {
+        key: 2034,
+        text: {
+          EN: "Optimized internal management tool for resources workload monitoring",
+          ES: "Optimización del herramienta de gestión interno para controlar la carga de trabajo de los empleados",
+          FR: "Optimisation de l'outil de management interne pour contrôler la charge de travail des employés",
+        },
+      },
     ],
   },
   {
@@ -443,38 +443,38 @@ export const main = [
     code: "",
     link: "",
     details: [
-      // {
-      //   key: 71,
-      //   text: {
-      //     EN: "Managed the industrialization of two production lines",
-      //     ES: "Dirección de la industrialización de dos linéas de producción",
-      //     FR: "Direction de l'industralisation de deux lignes de production",
-      //   },
-      // },
-      // /*{
-      //   key: 72,
-      //   text: {
-      //     EN: "Animated progress meetings to liaise management and operational teams",
-      //     ES: "Animación de reuniónes para vincular los equipos de management y los equipos operacionales",
-      //     FR: "Animation de réunions pour lier les équipes de management et les équipes opérationnelles",
-      //   },
-      // },*/
-      // /*{
-      //   key: 73,
-      //   text: {
-      //     EN: "Identified process issues to establish action plans supporting engineering production and exploitation unit",
-      //     ES: "Identificación de los procesos bloqueantes y implementación de un plan de acciónes para soportar la concepción y la producción",
-      //     FR: "Identification des processus bloquants et mise en place de plan d'action pour supporter la conception et la production",
-      //   },
-      // },*/
-      // {
-      //   key: 74,
-      //   text: {
-      //     EN: "Implemented an internal tool to monitor production and to measure Key Performance Indicator",
-      //     ES: "Implementación de un herramienta interno de gestión de producción y de medida de los Indicadores Clave de Rendimiento",
-      //     FR: "Implémentation d'un outil interne de gestion de production et de mesure des Indicateurs Clé de Performance",
-      //   },
-      // },
+      {
+        key: 2041,
+        text: {
+          EN: "Managed the industrialization of two production lines",
+          ES: "Dirección de la industrialización de dos linéas de producción",
+          FR: "Direction de l'industralisation de deux lignes de production",
+        },
+      },
+      {
+        key: 2042,
+        text: {
+          EN: "Animated progress meetings to liaise management and operational teams",
+          ES: "Animación de reuniónes para vincular los equipos de management y los equipos operacionales",
+          FR: "Animation de réunions pour lier les équipes de management et les équipes opérationnelles",
+        },
+      },
+      {
+        key: 2043,
+        text: {
+          EN: "Identified process issues to establish action plans supporting engineering production and exploitation unit",
+          ES: "Identificación de los procesos bloqueantes y implementación de un plan de acciónes para soportar la concepción y la producción",
+          FR: "Identification des processus bloquants et mise en place de plan d'action pour supporter la conception et la production",
+        },
+      },
+      {
+        key: 2044,
+        text: {
+          EN: "Implemented an internal tool to monitor production and to measure Key Performance Indicator",
+          ES: "Implementación de un herramienta interno de gestión de producción y de medida de los Indicadores Clave de Rendimiento",
+          FR: "Implémentation d'un outil interne de gestion de production et de mesure des Indicateurs Clé de Performance",
+        },
+      },
     ],
   },
   {
@@ -504,46 +504,46 @@ export const main = [
     code: "",
     link: "https://www.fitnetmanager.com/en/home-en/",
     details: [
-      // {
-      //   key: 81,
-      //   text: {
-      //     EN: "Guided customers in their ERP SaaS solution implementation",
-      //     ES: "Asistencia de los clientes durante la fase de implementación de la solución ERP",
-      //     FR: "Assistance des clients pendant la phase d'implémentation de leur solution ERP",
-      //   },
-      // },
-      // {
-      //   key: 82,
-      //   text: {
-      //     EN: "Produced technical specifications to create / improve solution functionalities",
-      //     ES: "Producción de las especificaciónes technicas para créar / mejorar las funciónes de la solución",
-      //     FR: "Producion des spécifications techniques pour créer / améliorer les fonctionalités de la solution",
-      //   },
-      // },
-      // /*{
-      //   key: 83,
-      //   text: {
-      //     EN: "Implemented walkthrough programming HTML and CSS",
-      //     ES: "Implementación tutoriales dinámicos con HTML y CSS",
-      //     FR: "Implémentation de tutoriels dynamiques avec HTML et CSS",
-      //   },
-      // },*/
-      // {
-      //   key: 84,
-      //   text: {
-      //     EN: "Troubleshot, investigated and created detailed reports about issues",
-      //     ES: "Identificación de los bugs, investigación y redacción de informes de resolución detallados",
-      //     FR: "Indentification des bugs, investigation et rédaction de rapports de résolution détaillés",
-      //   },
-      // },
-      // /*{
-      //   key: 65,
-      //   text: {
-      //     EN: "Provided online instructions for users",
-      //     ES: "Redacción de las instrucciónes de uso en línea",
-      //     FR: "Rédaction des instructions d'utilisation en ligne",
-      //   },
-      // },*/
+      {
+        key: 2051,
+        text: {
+          EN: "Guided customers in their ERP SaaS solution implementation",
+          ES: "Asistencia de los clientes durante la fase de implementación de la solución ERP",
+          FR: "Assistance des clients pendant la phase d'implémentation de leur solution ERP",
+        },
+      },
+      {
+        key: 2052,
+        text: {
+          EN: "Produced technical specifications to create / improve solution functionalities",
+          ES: "Producción de las especificaciónes technicas para créar / mejorar las funciónes de la solución",
+          FR: "Producion des spécifications techniques pour créer / améliorer les fonctionalités de la solution",
+        },
+      },
+      {
+        key: 2053,
+        text: {
+          EN: "Implemented walkthrough programming HTML and CSS",
+          ES: "Implementación tutoriales dinámicos con HTML y CSS",
+          FR: "Implémentation de tutoriels dynamiques avec HTML et CSS",
+        },
+      },
+      {
+        key: 2054,
+        text: {
+          EN: "Troubleshot, investigated and created detailed reports about issues",
+          ES: "Identificación de los bugs, investigación y redacción de informes de resolución detallados",
+          FR: "Indentification des bugs, investigation et rédaction de rapports de résolution détaillés",
+        },
+      },
+      {
+        key: 2055,
+        text: {
+          EN: "Provided online instructions for users",
+          ES: "Redacción de las instrucciónes de uso en línea",
+          FR: "Rédaction des instructions d'utilisation en ligne",
+        },
+      },
     ],
   },
   {
@@ -574,30 +574,83 @@ export const main = [
       { key: 208 },
       { key: 209 },
       { key: 210 },
-      { key: 301 },
-      { key: 303 },
       { key: 501 },
     ],
     code: "",
     link: "https://ideasoft.io/",
     details: [
-      // TODO
-      // {
-      //   key: 261,
-      //   text: {
-      //     EN: "Solidity Developer on Bridge-Mutual DEFI project",
-      //     ES: "Desarolladora Solidity en el proyecto DEFI Bridge-Mutual",
-      //     FR: "Développeuse Solidity sur le projet DEFI Bridge-Mutual",
-      //   },
-      // },
-      // {
-      //   key: 262,
-      //   text: {
-      //     EN: "Solidity Developer on NFT MarketPlace project",
-      //     ES: "Desarolladora Solidity en proyecto NFT MarketPlace",
-      //     FR: "Développeuse Solidity sur un projet NFT MarketPlace",
-      //   },
-      // },
+      {
+        key: 2061,
+        text: {
+          EN: "Solidity Developer on Bridge Mutual DEFI project",
+          ES: "Desarolladora Solidity en el proyecto DEFI Bridge Mutual",
+          FR: "Développeuse Solidity sur le projet DEFI Bridge Mutual",
+        },
+      },
+      {
+        key: 2062,
+        text: {
+          EN: "Solidity Developer on various NFT project",
+          ES: "Desarolladora Solidity en varios proyectos NFT",
+          FR: "Développeuse Solidity sur plusieurs projets NFT",
+        },
+      },
+      {
+        key: 2063,
+        text: {
+          EN: "Integration with DEFI protocols Aave, Compound & Yearn to generate yield",
+          ES: "Integración de los protocolos DEFI Aave, Compound & Yearn para generar rendimiento",
+          FR: "Intégration des protocols DEFI Aave, Compound & Yearn pour générer rendement",
+        },
+      },
+      {
+        key: 2064,
+        text: {
+          EN: "Securization of capital pools",
+          ES: "Securización de los capital pools",
+          FR: "Securisation des capital pools",
+        },
+      },
+      {
+        key: 2065,
+        text: {
+          EN: "Management of multichain deployment",
+          ES: "Gestión de despliegue multichain",
+          FR: "Gestion de déploiement mutichain",
+        },
+      },
+      {
+        key: 2066,
+        text: {
+          EN: "Development of encrypted voting system",
+          ES: "Desarollo de un sistema de votos encriptados",
+          FR: "Développement d'un système votes encryptés",
+        },
+      },
+      {
+        key: 2067,
+        text: {
+          EN: "Development of staking and rewarding contracts",
+          ES: "Desarollo de contratos de staking y rewarding",
+          FR: "Développement de contrats de staking et rewarding",
+        },
+      },
+      {
+        key: 2068,
+        text: {
+          EN: "Development of vesting platform",
+          ES: "Desarollo una plataforma de vesting",
+          FR: "Développement d'une plateforme de vesting",
+        },
+      },
+      {
+        key: 2069,
+        text: {
+          EN: "Random generation of NFT asset according to a ranking",
+          ES: "Generación aleatoria de atributos NFT de acuerdo a un ranking",
+          FR: "Generation aléatoire d'attibuts NFT en fonction d'un ranking",
+        },
+      },
     ],
   },
   // PORTFOLIO
@@ -613,14 +666,14 @@ export const main = [
     link: "https://solenemhep-arkanoid.netlify.app/",
     img: "arkanoid.png",
     details: [
-      // {
-      //   key: 101,
-      //   text: {
-      //     EN: "Simple game developped in JavaScript",
-      //     ES: "Juego simple desarollado en JavaScript",
-      //     FR: "Jeu simple développé en JavaScript",
-      //   },
-      // },
+      {
+        key: 3011,
+        text: {
+          EN: "80s game developped in JavaScript",
+          ES: "Juego de los 80s desarollado en JavaScript",
+          FR: "Jeu des 80s développé en JavaScript",
+        },
+      },
     ],
   },
   {
@@ -635,14 +688,14 @@ export const main = [
     link: "",
     img: "hangman.png",
     details: [
-      // {
-      //   key: 121,
-      //   text: {
-      //     EN: "Node & JavaScript hangman game",
-      //     ES: "Node & Javascript juego del ahorcado",
-      //     FR: "Node & Javascript jeu du pendu",
-      //   },
-      // },
+      {
+        key: 3021,
+        text: {
+          EN: "Node & JavaScript hangman game",
+          ES: "Node & Javascript juego del ahorcado",
+          FR: "Node & Javascript jeu du pendu",
+        },
+      },
     ],
   },
   {
@@ -657,30 +710,30 @@ export const main = [
     link: "https://solenemhep-googlefonts.netlify.app/",
     img: "googlefonts.png",
     details: [
-      // {
-      //   key: 161,
-      //   text: {
-      //     EN: "React application displaying GoogleFonts",
-      //     ES: "Aplicación React de GoogleFonts",
-      //     FR: "Application React de GoogleFonts",
-      //   },
-      // },
-      // {
-      //   key: 162,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
-      // {
-      //   key: 163,
-      //   text: {
-      //     EN: "Fetch data from API GoogleFonts",
-      //     ES: "Fetch de los datos desde API GoogleFonts",
-      //     FR: "Fetch des données depuis API GoogleFonts",
-      //   },
-      // },
+      {
+        key: 3031,
+        text: {
+          EN: "React application displaying GoogleFonts",
+          ES: "Aplicación React de GoogleFonts",
+          FR: "Application React de GoogleFonts",
+        },
+      },
+      {
+        key: 3032,
+        text: {
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page designée avec Bootstrap",
+        },
+      },
+      {
+        key: 3033,
+        text: {
+          EN: "Fetch data from API GoogleFonts",
+          ES: "Fetch de los datos desde API GoogleFonts",
+          FR: "Fetch des données depuis API GoogleFonts",
+        },
+      },
     ],
   },
   {
@@ -695,27 +748,27 @@ export const main = [
     link: "https://solenemep-taties.netlify.app/",
     img: "taties.png",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3041,
+        text: {
+          EN: "React application for daily organization",
+          ES: "Aplicación React para organizarse diariamente",
+          FR: "Aplication React pour s'organiser quotidiennement",
+        },
+      },
+      {
+        key: 3042,
+        text: {
+          EN: "Page designed with Bootstrap",
+          ES: "Página diseñada con Bootstrap",
+          FR: "Page designée avec Bootstrap",
+        },
+      },
     ],
   },
   {
     key: 305,
-    title: { EN: "Mini UniSwap", ES: "Mini UniSwap", FR: "Mini UniSwap" },
+    title: { EN: "Mini Swap", ES: "Mini Swap", FR: "Mini Swap" },
     date: { EN: "July 2021", ES: "Julio 2021", FR: "Juillet 2021" },
     establishment: { EN: "", ES: "", FR: "" },
     location: { EN: "", ES: "", FR: "" },
@@ -734,22 +787,38 @@ export const main = [
     link: "https://solenemep-swap.netlify.app/",
     img: "swap.png",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3051,
+        text: {
+          EN: "Token swaping dapp",
+          ES: "Dapp de swap de tokens",
+          FR: "Dapp de swap de tokens",
+        },
+      },
+      {
+        key: 3052,
+        text: {
+          EN: "Simplified version of UniSwap",
+          ES: "Version simplificada de UniSwap",
+          FR: "Version simplifiée de UniSwap",
+        },
+      },
+      {
+        key: 3053,
+        text: {
+          EN: "Create pools, add liquidity and swap tokens",
+          ES: "Crear pools, añadir liquidez y swap tokens",
+          FR: "Créer des pools, ajouter de la liquidité et swap tokens",
+        },
+      },
+      {
+        key: 3054,
+        text: {
+          EN: "Connected with MetaMask",
+          ES: "Conectada con MetaMask",
+          FR: "Connecté avec MetaMask",
+        },
+      },
     ],
   },
   {
@@ -775,22 +844,30 @@ export const main = [
     link: "",
     img: "",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3061,
+        text: {
+          EN: "NFT Marketplace with auction",
+          ES: "Marketplace NFT con subasta",
+          FR: "Marketplace NFT à l'encan",
+        },
+      },
+      {
+        key: 3062,
+        text: {
+          EN: "Lazy minting with EIP712 signature",
+          ES: "Lazy minting con firma EIP712",
+          FR: "Lazy minting avec signature EIP712",
+        },
+      },
+      {
+        key: 3063,
+        text: {
+          EN: "Use of wrapped ETH",
+          ES: "Uso de wrapped ETH",
+          FR: "Usage de wrapped ETH",
+        },
+      },
     ],
   },
   {
@@ -809,22 +886,14 @@ export const main = [
     link: "",
     img: "",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3071,
+        text: {
+          EN: "Library for random number generation in a specific range",
+          ES: "Biblioteca de generación de numero aleatorio dentro de un rango especifico",
+          FR: "Bibliothèque de génération de numéro aléatoire compris dans un segment spécifique",
+        },
+      },
     ],
   },
   {
@@ -843,22 +912,22 @@ export const main = [
     link: "",
     img: "",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3081,
+        text: {
+          EN: "Template of upgradeable contracts registry",
+          ES: "Template de registry de contratos upgradeable",
+          FR: "Template de registry de contrats upgradeable",
+        },
+      },
+      {
+        key: 3082,
+        text: {
+          EN: "Deployment and upgrade scripts and tests",
+          ES: "Escriptos y pruebas de despliegue y upgrade",
+          FR: "Scripts et tests de déploiement et upgrade",
+        },
+      },
     ],
   },
   {
@@ -884,22 +953,38 @@ export const main = [
     link: "",
     img: "",
     details: [
-      // {
-      //   key: 171,
-      //   text: {
-      //     EN: "React application to organize",
-      //     ES: "Aplicación React para organizarse",
-      //     FR: "Aplication React pour s'organiser",
-      //   },
-      // },
-      // {
-      //   key: 172,
-      //   text: {
-      //     EN: "Page designed with Bootstrap",
-      //     ES: "Página diseñada con Bootstrap",
-      //     FR: "Page conçue avec Bootstrap",
-      //   },
-      // },
+      {
+        key: 3091,
+        text: {
+          EN: "Vesting plateform with 3 types of sales",
+          ES: "Plataforma de vesting con 3 tipos de ventas",
+          FR: "Plateforme de vesting avec 3 types de ventes",
+        },
+      },
+      {
+        key: 3092,
+        text: {
+          EN: "Cliff and release percentage at given date",
+          ES: "Cliff y porcentaje distribuido a fecha dada",
+          FR: "Cliff et pourcentage distribué à date donnée",
+        },
+      },
+      {
+        key: 3093,
+        text: {
+          EN: "Then, linear distribution claimable by user at any time",
+          ES: "Despues, distribución linear reclamable a cualquier momento",
+          FR: "Puis, distribution linéaire reclamable à tout moment",
+        },
+      },
+      {
+        key: 3094,
+        text: {
+          EN: "Tested with Hardhat and Foundry",
+          ES: "Probado con Hardhat y Foundry",
+          FR: "Testé avec Hardhat et Foundry",
+        },
+      },
     ],
   },
 ]
