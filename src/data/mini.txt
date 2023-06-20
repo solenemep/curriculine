@@ -9,3 +9,32 @@ Looking forward to reading from you.
 
 Regards,
 Solène
+
+I got involved by curiosity in 2017, as an engineer, I was earing a lot from blockchain and wanted to understand the technology. 
+Then I got involved technically in 2021 when I started to learn Solidity.
+
+I have worked on 3 main projects : a DEFI insurance app, a NFT marketplace and a NFT game project.
+On DEFI insurance project I spend most of my work experience and developed, maintained and tested (JS and Foundry) upgradeable contracts with the following specificities : 
+- Yield Generator => integration of Aave, Compound and Yearn
+- Voting System => encrypted voting system in 2 phases
+- Staking and Rewarding contracts => with ERC20, ERC 721 tokens
+- Vesting contract => including cliff and linear vesting
+
+Hello,
+
+I am french, living in Argentina. I speak fluently English (professional) and Spanish (daily life). 
+I graduated engineer in France and later learnt programming.
+
+I have 3 years experience as a solidity developer. I have worked on 3 main projects : a DEFI insurance app, a NFT marketplace and a NFT game project.
+On DEFI insurance project I spend most of my work experience and developed, maintained and tested (JS and Foundry) upgradeable contracts with the following specificities : 
+- Yield Generator => integration of Aave, Compound and Yearn
+- Voting System => encrypted voting system in 2 phases
+- Staking and Rewarding contracts => with ERC20, ERC 721 tokens
+- Vesting contract => including cliff and linear vesting
+
+I am looking for new experiences on remote projects.
+
+Looking forward to reading from you.
+
+Regards,
+Solène

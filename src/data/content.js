@@ -308,51 +308,51 @@ export const main = [
   //     },
   //   ],
   // },
-  {
-    key: 202,
-    title: {
-      EN: "Logistic analyst",
-      ES: "Analista logístico",
-      FR: "Analiste logisitque",
-    },
-    date: {
-      EN: "June 2015 - August 2015",
-      ES: "Junio 2015 - Agosto 2015",
-      FR: "Juin 2015 - Août 2015",
-    },
-    establishment: {
-      EN: "Pernod Ricard",
-      ES: "Pernod Ricard",
-      FR: "Pernod Ricard",
-    },
-    location: {
-      EN: "Bordeaux, France",
-      ES: "Burdeos, Francia",
-      FR: "Bordeaux, France",
-    },
-    section: "experience",
-    skills: [{ key: 401 }, { key: 402 }, { key: 502 }],
-    code: "",
-    link: "https://www.pernod-ricard.com/en",
-    details: [
-      {
-        key: 2021,
-        text: {
-          EN: "Designed a logistic plan to integrate a new supply chain activity",
-          ES: "Creación de un plano logístico para integrar una nueva actividad supply chain",
-          FR: "Création d'un plan logistique afin d'intégrer une nouvelle activité supply chain",
-        },
-      },
-      {
-        key: 2022,
-        text: {
-          EN: "Optimized goods picking & packing processes",
-          ES: "Optimización de los procesos de recogida et preparación de la mercancía",
-          FR: "Optimisation des processus de collecte et préparation de la marchandise",
-        },
-      },
-    ],
-  },
+  // {
+  //   key: 202,
+  //   title: {
+  //     EN: "Logistic analyst",
+  //     ES: "Analista logístico",
+  //     FR: "Analiste logisitque",
+  //   },
+  //   date: {
+  //     EN: "June 2015 - August 2015",
+  //     ES: "Junio 2015 - Agosto 2015",
+  //     FR: "Juin 2015 - Août 2015",
+  //   },
+  //   establishment: {
+  //     EN: "Pernod Ricard",
+  //     ES: "Pernod Ricard",
+  //     FR: "Pernod Ricard",
+  //   },
+  //   location: {
+  //     EN: "Bordeaux, France",
+  //     ES: "Burdeos, Francia",
+  //     FR: "Bordeaux, France",
+  //   },
+  //   section: "experience",
+  //   skills: [{ key: 401 }, { key: 402 }, { key: 502 }],
+  //   code: "",
+  //   link: "https://www.pernod-ricard.com/en",
+  //   details: [
+  //     {
+  //       key: 2021,
+  //       text: {
+  //         EN: "Designed a logistic plan to integrate a new supply chain activity",
+  //         ES: "Creación de un plano logístico para integrar una nueva actividad supply chain",
+  //         FR: "Création d'un plan logistique afin d'intégrer une nouvelle activité supply chain",
+  //       },
+  //     },
+  //     {
+  //       key: 2022,
+  //       text: {
+  //         EN: "Optimized goods picking & packing processes",
+  //         ES: "Optimización de los procesos de recogida et preparación de la mercancía",
+  //         FR: "Optimisation des processus de collecte et préparation de la marchandise",
+  //       },
+  //     },
+  //   ],
+  // },
   {
     key: 203,
     title: {
@@ -590,9 +590,9 @@ export const main = [
       {
         key: 2062,
         text: {
-          EN: "Solidity Developer on various NFT project",
-          ES: "Desarolladora Solidity en varios proyectos NFT",
-          FR: "Développeuse Solidity sur plusieurs projets NFT",
+          EN: "Solidity Developer on various NFT project (marketplaces and NFT games)",
+          ES: "Desarolladora Solidity en varios proyectos NFT (marketplaces y juegos NFT)",
+          FR: "Développeuse Solidity sur plusieurs projets NFT (marketplaces et jeux NFT)",
         },
       },
       {
@@ -606,45 +606,29 @@ export const main = [
       {
         key: 2064,
         text: {
-          EN: "Securization of capital pools",
-          ES: "Securización de los capital pools",
-          FR: "Securisation des capital pools",
+          EN: "Securization of capital pools (reentrancy, withdrawal checks, etc)",
+          ES: "Securización de los capital pools (reentrancy, withdrawal checks, etc)",
+          FR: "Securisation des capital pools (reentrancy, withdrawal checks, etc)",
         },
       },
       {
         key: 2065,
         text: {
-          EN: "Management of multichain deployment",
-          ES: "Gestión de despliegue multichain",
-          FR: "Gestion de déploiement mutichain",
+          EN: "Management of multichain deployment (ETH, BSC & POL)",
+          ES: "Gestión de despliegue multichain (ETH, BSC & POL)",
+          FR: "Gestion de déploiement mutichain (ETH, BSC & POL)",
         },
       },
       {
         key: 2066,
         text: {
-          EN: "Development of encrypted voting system",
-          ES: "Desarollo de un sistema de votos encriptados",
-          FR: "Développement d'un système votes encryptés",
+          EN: "Development of upgraded functionalities (encrypted voting system, staking and rewarding, vesting platform, etc)",
+          ES: "Desarollo de nuevas funcionalidades (sistema de votos encriptados, staking y rewarding, plataforma de vesting, etc)",
+          FR: "Développement de nouvelles fonctionnalités (système votes encryptés, staking et rewarding, plateforme de vesting, etc",
         },
       },
       {
         key: 2067,
-        text: {
-          EN: "Development of staking and rewarding contracts",
-          ES: "Desarollo de contratos de staking y rewarding",
-          FR: "Développement de contrats de staking et rewarding",
-        },
-      },
-      {
-        key: 2068,
-        text: {
-          EN: "Development of vesting platform",
-          ES: "Desarollo una plataforma de vesting",
-          FR: "Développement d'une plateforme de vesting",
-        },
-      },
-      {
-        key: 2069,
         text: {
           EN: "Random generation of NFT asset according to a ranking",
           ES: "Generación aleatoria de atributos NFT de acuerdo a un ranking",

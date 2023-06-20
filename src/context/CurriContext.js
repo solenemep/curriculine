@@ -34,7 +34,7 @@ export const CurriContextProvider = ({ children }) => {
   const color2 = "red"
 
   const bgCurri = darkMode ? "black" : "white"
-  const bgCard = darkMode ? `${color1}.100` : `${color1}.100`
+  const bgCard = darkMode ? `${color1}.50` : `${color1}.50`
   const bgGradientCard = darkMode
     ? `linear(${color1}.100, ${color2}.100)`
     : `linear(${color1}.100, ${color2}.100)`

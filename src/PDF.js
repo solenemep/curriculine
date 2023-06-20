@@ -77,7 +77,7 @@ const PDF = () => {
       <Grid
         sx={{
           display: "grid",
-          gridTemplateColumns: { base: "2fr 1fr" },
+          gridTemplateColumns: { base: "3fr 1fr" },
           gap: "4rem",
         }}
         alignItems={"start"}
