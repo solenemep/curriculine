@@ -15,7 +15,7 @@ export const CurriContextProvider = ({ children }) => {
 
   // Section
   const [section, setSection] = useState(
-    () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "education"
+    () => JSON.parse(localStorage.getItem("sectionCurricuLine")) || "portfolio"
   )
   useEffect(() => {
     localStorage.setItem("sectionCurricuLine", JSON.stringify(section))
