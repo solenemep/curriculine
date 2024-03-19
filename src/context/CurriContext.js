@@ -30,8 +30,8 @@ export const CurriContextProvider = ({ children }) => {
   }, [darkMode])
 
   // Color Mode
-  const color1 = "purple"
-  const color2 = "red"
+  const color1 = "pink"
+  const color2 = "pink"
 
   const bgCurri = darkMode ? "black" : "white"
   const bgCard = darkMode ? `${color1}.50` : `${color1}.50`

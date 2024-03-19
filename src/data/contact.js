@@ -28,19 +28,19 @@ export const coord = {
 }
 
 export const mailme = {
-  name: { EN: "Your name", ES: "Su nombre", FR: "Votre nom" },
-  mail: { EN: "Your email", ES: "Su email", FR: "Votre email" },
-  subject: { EN: "Subject", ES: "Sujeto", FR: "Sujet" },
-  message: { EN: "Your message", ES: "Su mensaje", FR: "Votre message" },
-  send: { EN: "Send", ES: "Enviar", FR: "Envoyer" },
+  name: { EN: "your name", ES: "su nombre", FR: "votre nom" },
+  mail: { EN: "your email", ES: "su email", FR: "votre email" },
+  subject: { EN: "subject", ES: "sujeto", FR: "sujet" },
+  message: { EN: "your message", ES: "su mensaje", FR: "votre message" },
+  send: { EN: "send", ES: "enviar", FR: "envoyer" },
   OK: {
-    EN: "Your message has been successfuly sent",
-    ES: "Su mensaje ha sido enviado exitosamente",
-    FR: "Votre message a bien été envoyé",
+    EN: "your message has been successfuly sent",
+    ES: "su mensaje ha sido enviado exitosamente",
+    FR: "votre message a bien été envoyé",
   },
   KO: {
-    EN: "Error sending message, please contact me at ",
-    ES: "Error en el envío del mensaje, por favor contácteme a ",
-    FR: "Erreur à l'envoi du message, veuillez me contacter sur ",
+    EN: "error sending message, please contact me at ",
+    ES: "error en el envío del mensaje, por favor contácteme a ",
+    FR: "erreur à l'envoi du message, veuillez me contacter sur ",
   },
 }
